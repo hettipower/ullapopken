@@ -14403,3 +14403,85 @@ a:focus {
   max-width: 1400px;
   margin: auto;
 }
+a {
+  color: #191919;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: #191919;
+}
+header .navbar {
+  padding: 0;
+  flex-wrap: wrap;
+}
+header .navbar .topnavvbar {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 5px 0;
+  font-size: 13px;
+}
+header .navbar .topnavvbar .menuWrap li {
+  padding-left: 1rem;
+}
+header .navbar .middleWrap {
+  width: 100%;
+  padding: 15px 0;
+}
+header .navbar .middleWrap .container {
+  align-items: center;
+}
+header .navbar .middleWrap .container .navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+header .navbar .middleWrap .container .navbar-brand img {
+  width: 14.5rem;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link i {
+  font-size: 22px;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link span {
+  font-size: 11px;
+  margin-top: 3px;
+}
+header .navbar .bottomWrap {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+header .navbar .bottomWrap .searchWrap {
+  max-width: 350px;
+  width: 100%;
+}
+header .navbar .bottomWrap .searchWrap .input-group {
+  background-color: #f2f2f2;
+}
+header .navbar .bottomWrap .searchWrap .input-group .form-control {
+  border: none;
+  background-color: transparent;
+}
+header .navbar .bottomWrap .searchWrap .input-group .input-group-text {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+header .navbar .bottomWrap .searchWrap .input-group .input-group-text button {
+  border: none;
+  background-color: transparent;
+  padding: 10px 15px;
+}
+header .saleWrap {
+  width: 100%;
+  background-color: #ff8824;
+  padding: 12px 0;
+  color: #000;
+  text-align: center;
+}
+header .saleWrap:empty {
+  display: none;
+}
