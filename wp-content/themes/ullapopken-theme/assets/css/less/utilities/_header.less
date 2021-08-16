@@ -23,6 +23,27 @@ header {
             .container {
                 align-items: center;
 
+                .topCatWrap {
+                    .navbar-nav {
+                        .nav-item {
+                            margin-right: 2rem;
+    
+                            .nav-link {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                border-bottom: 1px solid transparent;
+                                padding: 4px 0;
+    
+                                &.active {
+                                    border-color: #191919;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .navbar-brand {
                     margin: 0;
                     padding: 0;
@@ -78,6 +99,26 @@ header {
                             border: none;
                             background-color: transparent;
                             padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            .mainMenuWrap {
+                .navbar-nav {
+                    .nav-item {
+                        margin-right: 1.5rem;
+
+                        .nav-link {
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 600;
+                            padding: .65rem 0;
+                            border-bottom: 1px solid transparent;
+
+                            &.active {
+                                border-color: #FE8273;
+                            }
                         }
                     }
                 }
