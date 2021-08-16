@@ -1,0 +1,212 @@
+.rtl .pwf-column {
+    float: right;
+}
+.rtl .pwf-item-label .pwf-title-container {
+    padding-right: 10px; 
+    padding-left: 24px;
+}
+.rtl .pwf-product-counts { 
+    margin-left: 0;
+    margin-right: 8px;
+}
+.rtl .pwf-product-counts::after {
+    right: auto;
+    left: -3px
+}
+.rtl .pwf-product-counts::before {
+    left: auto;
+    right: -3px;
+}
+.rtl .pwf-woo-filter .pwf-items-hierarchical .pwf-children {
+    padding-left: 0;
+    padding-right: 20px;
+}
+/* Toggle */
+.rtl .pwf-more-button .pwf-icon-more,
+.rtl .pwf-woo-filter .pwf-toggle {
+    float: left;
+}
+.rtl .pwf-more-button .pwf-icon-more {
+    float: none;
+    margin-right: 0;
+    margin-left: 4px;
+}
+.rtl .pwf-more-button .pwf-icon-more::before,
+.rtl .pwf-woo-filter .pwf-toggle::before {
+   right: auto;
+   left: 0;
+}
+/* Check box style */
+.rtl .pwf-checkbox-label .pwf-input-container {
+    float: right;
+}
+/* Radio List */
+.rtl .pwf-radiolist-label .pwf-input-container {   
+    float: right;
+}
+/* Text List */
+.rtl .pwf-textlist-item .pwf-item-label .pwf-title-container {
+    padding-right: 0;
+}
+.rtl .pwf-textlist-inline-style .pwf-textlist-item {
+    margin-right: 0;
+    margin-left: 1px;
+}
+/* Dropdownlist */
+.rtl #sidebar .pwf-field-item-dropdownlist select,
+.rtl .pwf-field-item-dropdownlist .select2-container--default .select2-selection--single,
+.rtl .pwf-field-item-dropdownlist select {
+    padding: 0 8px 0 24px;
+}
+.rtl .pwf-field-item-dropdownlist .pwf-select::after {
+    right: auto;
+    left: 4%;
+}
+/* colorlist */
+.rtl .pwf-colorlist-item {
+    float: right;
+    margin: 14px 0 0 14px;
+}
+.rtl .pwf-colorlist-item .pwf-product-counts {
+    right: auto;
+    left: -1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.rtl .pwf-field-item-colorlist.pwf-rounded .pwf-product-counts {    
+    right: auto;
+    left: -6px;
+}
+/** Boxlist */
+.rtl .pwf-boxlist-item {
+    float: right;
+    margin: 14px 0 0 14px;
+}
+.rtl .pwf-boxlist-item .pwf-product-counts {
+    right: auto;
+    left: -1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*search*/
+.rtl .pwf-search-icon {
+    right: auto;
+    left: 12px;
+}
+.rtl .pwf-field-item-search input[type="text"],
+.rtl .woocommerce .pwf-field-item-search  input[type="text"],
+.rtl .woocommerce-page .pwf-field-item-search  input[type="text"] {
+    padding: 0 12px 0 0;
+}
+/* Date */
+.rtl .pwf-price-slider-min-max-inputs input,
+.rtl .pwf-date-field input,
+.rtl.woocommerce .pwf-date-field input[type="text"] {
+    margin: 0 0 0 2%;
+    padding: 0 12px 0 0;
+}
+.rtl .pwf-date-field input:last-child,
+.rtl .pwf-price-slider-min-max-inputs input:last-child {
+    margin-left: 0;
+}
+.rtl .ui-datepicker .ui-datepicker-prev span,
+.rtl .ui-datepicker .ui-datepicker-next span {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.rtl .ui-datepicker .ui-datepicker-next span {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.rtl .ui-datepicker .ui-datepicker-prev span {
+    margin-right: -6px;
+}
+.rtl .ui-datepicker .ui-datepicker-prev-hover {
+    left: auto;
+    right: 2px;
+}
+.rtl .ui-datepicker .ui-datepicker-next-hover {
+    right: auto;
+    left: 2px;
+}
+/* More Button */
+.rtl .pwf-more-button {
+    padding-left: 0;
+    padding-right: 28px;
+}
+/* Active filter notics */
+.rtl .pwf-note-item {   
+    padding: 2px 12px 2px 6px;
+    margin-right: 0;
+    margin-left: 2px;
+}
+.rtl .pwf-icon-remove {
+    margin-right: 0;
+    margin-left: 6px;
+}
+.rtl .pwf-icon-remove::after,
+.rtl .pwf-icon-remove::before {
+    right: auto;
+    left: 0;
+}
+/*StikyFilter*/
+.rtl .pwf-sticky-button form,
+.rtl .woocommerce .pwf-sticky-button .woocommerce-ordering {
+    left: auto;
+    right: 0;
+}
+.rtl .pwf-sticky-button form select,
+.rtl .woocommerce .pwf-sticky-button > .woocommerce-ordering select {
+    padding: 0 8px 0 0;
+}
+.rtl .pwf-sticky-button .pwf-sorting-text::after {
+    margin-left: 0;
+    margin-right: 12px;
+}
+.rtl .pwf-sticky-filter-count {
+    padding-left: 0;
+    padding-right: 8px;
+}
+/*offcanvas*/
+.rtl .pwf-off-canvas .pwf-canvas-close-btn {
+    right: auto;
+    left: 0;
+}
+.rtl .pwf-canvas-close-btn .pwf-canvas-icon::before,
+.rtl .pwf-canvas-close-btn .pwf-canvas-icon::after {
+    right: auto;
+    left: 0;
+}
+/* Filter As button */
+.rtl .pwf-canvas-footer .pwf-field-item-button:last-child {
+    margin-left: 0;
+    border-left:0;
+}
+.rtl .pwf-filter-as-button-header .pwf-filter-as-button-text {
+    padding-right: 0;
+    padding-left: 16px;
+}
+.rtl .pwf-filter-as-button-text::after,
+.rtl .pwf-filter-as-button-text::before {
+    right: auto;
+    left: 0;
+}
+.rtl .pwf-range-slider-labels {
+    text-align: left;
+}
+.rtl .pwf-load-more-button .pwf-button-loader {
+    margin-left: 0;
+    margin-right: 12px;
+}
+.rtl .pwf-field-item-rating .pwf-star-rating-item > .star-rating {
+    margin-left: 0;
+    margin-right: 8px;
+}
+.rtl .pwf-up-text {
+    margin-left: 0;
+    margin-right: 6px;
+}
+.rtl .pwf-has-multiple-select .select2-container--default .select2-selection--multiple {
+    padding: 0 8px 0 24px;
+}

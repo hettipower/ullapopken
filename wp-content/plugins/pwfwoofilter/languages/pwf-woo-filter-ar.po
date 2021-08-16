@@ -1,0 +1,1773 @@
+# Copyright (C) 2020 pwfwoofilter
+# This file is distributed under the same license as the pwfwoofilter package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pwfwoofilter\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar_EG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-pwf-api.php:58,
+#: dist/pwfwoofilter/includes/class-pwf-api.php:58
+msgid "Missing filter ID"
+msgstr "لم يتم تحديد رقم الفلتر المستخدم"
+
+#: includes/class-pwf-api.php:62,
+#: dist/pwfwoofilter/includes/class-pwf-api.php:62
+msgid "Filter post ID not exists"
+msgstr "هذا الفلتر غير موجود id"
+
+#: includes/class-pwf-filter-post-type.php:56,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:56
+msgctxt "post type general name"
+msgid "Filter"
+msgstr "فلتر"
+
+#: includes/class-pwf-filter-post-type.php:57,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:57
+msgctxt "post type singular name"
+msgid "Filter"
+msgstr "فلتر"
+
+#: includes/class-pwf-filter-post-type.php:58,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:58
+msgctxt "admin menu"
+msgid "Filters"
+msgstr "فلاتر"
+
+#: includes/class-pwf-filter-post-type.php:59,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:59
+msgctxt "add new on admin bar"
+msgid "Filter"
+msgstr "فلتر"
+
+#: includes/class-pwf-filter-post-type.php:60,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:60
+#, fuzzy
+#| msgctxt "Review"
+#| msgid "Add new"
+msgctxt "Filter"
+msgid "Add new"
+msgstr "إضافة جديد"
+
+#: includes/class-pwf-filter-post-type.php:61,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:61
+msgid "Add new Filter"
+msgstr "إضافة فلتر جديد"
+
+#: includes/class-pwf-filter-post-type.php:62,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:62
+msgid "New Filter"
+msgstr "إضافة فلتر "
+
+#: includes/class-pwf-filter-post-type.php:63,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:63
+msgid "Edit Filter"
+msgstr "تحرير الفلتر"
+
+#: includes/class-pwf-filter-post-type.php:64,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:64
+msgid "View Filter"
+msgstr "مشاهدة الفتر"
+
+#: includes/class-pwf-filter-post-type.php:65,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:65
+msgid "Filters"
+msgstr "الفلاتر"
+
+#: includes/class-pwf-filter-post-type.php:66,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:66
+msgid "Search Filters"
+msgstr "بحث في الفلاتر"
+
+#: includes/class-pwf-filter-post-type.php:67,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:67
+msgid "Parent Filters:"
+msgstr ""
+
+#: includes/class-pwf-filter-post-type.php:68,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:68
+msgid "No Filters found."
+msgstr "لا توجد فلاتر."
+
+#: includes/class-pwf-filter-post-type.php:69,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:69
+msgid "No Filters found in trash."
+msgstr "لا يوجد فلاتر فى سلة المحذوفات."
+
+#: includes/class-pwf-front-end-ajax.php:70,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:70
+msgid "Filer ID must be integer."
+msgstr "يجب أن يكون رقم الفلتر id رقم صحيح."
+
+#: includes/class-pwf-front-end-ajax.php:144,
+#: includes/admin/class-pwf-meta.php:792,
+#: includes/admin/class-pwf-meta.php:1097,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:144,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:792,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1097
+msgid "Apply"
+msgstr "تطبيق"
+
+#: includes/class-pwf-front-end-ajax.php:145,
+#: includes/admin/class-pwf-meta-data.php:31,
+#: includes/admin/class-pwf-meta.php:791,
+#: includes/admin/class-pwf-meta.php:1096,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:145,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:31,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:791,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1096
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#: includes/class-pwf-front-end-ajax.php:146,
+#: includes/class-pwf-render-filter.php:103,
+#: includes/admin/class-pwf-admin-setting.php:20,
+#: includes/admin/class-pwf-meta-data.php:35,
+#: includes/widgets/class-pwf-filter-widget.php:108,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:146,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:20,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:35,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:108
+msgid "Filter"
+msgstr "فلتر"
+
+#: includes/class-pwf-front-end-ajax.php:147,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:147
+msgid "Price"
+msgstr "السعر"
+
+#: includes/class-pwf-front-end-ajax.php:148,
+#: includes/admin/class-pwf-meta.php:1105,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:148,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1105
+#, fuzzy
+#| msgid "Search Filters"
+msgid "Search"
+msgstr "بحث في الفلاتر"
+
+#: includes/class-pwf-front-end-ajax.php:149,
+#: includes/class-pwf-render-filter-fields.php:1067,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:149,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1067
+msgid "Rated"
+msgstr ""
+
+#: includes/class-pwf-front-end-ajax.php:150,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:150
+#, fuzzy
+#| msgid "Show more"
+msgid "Load more"
+msgstr "عرض المزيد"
+
+#: includes/class-pwf-front-end-ajax.php:151
+msgid "Clear all"
+msgstr "مسح الكل"
+
+#: includes/class-pwf-render-filter-fields.php:181,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:181
+msgid "Show more"
+msgstr "عرض المزيد"
+
+#: includes/class-pwf-render-filter-fields.php:182,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:182
+msgid "Show less"
+msgstr "عرض أقل"
+
+#: includes/class-pwf-render-filter-fields.php:786,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:786
+msgid "Min price"
+msgstr "أقل سعر"
+
+#: includes/class-pwf-render-filter-fields.php:787,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:787
+msgid "Max price"
+msgstr "أقصى سعر"
+
+#: includes/class-pwf-render-filter-fields.php:891,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:891
+msgid "Min value"
+msgstr "الحد اﻷدنى"
+
+#: includes/class-pwf-render-filter-fields.php:892,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:892
+msgid "Max value"
+msgstr "الحد الاقصى"
+
+#: includes/class-pwf-render-filter-fields.php:966,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:966
+msgid "From"
+msgstr "من"
+
+#: includes/class-pwf-render-filter-fields.php:967,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:967
+msgid "To"
+msgstr "إلى"
+
+#: includes/class-pwf-render-filter-fields.php:1019,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1019
+msgid "up"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:1022,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1022
+msgid "and"
+msgstr "و"
+
+#: includes/class-pwf-render-filter-fields.php:1068,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1068
+msgid "and up"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:1065,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1065
+msgid "Rated out of"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1653,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1653
+msgid "Rate 5"
+msgstr "تقيم 5"
+
+#: includes/class-pwf-render-filter.php:1656,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1656
+msgid "Rate 4"
+msgstr "تقيم 4"
+
+#: includes/class-pwf-render-filter.php:1659,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1659
+msgid "Rate 3"
+msgstr "تقيم 3"
+
+#: includes/class-pwf-render-filter.php:1662,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1662
+msgid "Rate 2"
+msgstr "تقيم 2"
+
+#: includes/class-pwf-render-filter.php:1665,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1665
+msgid "Rate 1"
+msgstr "تقيم 1"
+
+#: includes/admin/class-pwf-admin-setting.php:28,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:28
+#, fuzzy
+#| msgid "Select a filter to integrate with shop archive"
+msgid "Select a filter to integrate with shop archive page"
+msgstr "قم باختيار فلتر لدمجه مع صفحة أرشيف المنتجات"
+
+#: includes/admin/class-pwf-admin-setting.php:33,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:33
+msgid "Filter ID"
+msgstr "الفلتر"
+
+#: includes/admin/class-pwf-admin-setting.php:39,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:39
+msgid "Transient time"
+msgstr "وقت التخزين المؤقت Transient time"
+
+#: includes/admin/class-pwf-admin-setting.php:40,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:40
+msgid "Set transient time in seconds."
+msgstr "ضبط وقت التخزين المؤقت بالثوانى."
+
+#: includes/admin/class-pwf-admin-setting.php:51,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:51
+msgid "Theme Comitable"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:55,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:55
+msgid "Enable"
+msgstr "تمكين"
+
+#: includes/admin/class-pwf-admin-setting.php:56,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:56
+#, fuzzy
+#| msgid "Disabled"
+msgid "Disable"
+msgstr "معطل"
+
+#: includes/admin/class-pwf-admin-setting.php:60,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:60
+#, fuzzy
+#| msgid "Default sorting"
+msgid "Default loader"
+msgstr "الترتيب الافتراضي"
+
+#: includes/admin/class-pwf-admin-setting.php:61,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:61
+msgid "Default HTML loader template uses by Ajax."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:66,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:66
+#, fuzzy
+#| msgid "Button"
+msgid "Button loader"
+msgstr "زرار (button)"
+
+#: includes/admin/class-pwf-admin-setting.php:67,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:67
+msgid "HTML loader template uses by load more button."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:72,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:72
+msgid "Infinite Loader"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:73,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:73
+msgid "HTML loader template uses by infinite scroll."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:94,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:94
+msgid "None"
+msgstr "لا شئ"
+
+#: includes/admin/class-pwf-clear-transients.php:23,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:23
+msgid "WooCommerce filter transients"
+msgstr ""
+
+#: includes/admin/class-pwf-clear-transients.php:24,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:24
+msgid "Clear transients"
+msgstr "مسح التخزين المؤقت"
+
+#: includes/admin/class-pwf-clear-transients.php:25,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:25
+msgid ""
+"This tool will clear the plugin professional Woocommerce filter term counts "
+"transients cache."
+msgstr ""
+"هذه اﻷداة سوف تقوم بمسح التخزين المؤقت ﻹضافة PWF لعدد المنتجات لكل عنصر."
+
+#: includes/admin/class-pwf-clear-transients.php:68,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:68
+msgid "Cached terms count cleared"
+msgstr "تم مسح عدد العناصر المخزنة مؤقتاً"
+
+#: includes/admin/class-pwf-database-query.php:218,
+#: includes/admin/class-pwf-database-query.php:283,
+#: includes/admin/class-pwf-meta-data.php:139,
+#: includes/admin/class-pwf-meta-data.php:191,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:218,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:283,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:139,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:191
+msgid "All"
+msgstr "الكل"
+
+#: includes/admin/class-pwf-database-query.php:293,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:293
+msgid "No selected"
+msgstr "حدد اختيار"
+
+#: includes/admin/class-pwf-meta-data.php:16,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:16
+msgid "AND"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:20,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:20
+msgid "OR"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:47,
+#: includes/admin/class-pwf-meta-data.php:87,
+#: includes/admin/class-pwf-meta-fields.php:179,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:47,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:87,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:179
+msgid "Attribute"
+msgstr "السمات"
+
+#: includes/admin/class-pwf-meta-data.php:51,
+#: includes/admin/class-pwf-meta-data.php:91,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:51,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:91
+msgid "Category"
+msgstr "التصنيف"
+
+#: includes/admin/class-pwf-meta-data.php:55,
+#: includes/admin/class-pwf-meta-data.php:95,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:55,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:95
+msgid "Tag"
+msgstr "الوسوم"
+
+#: includes/admin/class-pwf-meta-data.php:59,
+#: includes/admin/class-pwf-meta-data.php:99,
+#: includes/admin/class-pwf-meta-fields.php:189,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:59,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:99,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:189
+msgid "Taxonomy"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:63,
+#: includes/admin/class-pwf-meta.php:1071,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:63,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1071
+msgid "Stock status"
+msgstr "حالة المخزن"
+
+#: includes/admin/class-pwf-meta-data.php:67,
+#: includes/admin/class-pwf-meta-fields.php:359,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:67,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:359
+msgid "Order by"
+msgstr "ترتيب حسب"
+
+#: includes/admin/class-pwf-meta-data.php:71,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:71
+msgid "Author"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:75,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:75
+msgid "Meta"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:103
+msgid "Page"
+msgstr "صفحه"
+
+#: includes/admin/class-pwf-meta-data.php:115,
+#: includes/admin/class-pwf-meta.php:1098,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:115,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1098
+msgid "Equal to"
+msgstr "يساوي"
+
+#: includes/admin/class-pwf-meta-data.php:119,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:119
+msgid "Not Equal to"
+msgstr "لا يساوى"
+
+#: includes/admin/class-pwf-meta-data.php:195,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:195
+msgid "Only Parent"
+msgstr "الآباء فقط - عدم ظهور التصنيفات المتفرعة منها"
+
+#: includes/admin/class-pwf-meta-data.php:199,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:199
+msgid "Only Selected"
+msgstr "العناصر المحددة"
+
+#: includes/admin/class-pwf-meta-data.php:203,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:203
+msgid "Except Selected"
+msgstr "العناصر غير المحددة"
+
+#: includes/admin/class-pwf-meta-data.php:214,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:214
+msgid "In stock"
+msgstr "متوافر في المخزن"
+
+#: includes/admin/class-pwf-meta-data.php:218,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:218
+msgid "Out of stock"
+msgstr "غير متوافر فى المخزن"
+
+#: includes/admin/class-pwf-meta-data.php:222,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:222
+msgid "On backorder"
+msgstr "متاح للطلب المسبق"
+
+#: includes/admin/class-pwf-meta-data.php:234,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:234
+msgid "Default sorting"
+msgstr "الترتيب الافتراضي"
+
+#: includes/admin/class-pwf-meta-data.php:238,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:238
+msgid "Sort by popularity"
+msgstr "ترتيب حسب الشهرة"
+
+#: includes/admin/class-pwf-meta-data.php:242,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:242
+msgid "Sort by average rating"
+msgstr "ترتيب حسب معدل التقييم"
+
+#: includes/admin/class-pwf-meta-data.php:246,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:246
+msgid "Sort by latest"
+msgstr "ترتيب حسب اﻷحدث"
+
+#: includes/admin/class-pwf-meta-data.php:250,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:250
+msgid "Sort by price: low to high"
+msgstr "ترتيب حسب: الأدنى سعراً للأعلى"
+
+#: includes/admin/class-pwf-meta-data.php:254,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:254
+msgid "Sort by price: high to low"
+msgstr "ترتيب حسب: الأعلى سعراً للأدنى"
+
+#: includes/admin/class-pwf-meta-data.php:265,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:265
+msgid "Name"
+msgstr "الاسم"
+
+#: includes/admin/class-pwf-meta-data.php:269,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:269
+msgid "Order"
+msgstr "حسب الترتيب في لوحة التحكم (order)"
+
+#: includes/admin/class-pwf-meta-data.php:273,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:273
+msgid "Count"
+msgstr "عدد المنتجات"
+
+#: includes/admin/class-pwf-meta-data.php:284,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:284
+msgid "Show content"
+msgstr "عرض المحتوى"
+
+#: includes/admin/class-pwf-meta-data.php:288,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:288
+msgid "Hide content"
+msgstr "إخفاء المحتوى"
+
+#: includes/admin/class-pwf-meta-data.php:299,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:299
+msgid "Show all"
+msgstr "عرض الكل"
+
+#: includes/admin/class-pwf-meta-data.php:303,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:303
+msgid "Hide"
+msgstr "إخفاء"
+
+#: includes/admin/class-pwf-meta-data.php:307,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:307
+msgid "Mark as disabled"
+msgstr "وضع علامة معطل"
+
+#: includes/admin/class-pwf-meta-data.php:319,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:319
+msgid "Disabled"
+msgstr "معطل"
+
+#: includes/admin/class-pwf-meta-data.php:323,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:323
+msgid "Scrollbar"
+msgstr "شريط التمرير"
+
+#: includes/admin/class-pwf-meta-data.php:327,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:327
+msgid "More button"
+msgstr "زرار المزيد"
+
+#: includes/admin/class-pwf-meta-data.php:338,
+#: includes/admin/class-pwf-meta.php:419,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:338,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:419
+msgid "Default"
+msgstr "افتراضي"
+
+#: includes/admin/class-pwf-meta-data.php:342,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:342
+msgid "Plugin style"
+msgstr "نمط ( استايل ) الاضافة"
+
+#: includes/admin/class-pwf-meta-data.php:353,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:353
+msgid "Parameters through a dash"
+msgstr "بارميتر واحد يفصل بين القيمتين شرطه"
+
+#: includes/admin/class-pwf-meta-data.php:357,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:357
+msgid "Two parameters"
+msgstr "2 باراميتر"
+
+#: includes/admin/class-pwf-meta-data.php:368,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:368
+msgid "="
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:372,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:372
+msgid "!="
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:376,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:376
+msgid "&gt;"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:380,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:380
+msgid "&lt;"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:384,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:384
+msgid "&gt;="
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:388,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:388
+msgid "&lt;="
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:392,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:392
+msgid "LIKE"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:396,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:396
+msgid "NOT LIKE’"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:400,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:400
+msgid "IN"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:404,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:404
+msgid "NOT IN"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:408,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:408
+msgid "BETWEEN"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:412,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:412
+msgid "NOT BETWEEN"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:416,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:416
+msgid "NOT EXISTS"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:420,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:420
+msgid "REGEXP"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:424,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:424
+msgid "NOT REGEXP"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:428,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:428
+msgid "RLIKE"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:440,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:440
+msgid "CHAR"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:444,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:444
+msgid "NUMERIC"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:448,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:448
+msgid "TIME"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:452,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:452
+msgid "DATE"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:456,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:456
+msgid "DATETIME"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:460,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:460
+msgid "DECIMAL"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:464,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:464
+msgid "SIGNED"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:468,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:468
+msgid "UNSIGNED"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:479,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:479
+msgid "Custom"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:483,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:483
+#, fuzzy
+#| msgid "Light"
+msgid "Weight"
+msgstr "فاتح"
+
+#: includes/admin/class-pwf-meta-data.php:487,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:487
+#, fuzzy
+#| msgid "Light"
+msgid "Height"
+msgstr "فاتح"
+
+#: includes/admin/class-pwf-meta-data.php:491,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:491
+msgid "Length"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:495,
+#: includes/admin/class-pwf-meta-fields.php:405,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:495,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:405
+msgid "Width"
+msgstr "العرض"
+
+#: includes/admin/class-pwf-meta-fields.php:25,
+#: includes/admin/class-pwf-meta.php:289,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:25,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:289
+msgid "Title"
+msgstr "العنوان"
+
+#: includes/admin/class-pwf-meta-fields.php:34,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:34
+msgid "Action"
+msgstr "اﻹجراء"
+
+#: includes/admin/class-pwf-meta-fields.php:43,
+#: includes/admin/class-pwf-meta-fields.php:458,
+#: includes/admin/class-pwf-meta.php:304,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:43,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:458,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:304
+#, fuzzy
+#| msgid "Css class"
+msgid "CSS class"
+msgstr "اسم CSS Class"
+
+#: includes/admin/class-pwf-meta-fields.php:52,
+#: includes/admin/class-pwf-meta-fields.php:63,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:52,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:63
+msgid "URL format"
+msgstr "نسق الرابط (URL format)"
+
+#: includes/admin/class-pwf-meta-fields.php:73,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:73
+msgid "URL key"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:74,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:74
+msgid ""
+"The \"URL key\" is the URL-friendly version of the title. It is usually all "
+"lowercase and contains only letters, numbers, and hyphens"
+msgstr ""
+"يعتبر نسخة ملائمة من العنوان ويتم إضافته إلى رابط متصفح اﻹنترنت . وهو  يتكون "
+"من مجموعة من اﻷرقام والحروف والشرطة ويفضل أن يكون باللغة الانجليزية وأن تكون "
+"الحروف  صغيرة وان يكون هذا الاسم غير مكرر داخل تدوينة الفلتر الواحدة"
+
+#: includes/admin/class-pwf-meta-fields.php:83,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:83
+msgid "URL key for minimum price"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:84,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:84
+msgid ""
+"The “URL key for minimum price” is the URL-friendly version of “minimum "
+"price”. It is usually all lowercase and contains only letters, numbers, and "
+"hyphens"
+msgstr ""
+"خاص بالحد اﻷدنى للسعر ويتم إضافته إلى رابط متصفح اﻹنترنت وتطبق عليه قواعد "
+"التسمية المذكورة في (url_key)"
+
+#: includes/admin/class-pwf-meta-fields.php:93,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:93
+msgid "URL key for max price"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:94,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:94
+msgid ""
+"The “URL key for maximum price” is the URL-friendly version of “maximum "
+"price”. It is usually all lowercase and contains only letters, numbers, and "
+"hyphens."
+msgstr ""
+"خاص بالحد اﻷقصى للسعر ويتم إضافته إلى رابط متصفح اﻹنترنت وتطبق عليه قواعد "
+"التسمية المذكورة في (url_key)"
+
+#: includes/admin/class-pwf-meta-fields.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:103
+msgid "URL key for date after"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:112,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:112
+msgid "URL key for date before"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:121,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:121
+msgid "URL key for minimum value"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:130,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:130
+msgid "URL key for maximum value"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:139,
+#: includes/admin/class-pwf-meta-fields.php:491,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:139,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:491
+msgid "Multi Select"
+msgstr "تحديد متعدد"
+
+#: includes/admin/class-pwf-meta-fields.php:147,
+#: includes/admin/class-pwf-meta-fields.php:499,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:147,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:499
+msgid "Query type"
+msgstr "نوع الاستعلام (ََQuery type)"
+
+#: includes/admin/class-pwf-meta-fields.php:148,
+#: includes/admin/class-pwf-meta-fields.php:500,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:148,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:500
+msgid ""
+"Type of query that allows you to apply multiple filters. “And” satisfy both "
+"conditions. “Or” satisfy at least one of the conditions"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:158,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:158
+msgid "Source of options"
+msgstr "مصدر الخيارات Source of options"
+
+#: includes/admin/class-pwf-meta-fields.php:159,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:159
+msgid "Select source of options, that will be using to filter products"
+msgstr "حدد مصدر الخيارات الذي سوف يستخدم لعمل فلتر للمنتجات"
+
+#: includes/admin/class-pwf-meta-fields.php:168,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:168
+msgid "Category of options"
+msgstr "خيارات التصنيف"
+
+#: includes/admin/class-pwf-meta-fields.php:169,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:169
+msgid "Choose one of the categories"
+msgstr "اختر واحد من تلك التصنيفات"
+
+#: includes/admin/class-pwf-meta-fields.php:180,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:180
+msgid "Choose one of the attributes created in “Products > Attributes”"
+msgstr "قم باختيار واحده من السمات التي أنشئت في “المنتجات > السمات”"
+
+#: includes/admin/class-pwf-meta-fields.php:190,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:190
+msgid ""
+"The “Taxonomy” is a grouping mechanism for posts. For example, \"product tags"
+"\" and \"product attributes\" are also taxonomies"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:199,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:199
+msgid "Taxonomy of options"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:200,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:200
+msgid "Choose one of the taxonomies"
+msgstr "اختر واحد من taxonomies"
+
+#: includes/admin/class-pwf-meta-fields.php:209,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:209
+msgid "Roles"
+msgstr "المسئوليات (ٌRoles)"
+
+#: includes/admin/class-pwf-meta-fields.php:217,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:217
+msgid "Display"
+msgstr "عرض"
+
+#: includes/admin/class-pwf-meta-fields.php:226,
+#: includes/admin/class-pwf-meta.php:1080,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:226,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1080
+msgid "Color"
+msgstr "اللون"
+
+#: includes/admin/class-pwf-meta-fields.php:233,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:233
+msgid "Include"
+msgstr "يتضمن (Include)"
+
+#: includes/admin/class-pwf-meta-fields.php:240,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:240
+msgid "Exclude"
+msgstr "استثناء (Exclude)"
+
+#: includes/admin/class-pwf-meta-fields.php:247,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:247
+msgid "Labels"
+msgstr "عناوين الخيارات"
+
+#: includes/admin/class-pwf-meta-fields.php:248,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:248
+msgid "Rename fields to display in frontend"
+msgstr "إعادة تسمية الخيارات لعرضها في واجهة الموقع الأمامية"
+
+#: includes/admin/class-pwf-meta-fields.php:255,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:255
+msgid "Displayed statuses"
+msgstr "اختر حالة المخزن المطلوب عرضها"
+
+#: includes/admin/class-pwf-meta-fields.php:265,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:265
+msgid "Order By"
+msgstr "الترتيب حسب"
+
+#: includes/admin/class-pwf-meta-fields.php:275,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:275
+msgid "\"In stock\" text"
+msgstr "\"متوافر في المخزن\" استبدال هذا النص بـ"
+
+#: includes/admin/class-pwf-meta-fields.php:283,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:283
+msgid "\"Out of stock\" text"
+msgstr "\"غير متوافر بالمخزن\" استبدال هذا النص بـ"
+
+#: includes/admin/class-pwf-meta-fields.php:291,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:291
+msgid "\"On backorder\" text"
+msgstr "\"متاح للطلب المسبق\" استبدال هذا النص بـ"
+
+#: includes/admin/class-pwf-meta-fields.php:299,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:299
+msgid "\"Show all\" text"
+msgstr "\"عرض الكل\" استبدال هذا النص ب"
+
+#: includes/admin/class-pwf-meta-fields.php:308,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:308
+msgid "Placeholder"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:309,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:309
+msgid "Search for Products"
+msgstr "عدد المنتجات المطلوب عرضها"
+
+#: includes/admin/class-pwf-meta-fields.php:317,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:317
+#, fuzzy
+#| msgid "Source of options"
+msgid "Source of meta"
+msgstr "مصدر الخيارات Source of options"
+
+#: includes/admin/class-pwf-meta-fields.php:326,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:326
+msgid "Meta key"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:334,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:334
+msgid "Meta compare"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:343,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:343
+msgid "Meta type"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:352,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:352
+msgid "Meta items"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:368,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:368
+msgid "Unit"
+msgstr "وحدة القياس"
+
+#: includes/admin/class-pwf-meta-fields.php:369,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:369
+msgid "EX: cm, kg"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:376,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:376
+msgid "Enable interaction"
+msgstr "السماح بالتفاعل"
+
+#: includes/admin/class-pwf-meta-fields.php:377,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:377
+msgid "Allow this item to interact with other filter items"
+msgstr "السماح لهذا العنصر بالتفاعل مع باقي العناصر"
+
+#: includes/admin/class-pwf-meta-fields.php:385,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:385
+msgid "Up text"
+msgstr "اضافة نص و أعلى"
+
+#: includes/admin/class-pwf-meta-fields.php:386,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:386
+msgid "Add the \"up\" text for each rate."
+msgstr "أضافه كلمة \"ﻷعلى\" لكل تقيم."
+
+#: includes/admin/class-pwf-meta-fields.php:394,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:394
+msgid "Display rules"
+msgstr "قواعد العرض"
+
+#: includes/admin/class-pwf-meta-fields.php:415,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:415
+msgid "Width unit"
+msgstr "وحدة العرض"
+
+#: includes/admin/class-pwf-meta-fields.php:433,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:433
+msgid "Display title"
+msgstr "عرض العنوان"
+
+#: includes/admin/class-pwf-meta-fields.php:441,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:441
+msgid "Display toggle content"
+msgstr "عرض علامة تبديل المحتوى"
+
+#: includes/admin/class-pwf-meta-fields.php:448,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:448
+msgid "Default toggle state"
+msgstr "الوضع الافتراضي لعرض المحتوى"
+
+#: includes/admin/class-pwf-meta-fields.php:449,
+#: includes/admin/class-pwf-meta.php:431,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:449,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:431
+msgid "Default state (show)"
+msgstr "الحالة الافتراضية (عرض المحتوى)"
+
+#: includes/admin/class-pwf-meta-fields.php:466,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:466
+msgid "Drop Down Style"
+msgstr "نسق القائمة المنسدلة"
+
+#: includes/admin/class-pwf-meta-fields.php:475,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:475
+msgid "Inline style"
+msgstr "عرض الخيارات في صف واحد (inline style)"
+
+#: includes/admin/class-pwf-meta-fields.php:483,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:483
+msgid "Display hierarchical"
+msgstr "العرض الهرمى ( الشجرى )"
+
+#: includes/admin/class-pwf-meta-fields.php:510,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:510
+msgid "Display hierarchy collapsed"
+msgstr "طي العرض الهرمى"
+
+#: includes/admin/class-pwf-meta-fields.php:518,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:518
+msgid "Style"
+msgstr "التنسيق (ٍstyle)"
+
+#: includes/admin/class-pwf-meta-fields.php:523,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:523
+msgid "Rounded"
+msgstr "دائرى"
+
+#: includes/admin/class-pwf-meta-fields.php:527,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:527
+msgid "Rectangle"
+msgstr "مستطيل"
+
+#: includes/admin/class-pwf-meta-fields.php:536,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:536
+msgid "Action for empty options"
+msgstr "اﻹجراء المستخدم إذا كانت الخيارات فارغة"
+
+#: includes/admin/class-pwf-meta-fields.php:537,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:537
+msgid "Actions with options when no available products"
+msgstr "اﻹجراء للخيارات التي لا تحتوى على منتجات"
+
+#: includes/admin/class-pwf-meta-fields.php:546,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:546
+msgid "Display product counts"
+msgstr "عرض عدد المنتج"
+
+#: includes/admin/class-pwf-meta-fields.php:547,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:547
+msgid "Show/hide product counts in options"
+msgstr "عرض/إخفاء عدد المنتجات لهذا العنصر"
+
+#: includes/admin/class-pwf-meta-fields.php:555,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:555
+msgid "See more options by"
+msgstr "عرض المزيد من الخيارات"
+
+#: includes/admin/class-pwf-meta-fields.php:564,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:564
+msgid "Height of visible content"
+msgstr "حدد الارتفاع للمحتوى المرئى"
+
+#: includes/admin/class-pwf-meta-fields.php:572,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:572
+msgid "size"
+msgstr "الحجم"
+
+#: includes/admin/class-pwf-meta-fields.php:573,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:573
+msgid "Height and width of item"
+msgstr "ارتفاع وعرض الخيار"
+
+#: includes/admin/class-pwf-meta-fields.php:582,
+#: includes/admin/class-pwf-meta-fields.php:633,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:582,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:633
+msgid "Step"
+msgstr "تحريك مؤشر السعر بمقدار (ٍٍStep)"
+
+#: includes/admin/class-pwf-meta-fields.php:591,
+#: includes/admin/class-pwf-meta-fields.php:642,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:591,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:642
+msgid "Start"
+msgstr "بداية سلايدر السعر (Start)"
+
+#: includes/admin/class-pwf-meta-fields.php:592,
+#: includes/admin/class-pwf-meta-fields.php:643,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:592,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:643
+msgid "Range slider start handle."
+msgstr "حدد قيمة افتراضية للحد اﻷدنى للسعر يكون عندها المؤشر."
+
+#: includes/admin/class-pwf-meta-fields.php:600,
+#: includes/admin/class-pwf-meta-fields.php:651,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:600,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:651
+msgid "End"
+msgstr "نهاية سلايدر السهر (End)"
+
+#: includes/admin/class-pwf-meta-fields.php:601,
+#: includes/admin/class-pwf-meta-fields.php:652,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:601,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:652
+msgid "Range slider end handle."
+msgstr "حدد قيمة افتراضية للحد اﻷقصى للسعر يكون عندها المؤشر."
+
+#: includes/admin/class-pwf-meta-fields.php:609,
+#: includes/admin/class-pwf-meta-fields.php:660,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:609,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:660
+msgid "Display max and min inputs"
+msgstr "عرض حقول الادخال للسعر"
+
+#: includes/admin/class-pwf-meta-fields.php:617,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:617
+msgid "Display price label"
+msgstr "عرض نص السعر"
+
+#: includes/admin/class-pwf-meta-fields.php:625,
+#: includes/admin/class-pwf-meta-fields.php:676,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:625,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:676
+msgid "Display Tooltip"
+msgstr "عرض Tooltip"
+
+#: includes/admin/class-pwf-meta-fields.php:668,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:668
+#, fuzzy
+#| msgid "Display price label"
+msgid "Display label"
+msgstr "عرض نص السعر"
+
+#: includes/admin/class-pwf-meta.php:129,
+#: includes/admin/class-pwf-meta.php:182,
+#: includes/admin/class-pwf-meta.php:222,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:129,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:182,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:222
+msgid "Please select option from source of options"
+msgstr "من فضلك قم بتحديد اختيار من مصدر الخيارات"
+
+#: includes/admin/class-pwf-meta.php:164,
+#: includes/admin/class-pwf-meta.php:203,
+#: includes/admin/class-pwf-meta.php:248,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:164,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:203,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:248
+msgid "There is no option list"
+msgstr "لاتوجد قائمة خيارات"
+
+#: includes/admin/class-pwf-meta.php:273,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:273
+msgid "Automatically"
+msgstr "تلقائياً"
+
+#: includes/admin/class-pwf-meta.php:277,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:277
+msgid "When on click send button"
+msgstr "عند الضغط على زر الارسال"
+
+#: includes/admin/class-pwf-meta.php:290,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:290
+msgid "Shop Filter"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:296,
+#: includes/admin/class-pwf-meta.php:479,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:296,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:479
+msgid "Filtering starts"
+msgstr "تصفية المنتجات"
+
+#: includes/admin/class-pwf-meta.php:311,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:311
+msgid "Which components to use"
+msgstr "المكونات التي يجب استخدامها"
+
+#: includes/admin/class-pwf-meta.php:312,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:312
+msgid "Content of components will be updated when filtering"
+msgstr "قم بتحديد المحتوى الذي سوف يتم تحديثه عند تصفية المنتجات"
+
+#: includes/admin/class-pwf-meta.php:317,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:317
+msgid "Pagination"
+msgstr "ترقيم الصفحات"
+
+#: includes/admin/class-pwf-meta.php:322,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:322
+msgid "Sorting"
+msgstr "الفرز - ترتيب المنتجات حسب [ اﻷحدث - السعر]"
+
+#: includes/admin/class-pwf-meta.php:327,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:327
+msgid "Results count"
+msgstr "عدد النتائج - الخاصة بالمنتجات"
+
+#: includes/admin/class-pwf-meta.php:335,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:335
+#, fuzzy
+#| msgid "Pagination"
+msgid "Pagination type"
+msgstr "ترقيم الصفحات"
+
+#: includes/admin/class-pwf-meta.php:341,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:341
+msgid "Numbers"
+msgstr "ارقام"
+
+#: includes/admin/class-pwf-meta.php:345,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:345
+#, fuzzy
+#| msgid "More button"
+msgid "Load more button"
+msgstr "زرار المزيد"
+
+#: includes/admin/class-pwf-meta.php:349,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:349
+msgid "Infinite scrolling"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:356,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:356
+msgid "Pagination ajax"
+msgstr "استخدام الاجاكس للتنقل بين الصفحات"
+
+#: includes/admin/class-pwf-meta.php:362,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:362
+msgid "Sorting ajax"
+msgstr "استخدام الاجاكس مع القائمة المنسدلة الخاصة بترتيب المنتجات"
+
+#: includes/admin/class-pwf-meta.php:371,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:371
+msgid "Products container selector"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:378,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:378
+msgid "Pagination selector"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:385,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:385
+msgid "Result count selector"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:392,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:392
+msgid "Sorting selector"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:399,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:399
+msgid "active Filters selector"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:405,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:405
+#, fuzzy
+#| msgid "Scrollbar"
+msgid "Scroller to"
+msgstr "شريط التمرير"
+
+#: includes/admin/class-pwf-meta.php:406,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:406
+msgid ""
+"Use to scroll top when Ajax finished, default is Products container selector."
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:414,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:414
+msgid "Display Filter"
+msgstr "طريقة عرض الفلتر"
+
+#: includes/admin/class-pwf-meta.php:423,
+#: includes/admin/class-pwf-meta.php:1068,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:423,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1068
+msgid "Button"
+msgstr "زرار (button)"
+
+#: includes/admin/class-pwf-meta.php:430,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:430
+msgid "Button toggle state"
+msgstr "حالة تبديل الزر"
+
+#: includes/admin/class-pwf-meta.php:438,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:438
+msgid "Number of products"
+msgstr "عدد المنتجات المطلوب عرضها"
+
+#: includes/admin/class-pwf-meta.php:443,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:443
+msgid "Enable browser hash"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:449,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:449
+msgid "API remove columns layout"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:450,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:450
+msgid "Remove columns layout in API"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:456,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:456
+msgid "Is shortcode"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:462,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:462
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:463,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:463
+msgid "Copy your shortcode you add in the post and paste it here"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:471,
+#: includes/admin/class-pwf-meta.php:759,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:471,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:759
+msgid "Responsive"
+msgstr "ريسبونسيف"
+
+#: includes/admin/class-pwf-meta.php:472,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:472
+msgid "Convert the filter to responsive"
+msgstr "تغيير طريقة عرض الفلتر على الشاشات الصغيرة، إلى قائمة جانبية"
+
+#: includes/admin/class-pwf-meta.php:486,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:486
+msgid "Append the filter to"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:487,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:487
+msgid "Append the filter sticky navigation, default to the HTML body tag"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:493,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:493
+msgid "Screen width"
+msgstr "عرض الشاشة"
+
+#: includes/admin/class-pwf-meta.php:494,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:494
+msgid "Assign width in pixel to convert the filter to sticky navigation"
+msgstr ""
+"قم بتحديد عرض الشاشة بالبكسل  (px) لتحويل الفلتر إلى قائمة ثابتة اسفل الشاشة "
+"(sticky navigation)"
+
+#: includes/admin/class-pwf-meta.php:711,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:711
+msgid "Items"
+msgstr "العناصر"
+
+#: includes/admin/class-pwf-meta.php:717,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:717
+msgid "Save"
+msgstr "حفظ"
+
+#: includes/admin/class-pwf-meta.php:718,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:718
+msgid "Add item"
+msgstr "اضافة عنصر"
+
+#: includes/admin/class-pwf-meta.php:754,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:754
+msgid "Filter setting"
+msgstr "اعدادات الفلتر"
+
+#: includes/admin/class-pwf-meta.php:756,
+#: includes/admin/class-pwf-meta.php:1088,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:756,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1088
+msgid "General"
+msgstr "عام"
+
+#: includes/admin/class-pwf-meta.php:757,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:757
+msgid "Selectors"
+msgstr "تحديد CSS Class"
+
+#: includes/admin/class-pwf-meta.php:758,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:758
+msgid "Extra"
+msgstr "المزيد"
+
+#: includes/admin/class-pwf-meta.php:819,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:819
+msgid "There is no data to save"
+msgstr "لا يوجد بيانات لحفظها"
+
+#: includes/admin/class-pwf-meta.php:851,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:851
+msgid "Filter post not saved"
+msgstr "لم يتم حفظ هذا الفتلتر"
+
+#: includes/admin/class-pwf-meta.php:1060,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1060
+msgid "Checkbox list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1061,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1061
+msgid "Radio list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1062,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1062
+msgid "Dropdown list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1063,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1063
+msgid "Color list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1064,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1064
+msgid "Box list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1065,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1065
+msgid "Text list"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1066,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1066
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1067,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1067
+msgid "Price slider"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:1069,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1069
+msgid "Preset"
+msgstr "نماذج جاهزه للاستخدام"
+
+#: includes/admin/class-pwf-meta.php:1070,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1070
+msgid "Categories"
+msgstr "التصنيفات"
+
+#: includes/admin/class-pwf-meta.php:1072,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1072
+msgid "Layout"
+msgstr "التصميم (layout)"
+
+#: includes/admin/class-pwf-meta.php:1073,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1073
+msgid "Column"
+msgstr "عمود (column)"
+
+#: includes/admin/class-pwf-meta.php:1074,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1074
+msgid "Field"
+msgstr "حقل"
+
+#: includes/admin/class-pwf-meta.php:1075,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1075
+msgid "This field is required"
+msgstr "هذا الحقل مطلوب"
+
+#: includes/admin/class-pwf-meta.php:1076,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1076
+msgid "This field must be unique"
+msgstr "يجب أن يكون اسم هذا الحقل فريداً وغير مكرر"
+
+#: includes/admin/class-pwf-meta.php:1077,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1077
+msgid "Ajax can not get data from your site"
+msgstr "لم نستطيع الحصول على بيانات من موقعك باستخدام الاجكس"
+
+#: includes/admin/class-pwf-meta.php:1078,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1078
+msgctxt "OR text for display rules"
+msgid "OR"
+msgstr "أو"
+
+#: includes/admin/class-pwf-meta.php:1079,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1079
+msgid "Hide this filter if"
+msgstr "قم بإخفاء هذا العنصر فى حالة"
+
+#: includes/admin/class-pwf-meta.php:1081,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1081
+msgid "Image"
+msgstr "صورة"
+
+#: includes/admin/class-pwf-meta.php:1082,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1082
+msgid "Upload image"
+msgstr "تحميل صورة"
+
+#: includes/admin/class-pwf-meta.php:1083,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1083
+msgid "Type"
+msgstr "النوع"
+
+#: includes/admin/class-pwf-meta.php:1084,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1084
+msgid "Border"
+msgstr "الحد الخارجى"
+
+#: includes/admin/class-pwf-meta.php:1085,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1085
+msgid "Marker"
+msgstr "علامة"
+
+#: includes/admin/class-pwf-meta.php:1086,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1086
+msgid "Light"
+msgstr "فاتح"
+
+#: includes/admin/class-pwf-meta.php:1087,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1087
+msgid "Dark"
+msgstr "داكن"
+
+#: includes/admin/class-pwf-meta.php:1089,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1089
+msgid "Visual"
+msgstr "مرئي"
+
+#: includes/admin/class-pwf-meta.php:1090,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1090
+msgid "Edit"
+msgstr "تحرير"
+
+#: includes/admin/class-pwf-meta.php:1091,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1091
+msgid "Close"
+msgstr "اغلاق"
+
+#: includes/admin/class-pwf-meta.php:1092,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1092
+msgid "Remove"
+msgstr "حذف"
+
+#: includes/admin/class-pwf-meta.php:1093,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1093
+msgid "Label"
+msgstr "الاسم"
+
+#: includes/admin/class-pwf-meta.php:1094,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1094
+msgid "Value"
+msgstr "القيمة"
+
+#: includes/admin/class-pwf-meta.php:1095,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1095
+msgid "Error"
+msgstr "خطأ"
+
+#: includes/admin/class-pwf-meta.php:1099,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1099
+msgid "Back"
+msgstr "رجوع"
+
+#: includes/admin/class-pwf-meta.php:1100,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1100
+msgctxt "Add new meta"
+msgid "Add new"
+msgstr "إضافة جديد"
+
+#: includes/admin/class-pwf-meta.php:1101,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1101
+#, fuzzy
+#| msgid "Please fill requited field"
+msgid "Please fill the required field"
+msgstr "من فضلك قم بملء الحقل المطلوب"
+
+#: includes/admin/class-pwf-meta.php:1102,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1102
+msgid "Select item"
+msgstr "اختار عنصر"
+
+#: includes/admin/class-pwf-meta.php:1103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1103
+msgid "Filter updated"
+msgstr "تم تحديث الفلتر"
+
+#: includes/admin/class-pwf-meta.php:1104,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1104
+#, fuzzy
+#| msgid "There is no option list"
+msgid "There are no options list to display"
+msgstr "لاتوجد قائمة خيارات"
+
+#: includes/admin/class-pwf-meta.php:1106,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1106
+#, fuzzy
+#| msgid "Range slider end handle."
+msgid "Range slider"
+msgstr "حدد قيمة افتراضية للحد اﻷقصى للسعر يكون عندها المؤشر."
+
+#: includes/admin/class-pwf-meta.php:1107,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1107
+#, fuzzy
+#| msgid "Sorting"
+msgid "Rating"
+msgstr "الفرز - ترتيب المنتجات حسب [ اﻷحدث - السعر]"
+
+#: includes/widgets/class-pwf-filter-widget.php:19,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:19
+msgid ""
+"This widget displays a form with items that you created in the filter post. "
+"When interacting with options, products are filtering."
+msgstr "يتم عرض العناصر التي قمن بإنشائها في تدوينة الفلتر."
+
+#: includes/widgets/class-pwf-filter-widget.php:22,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:22
+msgid "Product Filters"
+msgstr "فلتر المنتجات"
+
+#: includes/widgets/class-pwf-filter-widget.php:100,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:100
+msgid "title:"
+msgstr "العنوان:"
+
+#: includes/widgets/class-pwf-filter-widget.php:101,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:101
+msgid "Filter products"
+msgstr "فلتر المنتجات"
+
+#: includes/widgets/class-pwf-filter-widget.php:117,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:117
+msgid "Display widget title:"
+msgstr "عرض عنوان:"
+
+#: includes/widgets/class-pwf-filter-widget.php:145,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:145
+msgid "Please add new filter"
+msgstr "من فضلك قم بإضافة فلتر جديد"
+
+#, fuzzy
+#~| msgid "Button"
+#~ msgid "Button Loader"
+#~ msgstr "زرار (button)"
+
+#, fuzzy
+#~| msgid "Price"
+#~ msgid "Price:"
+#~ msgstr "السعر"
+
+#, fuzzy
+#~| msgid "\"Show all\" text"
+#~ msgid "Showing all %d result"
+#~ msgid_plural "Showing all %d results"
+#~ msgstr[0] "\"عرض الكل\" استبدال هذا النص ب"
+#~ msgstr[1] "\"عرض الكل\" استبدال هذا النص ب"
+#~ msgstr[2] "\"عرض الكل\" استبدال هذا النص ب"
+#~ msgstr[3] "\"عرض الكل\" استبدال هذا النص ب"
+#~ msgstr[4] "\"عرض الكل\" استبدال هذا النص ب"
+#~ msgstr[5] "\"عرض الكل\" استبدال هذا النص ب"
+
+#, fuzzy
+#~| msgid "Filter products"
+#~ msgid "Older posts"
+#~ msgstr "فلتر المنتجات"
+
+#~ msgctxt "Review"
+#~ msgid "Add new"
+#~ msgstr "إضافة جديد"
+
+#, fuzzy
+#~| msgid "Filter"
+#~ msgctxt "OR text for display rules"
+#~ msgid "Filter"
+#~ msgstr "فلتر"
+
+#, fuzzy
+#~| msgctxt "Review"
+#~| msgid "Add new"
+#~ msgid "Add New"
+#~ msgstr "إضافة جديد"
+
+#~ msgid "Please fill requited field"
+#~ msgstr "من فضلك قم بملء الحقل المطلوب"
