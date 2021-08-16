@@ -20,13 +20,23 @@ if(function_exists('add_theme_support')){
 //widget positions
 if ( function_exists ('register_sidebar')) {
     register_sidebar (array(
-        'name'=>'Main Menu',
-        'id' => 'main-menu',
-        'class' =>'nav navbar-nav',
+        'name'=>'Footer Widget 1',
+        'id' => 'footer-widget-1',
+        'class' =>'footer-widget',
         'before_widget' => '',
         'after_widget' => '',
-        'before_title' => "",
-        'after_title' => "",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => "</h3>",
+    ));
+
+    register_sidebar (array(
+        'name'=>'Footer Widget 2',
+        'id' => 'footer-widget-2',
+        'class' =>'footer-widget',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => "</h3>",
     ));
 }
 /*********************************************************************************************************************/
@@ -110,6 +120,10 @@ function theme_filter_wp_mail_from($email){
 require_once ('inc/admin/tgm-plugin-activation/class-tgm-plugin-activation.php');
 require_once ('inc/lib/Mobile_Detect.php');
 require_once ('assets/vendor/autoload.php');
+
+require_once ('inc/admin/post_types.php');
+
+require_once ('inc/front/theme_misc.php');
 
 add_action( 'tgmpa_register', 'theme_required_plugins_register' );
 function theme_required_plugins_register() {
