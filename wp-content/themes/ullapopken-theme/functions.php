@@ -197,13 +197,26 @@ add_filter( 'script_loader_src', 'theme_remove_cssjs_ver', 10, 2 );
 
 //Options Page
 if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+		'page_title' 	=> 'Global Data',
+		'menu_title'	=> 'Global Data',
+		'menu_slug' 	=> 'theme-global-data'
+	));
     
     acf_add_options_page(array(
         'page_title'    => 'Theme General Settings',
         'menu_title'    => 'Theme Settings',
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
-        'redirect'      => false
+        'redirect'      => false,
+        'parent_slug'	=> 'theme-global-data',
+    ));
+
+    acf_add_options_page(array(
+        'page_title'    => 'Shop Settings',
+        'menu_title'    => 'Shop Settings',
+        'parent_slug'	=> 'theme-global-data',
     ));
     
 }
