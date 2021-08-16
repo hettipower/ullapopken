@@ -1,0 +1,42 @@
+/*e6e6e6*/
+@font-face {
+    font-family: 'pwficons';
+    src:  url('fonts/pwficons.eot?bl4sy9');
+    src:  url('fonts/pwficons.eot?bl4sy9#iefix') format('embedded-opentype'),
+      url('fonts/pwficons.ttf?bl4sy9') format('truetype'),
+      url('fonts/pwficons.woff?bl4sy9') format('woff'),
+      url('fonts/pwficons.svg?bl4sy9#pwficons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+[class^="icon-pwf-"], [class*=" icon-pwf-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pwficons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-pwf-angle-down:before {
+    content: "\e909";
+}
+.icon-pwf-minus:before {
+    content: "\e902";
+}
+.icon-pwf-plus:before {
+    content: "\e903";
+}
+.icon-pwf-clear:before {
+    content: "\e904";
+}
+.icon-pwf-check:before {
+    content: "\e905";
+}

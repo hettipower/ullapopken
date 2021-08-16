@@ -1,0 +1,1734 @@
+# Copyright (C) 2020 pwf-woo-filter
+# This file is distributed under the same license as the pwf-woo-filter package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pwf-woo-filter\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-pwf-api.php:58,
+#: dist/pwfwoofilter/includes/class-pwf-api.php:58
+msgid "Missing filter ID"
+msgstr "شناسه فیلتر وجود ندارد"
+
+#: includes/class-pwf-api.php:62,
+#: dist/pwfwoofilter/includes/class-pwf-api.php:62
+msgid "Filter post ID not exists"
+msgstr "شناسه پست برای فیلتر وجود ندارد"
+
+#: includes/class-pwf-filter-post-type.php:56,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:56
+msgctxt "post type general name"
+msgid "Filter"
+msgstr "فیلتر"
+
+#: includes/class-pwf-filter-post-type.php:57,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:57
+msgctxt "post type singular name"
+msgid "Filter"
+msgstr "فیلتر"
+
+#: includes/class-pwf-filter-post-type.php:58,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:58
+msgctxt "admin menu"
+msgid "Filters"
+msgstr "فیلترها"
+
+#: includes/class-pwf-filter-post-type.php:59,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:59
+msgctxt "add new on admin bar"
+msgid "Filter"
+msgstr "فیلتر"
+
+#: includes/class-pwf-filter-post-type.php:60,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:60
+msgctxt "Filter"
+msgid "Add new"
+msgstr "افزودن جدید"
+
+#: includes/class-pwf-filter-post-type.php:61,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:61
+msgid "Add new Filter"
+msgstr "افزودن فیلتر جدید"
+
+#: includes/class-pwf-filter-post-type.php:62,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:62
+msgid "New Filter"
+msgstr "فیلتر جدید"
+
+#: includes/class-pwf-filter-post-type.php:63,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:63
+msgid "Edit Filter"
+msgstr "ویرایش فیلتر"
+
+#: includes/class-pwf-filter-post-type.php:64,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:64
+msgid "View Filter"
+msgstr "مشاهده فیلتر"
+
+#: includes/class-pwf-filter-post-type.php:65,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:65
+msgid "Filters"
+msgstr "فیلترها"
+
+#: includes/class-pwf-filter-post-type.php:66,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:66
+msgid "Search Filters"
+msgstr "جستوجوی فیلتر‌ها"
+
+#: includes/class-pwf-filter-post-type.php:67,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:67
+msgid "Parent Filters:"
+msgstr "فیلتر‌های والد:"
+
+#: includes/class-pwf-filter-post-type.php:68,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:68
+msgid "No Filters found."
+msgstr "هیچ فیلتری یافت نشد."
+
+#: includes/class-pwf-filter-post-type.php:69,
+#: dist/pwfwoofilter/includes/class-pwf-filter-post-type.php:69
+msgid "No Filters found in trash."
+msgstr "هیچ فیلتری در سطل زباله یافت نشد."
+
+#: includes/class-pwf-front-end-ajax.php:70,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:70
+msgid "Filer ID must be integer."
+msgstr "شناسه فیلتر باید صحیح باشد."
+
+#: includes/class-pwf-front-end-ajax.php:144,
+#: includes/admin/class-pwf-meta.php:792,
+#: includes/admin/class-pwf-meta.php:1097,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:144,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:792,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1097
+msgid "Apply"
+msgstr "اعمال کردن"
+
+#: includes/class-pwf-front-end-ajax.php:145,
+#: includes/admin/class-pwf-meta-data.php:31,
+#: includes/admin/class-pwf-meta.php:791,
+#: includes/admin/class-pwf-meta.php:1096,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:145,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:31,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:791,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1096
+msgid "Reset"
+msgstr "تنظیم مجدد"
+
+#: includes/class-pwf-front-end-ajax.php:146,
+#: includes/class-pwf-render-filter.php:103,
+#: includes/admin/class-pwf-admin-setting.php:20,
+#: includes/admin/class-pwf-meta-data.php:35,
+#: includes/widgets/class-pwf-filter-widget.php:108,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:146,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:20,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:35,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:108
+msgid "Filter"
+msgstr "فیلتر"
+
+#: includes/class-pwf-front-end-ajax.php:147,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:147
+msgid "Price"
+msgstr "قیمت"
+
+#: includes/class-pwf-front-end-ajax.php:148,
+#: includes/admin/class-pwf-meta.php:1105,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:148,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1105
+#, fuzzy
+#| msgid "Search Filters"
+msgid "Search"
+msgstr "جستوجوی فیلتر‌ها"
+
+#: includes/class-pwf-front-end-ajax.php:149,
+#: includes/class-pwf-render-filter-fields.php:1067,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:149,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1067
+msgid "Rated"
+msgstr ""
+
+#: includes/class-pwf-front-end-ajax.php:150,
+#: dist/pwfwoofilter/includes/class-pwf-front-end-ajax.php:150
+#, fuzzy
+#| msgid "Show more"
+msgid "Load more"
+msgstr "نمایش بیشتر"
+
+#: includes/class-pwf-front-end-ajax.php:151
+msgid "Clear all"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:181,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:181
+msgid "Show more"
+msgstr "نمایش بیشتر"
+
+#: includes/class-pwf-render-filter-fields.php:182,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:182
+msgid "Show less"
+msgstr "نمایش کمتر"
+
+#: includes/class-pwf-render-filter-fields.php:786,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:786
+msgid "Min price"
+msgstr "کمترین قیمت"
+
+#: includes/class-pwf-render-filter-fields.php:787,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:787
+msgid "Max price"
+msgstr "بیسترین قیمت"
+
+#: includes/class-pwf-render-filter-fields.php:891,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:891
+msgid "Min value"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:892,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:892
+msgid "Max value"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:966,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:966
+msgid "From"
+msgstr "از"
+
+#: includes/class-pwf-render-filter-fields.php:967,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:967
+msgid "To"
+msgstr "به"
+
+#: includes/class-pwf-render-filter-fields.php:1019,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1019
+msgid "up"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:1022,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1022
+#, fuzzy
+#| msgid "End"
+msgid "and"
+msgstr "پایان"
+
+#: includes/class-pwf-render-filter-fields.php:1068,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1068
+msgid "and up"
+msgstr ""
+
+#: includes/class-pwf-render-filter-fields.php:1065,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter-fields.php:1065
+msgid "Rated out of"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1653,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1653
+msgid "Rate 5"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1656,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1656
+msgid "Rate 4"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1659,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1659
+msgid "Rate 3"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1662,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1662
+msgid "Rate 2"
+msgstr ""
+
+#: includes/class-pwf-render-filter.php:1665,
+#: dist/pwfwoofilter/includes/class-pwf-render-filter.php:1665
+msgid "Rate 1"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:28,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:28
+msgid "Select a filter to integrate with shop archive page"
+msgstr "برای ادغام در صفحه بایگانی فروشگاه ، یک فیلتر را انتخاب کنید"
+
+#: includes/admin/class-pwf-admin-setting.php:33,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:33
+msgid "Filter ID"
+msgstr "شناسه فیلتر"
+
+#: includes/admin/class-pwf-admin-setting.php:39,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:39
+msgid "Transient time"
+msgstr "زمان گذرا"
+
+#: includes/admin/class-pwf-admin-setting.php:40,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:40
+msgid "Set transient time in seconds."
+msgstr "زمان گذرا را در چند ثانیه تنظیم کنید."
+
+#: includes/admin/class-pwf-admin-setting.php:51,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:51
+msgid "Theme Comitable"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:55,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:55
+msgid "Enable"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:56,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:56
+#, fuzzy
+#| msgid "Disabled"
+msgid "Disable"
+msgstr "غیر‌فعال"
+
+#: includes/admin/class-pwf-admin-setting.php:60,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:60
+#, fuzzy
+#| msgid "Default sorting"
+msgid "Default loader"
+msgstr "مرتب سازی پیش‌فرض"
+
+#: includes/admin/class-pwf-admin-setting.php:61,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:61
+msgid "Default HTML loader template uses by Ajax."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:66,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:66
+#, fuzzy
+#| msgid "Button"
+msgid "Button loader"
+msgstr "دکمه"
+
+#: includes/admin/class-pwf-admin-setting.php:67,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:67
+msgid "HTML loader template uses by load more button."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:72,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:72
+msgid "Infinite Loader"
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:73,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:73
+msgid "HTML loader template uses by infinite scroll."
+msgstr ""
+
+#: includes/admin/class-pwf-admin-setting.php:94,
+#: dist/pwfwoofilter/includes/admin/class-pwf-admin-setting.php:94
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: includes/admin/class-pwf-clear-transients.php:23,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:23
+msgid "WooCommerce filter transients"
+msgstr "فیلتر گذرای ووکامرس"
+
+#: includes/admin/class-pwf-clear-transients.php:24,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:24
+msgid "Clear transients"
+msgstr "پاک کردن گذرا"
+
+#: includes/admin/class-pwf-clear-transients.php:25,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:25
+msgid ""
+"This tool will clear the plugin professional Woocommerce filter term counts "
+"transients cache."
+msgstr "این ابزار افزونه حرفه‌ای فیلتر ووکامرس را از کش گذرا خالی خواهد کرد."
+
+#: includes/admin/class-pwf-clear-transients.php:68,
+#: dist/pwfwoofilter/includes/admin/class-pwf-clear-transients.php:68
+msgid "Cached terms count cleared"
+msgstr "کش ذخیره شده حذف شد"
+
+#: includes/admin/class-pwf-database-query.php:218,
+#: includes/admin/class-pwf-database-query.php:283,
+#: includes/admin/class-pwf-meta-data.php:139,
+#: includes/admin/class-pwf-meta-data.php:191,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:218,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:283,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:139,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:191
+msgid "All"
+msgstr "همه"
+
+#: includes/admin/class-pwf-database-query.php:293,
+#: dist/pwfwoofilter/includes/admin/class-pwf-database-query.php:293
+msgid "No selected"
+msgstr "انتخاب نشده"
+
+#: includes/admin/class-pwf-meta-data.php:16,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:16
+msgid "AND"
+msgstr "و"
+
+#: includes/admin/class-pwf-meta-data.php:20,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:20
+msgid "OR"
+msgstr "یا"
+
+#: includes/admin/class-pwf-meta-data.php:47,
+#: includes/admin/class-pwf-meta-data.php:87,
+#: includes/admin/class-pwf-meta-fields.php:179,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:47,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:87,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:179
+msgid "Attribute"
+msgstr "ویژگی"
+
+#: includes/admin/class-pwf-meta-data.php:51,
+#: includes/admin/class-pwf-meta-data.php:91,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:51,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:91
+msgid "Category"
+msgstr "دسته‌بندی"
+
+#: includes/admin/class-pwf-meta-data.php:55,
+#: includes/admin/class-pwf-meta-data.php:95,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:55,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:95
+msgid "Tag"
+msgstr "برچسب"
+
+#: includes/admin/class-pwf-meta-data.php:59,
+#: includes/admin/class-pwf-meta-data.php:99,
+#: includes/admin/class-pwf-meta-fields.php:189,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:59,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:99,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:189
+msgid "Taxonomy"
+msgstr "تکسونومی"
+
+#: includes/admin/class-pwf-meta-data.php:63,
+#: includes/admin/class-pwf-meta.php:1071,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:63,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1071
+msgid "Stock status"
+msgstr "وضعیت انبار"
+
+#: includes/admin/class-pwf-meta-data.php:67,
+#: includes/admin/class-pwf-meta-fields.php:359,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:67,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:359
+msgid "Order by"
+msgstr "مرتب سازی بر اساس"
+
+#: includes/admin/class-pwf-meta-data.php:71,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:71
+msgid "Author"
+msgstr "نویسنده"
+
+#: includes/admin/class-pwf-meta-data.php:75,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:75
+msgid "Meta"
+msgstr "متا"
+
+#: includes/admin/class-pwf-meta-data.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:103
+msgid "Page"
+msgstr "صفحه"
+
+#: includes/admin/class-pwf-meta-data.php:115,
+#: includes/admin/class-pwf-meta.php:1098,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:115,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1098
+msgid "Equal to"
+msgstr "برابر است با"
+
+#: includes/admin/class-pwf-meta-data.php:119,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:119
+msgid "Not Equal to"
+msgstr "برابر نیست با"
+
+#: includes/admin/class-pwf-meta-data.php:195,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:195
+msgid "Only Parent"
+msgstr "فقط والد"
+
+#: includes/admin/class-pwf-meta-data.php:199,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:199
+msgid "Only Selected"
+msgstr "فقط انتخاب شده‌"
+
+#: includes/admin/class-pwf-meta-data.php:203,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:203
+msgid "Except Selected"
+msgstr "به‌ جز انتخاب شده‌"
+
+#: includes/admin/class-pwf-meta-data.php:214,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:214
+msgid "In stock"
+msgstr "در انبار"
+
+#: includes/admin/class-pwf-meta-data.php:218,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:218
+msgid "Out of stock"
+msgstr "اتمام موجودی"
+
+#: includes/admin/class-pwf-meta-data.php:222,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:222
+msgid "On backorder"
+msgstr "در پیش سفارش"
+
+#: includes/admin/class-pwf-meta-data.php:234,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:234
+msgid "Default sorting"
+msgstr "مرتب سازی پیش‌فرض"
+
+#: includes/admin/class-pwf-meta-data.php:238,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:238
+msgid "Sort by popularity"
+msgstr "مرتب سازی بر اساس محبوبیت"
+
+#: includes/admin/class-pwf-meta-data.php:242,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:242
+msgid "Sort by average rating"
+msgstr "مرتب سازی بر اساس میانگین رتبه"
+
+#: includes/admin/class-pwf-meta-data.php:246,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:246
+msgid "Sort by latest"
+msgstr "مرتب سازی بر اساس جدیدترین"
+
+#: includes/admin/class-pwf-meta-data.php:250,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:250
+msgid "Sort by price: low to high"
+msgstr "مرتب سازی بر اساس قیمت: کم به زیاد"
+
+#: includes/admin/class-pwf-meta-data.php:254,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:254
+msgid "Sort by price: high to low"
+msgstr "مرتب سازی بر اساس قیمت: زیاد به کم"
+
+#: includes/admin/class-pwf-meta-data.php:265,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:265
+msgid "Name"
+msgstr "نام"
+
+#: includes/admin/class-pwf-meta-data.php:269,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:269
+msgid "Order"
+msgstr "ترتیب"
+
+#: includes/admin/class-pwf-meta-data.php:273,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:273
+msgid "Count"
+msgstr "تعداد"
+
+#: includes/admin/class-pwf-meta-data.php:284,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:284
+msgid "Show content"
+msgstr "نمایش محتوا"
+
+#: includes/admin/class-pwf-meta-data.php:288,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:288
+msgid "Hide content"
+msgstr "پنهان کردن محتوا"
+
+#: includes/admin/class-pwf-meta-data.php:299,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:299
+msgid "Show all"
+msgstr "نمایش همه"
+
+#: includes/admin/class-pwf-meta-data.php:303,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:303
+msgid "Hide"
+msgstr "پنهان کردن"
+
+#: includes/admin/class-pwf-meta-data.php:307,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:307
+msgid "Mark as disabled"
+msgstr "علامت گذاری به عنوان غیر‌فعال"
+
+#: includes/admin/class-pwf-meta-data.php:319,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:319
+msgid "Disabled"
+msgstr "غیر‌فعال"
+
+#: includes/admin/class-pwf-meta-data.php:323,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:323
+msgid "Scrollbar"
+msgstr "نوار اسکرول"
+
+#: includes/admin/class-pwf-meta-data.php:327,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:327
+msgid "More button"
+msgstr "دکمه بیشتر"
+
+#: includes/admin/class-pwf-meta-data.php:338,
+#: includes/admin/class-pwf-meta.php:419,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:338,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:419
+msgid "Default"
+msgstr "پیش‌فرض"
+
+#: includes/admin/class-pwf-meta-data.php:342,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:342
+msgid "Plugin style"
+msgstr "استایل افزونه"
+
+#: includes/admin/class-pwf-meta-data.php:353,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:353
+msgid "Parameters through a dash"
+msgstr "پارامترها از طریق خط تیره"
+
+#: includes/admin/class-pwf-meta-data.php:357,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:357
+msgid "Two parameters"
+msgstr "دو پارامتر"
+
+#: includes/admin/class-pwf-meta-data.php:368,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:368
+msgid "="
+msgstr "="
+
+#: includes/admin/class-pwf-meta-data.php:372,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:372
+msgid "!="
+msgstr "!="
+
+#: includes/admin/class-pwf-meta-data.php:376,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:376
+msgid "&gt;"
+msgstr "&gt;"
+
+#: includes/admin/class-pwf-meta-data.php:380,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:380
+msgid "&lt;"
+msgstr "&lt;"
+
+#: includes/admin/class-pwf-meta-data.php:384,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:384
+msgid "&gt;="
+msgstr "&gt;="
+
+#: includes/admin/class-pwf-meta-data.php:388,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:388
+msgid "&lt;="
+msgstr "&lt;="
+
+#: includes/admin/class-pwf-meta-data.php:392,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:392
+msgid "LIKE"
+msgstr "LIKE"
+
+#: includes/admin/class-pwf-meta-data.php:396,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:396
+msgid "NOT LIKE’"
+msgstr "NOT LIKE’"
+
+#: includes/admin/class-pwf-meta-data.php:400,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:400
+msgid "IN"
+msgstr "IN"
+
+#: includes/admin/class-pwf-meta-data.php:404,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:404
+msgid "NOT IN"
+msgstr "NOT IN"
+
+#: includes/admin/class-pwf-meta-data.php:408,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:408
+msgid "BETWEEN"
+msgstr "BETWEEN"
+
+#: includes/admin/class-pwf-meta-data.php:412,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:412
+msgid "NOT BETWEEN"
+msgstr "NOT BETWEEN"
+
+#: includes/admin/class-pwf-meta-data.php:416,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:416
+msgid "NOT EXISTS"
+msgstr "NOT EXISTS"
+
+#: includes/admin/class-pwf-meta-data.php:420,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:420
+msgid "REGEXP"
+msgstr "REGEXP"
+
+#: includes/admin/class-pwf-meta-data.php:424,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:424
+msgid "NOT REGEXP"
+msgstr "REGEXP"
+
+#: includes/admin/class-pwf-meta-data.php:428,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:428
+msgid "RLIKE"
+msgstr "RLIKE"
+
+#: includes/admin/class-pwf-meta-data.php:440,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:440
+msgid "CHAR"
+msgstr "CHAR"
+
+#: includes/admin/class-pwf-meta-data.php:444,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:444
+msgid "NUMERIC"
+msgstr "NUMERIC"
+
+#: includes/admin/class-pwf-meta-data.php:448,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:448
+msgid "TIME"
+msgstr "TIME"
+
+#: includes/admin/class-pwf-meta-data.php:452,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:452
+msgid "DATE"
+msgstr "DATE"
+
+#: includes/admin/class-pwf-meta-data.php:456,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:456
+msgid "DATETIME"
+msgstr "DATETIME"
+
+#: includes/admin/class-pwf-meta-data.php:460,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:460
+msgid "DECIMAL"
+msgstr "DECIMAL"
+
+#: includes/admin/class-pwf-meta-data.php:464,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:464
+msgid "SIGNED"
+msgstr "SIGNED"
+
+#: includes/admin/class-pwf-meta-data.php:468,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:468
+msgid "UNSIGNED"
+msgstr "UNSIGNED"
+
+#: includes/admin/class-pwf-meta-data.php:479,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:479
+msgid "Custom"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:483,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:483
+#, fuzzy
+#| msgid "Light"
+msgid "Weight"
+msgstr "روشن"
+
+#: includes/admin/class-pwf-meta-data.php:487,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:487
+#, fuzzy
+#| msgid "Light"
+msgid "Height"
+msgstr "روشن"
+
+#: includes/admin/class-pwf-meta-data.php:491,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:491
+msgid "Length"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-data.php:495,
+#: includes/admin/class-pwf-meta-fields.php:405,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-data.php:495,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:405
+msgid "Width"
+msgstr "عرض"
+
+#: includes/admin/class-pwf-meta-fields.php:25,
+#: includes/admin/class-pwf-meta.php:289,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:25,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:289
+msgid "Title"
+msgstr "عنوان"
+
+#: includes/admin/class-pwf-meta-fields.php:34,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:34
+msgid "Action"
+msgstr "اقدام"
+
+#: includes/admin/class-pwf-meta-fields.php:43,
+#: includes/admin/class-pwf-meta-fields.php:458,
+#: includes/admin/class-pwf-meta.php:304,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:43,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:458,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:304
+msgid "CSS class"
+msgstr "کلاس CSS"
+
+#: includes/admin/class-pwf-meta-fields.php:52,
+#: includes/admin/class-pwf-meta-fields.php:63,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:52,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:63
+msgid "URL format"
+msgstr "نوع لینک"
+
+#: includes/admin/class-pwf-meta-fields.php:73,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:73
+msgid "URL key"
+msgstr "کلید لینک"
+
+#: includes/admin/class-pwf-meta-fields.php:74,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:74
+msgid ""
+"The \"URL key\" is the URL-friendly version of the title. It is usually all "
+"lowercase and contains only letters, numbers, and hyphens"
+msgstr ""
+"\"کلید لینک\" نسخه متناسب با عنوان است. معمولا همه حروف کوچک هستند و فقط "
+"حروف ، اعداد و خط فاصله ها را شامل می شود"
+
+#: includes/admin/class-pwf-meta-fields.php:83,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:83
+msgid "URL key for minimum price"
+msgstr "کلید لینک برای حداقل قیمت"
+
+#: includes/admin/class-pwf-meta-fields.php:84,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:84
+msgid ""
+"The “URL key for minimum price” is the URL-friendly version of “minimum "
+"price”. It is usually all lowercase and contains only letters, numbers, and "
+"hyphens"
+msgstr ""
+"\"کلید لینک برای حداقل قیمت\" نسخه متناسب با \"حداقل قیمت\" است.معمولا همه "
+"حروف کوچک هستند و فقط حروف ، اعداد و خط فاصله ها را شامل می شود"
+
+#: includes/admin/class-pwf-meta-fields.php:93,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:93
+msgid "URL key for max price"
+msgstr "کلید لینک برای حد‌اکثر قیمت"
+
+#: includes/admin/class-pwf-meta-fields.php:94,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:94
+msgid ""
+"The “URL key for maximum price” is the URL-friendly version of “maximum "
+"price”. It is usually all lowercase and contains only letters, numbers, and "
+"hyphens."
+msgstr ""
+"\"کلید لینک برای حداکثر قیمت\" نسخه متناسب با \"حداکثر قیمت\" است.معمولا همه "
+"حروف کوچک هستند و فقط حروف ، اعداد و خط فاصله ها را شامل می شود."
+
+#: includes/admin/class-pwf-meta-fields.php:103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:103
+msgid "URL key for date after"
+msgstr "کلید لینک برای تاریخ بعد"
+
+#: includes/admin/class-pwf-meta-fields.php:112,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:112
+msgid "URL key for date before"
+msgstr "کلید لینک برای تاریخ قبل"
+
+#: includes/admin/class-pwf-meta-fields.php:121,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:121
+#, fuzzy
+#| msgid "URL key for minimum price"
+msgid "URL key for minimum value"
+msgstr "کلید لینک برای حداقل قیمت"
+
+#: includes/admin/class-pwf-meta-fields.php:130,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:130
+#, fuzzy
+#| msgid "URL key for minimum price"
+msgid "URL key for maximum value"
+msgstr "کلید لینک برای حداقل قیمت"
+
+#: includes/admin/class-pwf-meta-fields.php:139,
+#: includes/admin/class-pwf-meta-fields.php:491,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:139,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:491
+msgid "Multi Select"
+msgstr "چند ‌انتخابی"
+
+#: includes/admin/class-pwf-meta-fields.php:147,
+#: includes/admin/class-pwf-meta-fields.php:499,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:147,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:499
+msgid "Query type"
+msgstr "نوع پرس‌و‌جو"
+
+#: includes/admin/class-pwf-meta-fields.php:148,
+#: includes/admin/class-pwf-meta-fields.php:500,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:148,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:500
+msgid ""
+"Type of query that allows you to apply multiple filters. “And” satisfy both "
+"conditions. “Or” satisfy at least one of the conditions"
+msgstr ""
+"نوع پرس و جو که به شما امکان می دهد چندین فیلتر را اعمال کنید. \"و\" هر دو "
+"شرط را اعمال می‌کند. \"یا\" حداقل یکی از شرایط را اعمال می‌کند"
+
+#: includes/admin/class-pwf-meta-fields.php:158,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:158
+msgid "Source of options"
+msgstr "منبع گزینه ها"
+
+#: includes/admin/class-pwf-meta-fields.php:159,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:159
+msgid "Select source of options, that will be using to filter products"
+msgstr ""
+"منبع گزینه ها را که برای فیلتر کردن محصولات استفاده خواهد شد، انتخاب کنید"
+
+#: includes/admin/class-pwf-meta-fields.php:168,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:168
+msgid "Category of options"
+msgstr "دسته گزینه ها"
+
+#: includes/admin/class-pwf-meta-fields.php:169,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:169
+msgid "Choose one of the categories"
+msgstr "یکی از دسته ها را انتخاب کنید"
+
+#: includes/admin/class-pwf-meta-fields.php:180,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:180
+msgid "Choose one of the attributes created in “Products > Attributes”"
+msgstr "یکی از ویژگی های ایجاد شده در \"محصولات> ویژگی ها\" را انتخاب کنید"
+
+#: includes/admin/class-pwf-meta-fields.php:190,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:190
+msgid ""
+"The “Taxonomy” is a grouping mechanism for posts. For example, \"product tags"
+"\" and \"product attributes\" are also taxonomies"
+msgstr ""
+"\"تکسونومی\" مکانیسم گروه بندی برای مطلب‌ها است. به عنوان مثال ، \"برچسب های "
+"محصول\" و \"ویژگی های محصول\" نیز طبقه بندی هستند"
+
+#: includes/admin/class-pwf-meta-fields.php:199,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:199
+msgid "Taxonomy of options"
+msgstr "تکسونومی گزینه ها"
+
+#: includes/admin/class-pwf-meta-fields.php:200,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:200
+msgid "Choose one of the taxonomies"
+msgstr "یکی از تکسونومی‌ها را انتخاب نمایید"
+
+#: includes/admin/class-pwf-meta-fields.php:209,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:209
+msgid "Roles"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:217,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:217
+msgid "Display"
+msgstr "نمایش دادن"
+
+#: includes/admin/class-pwf-meta-fields.php:226,
+#: includes/admin/class-pwf-meta.php:1080,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:226,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1080
+msgid "Color"
+msgstr "رنگ"
+
+#: includes/admin/class-pwf-meta-fields.php:233,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:233
+msgid "Include"
+msgstr "شامل"
+
+#: includes/admin/class-pwf-meta-fields.php:240,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:240
+msgid "Exclude"
+msgstr "استثناء"
+
+#: includes/admin/class-pwf-meta-fields.php:247,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:247
+msgid "Labels"
+msgstr "برچسب‌ها"
+
+#: includes/admin/class-pwf-meta-fields.php:248,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:248
+msgid "Rename fields to display in frontend"
+msgstr "نام زمینه‌ها را برای نمایش در قسمت کاربری تغییر دهید"
+
+#: includes/admin/class-pwf-meta-fields.php:255,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:255
+msgid "Displayed statuses"
+msgstr "وضعیت‌های نمایش داده شده"
+
+#: includes/admin/class-pwf-meta-fields.php:265,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:265
+msgid "Order By"
+msgstr "مرتب‎سازی بر اساس"
+
+#: includes/admin/class-pwf-meta-fields.php:275,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:275
+msgid "\"In stock\" text"
+msgstr "متن \"موجودی\""
+
+#: includes/admin/class-pwf-meta-fields.php:283,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:283
+msgid "\"Out of stock\" text"
+msgstr "متن \"خارج از موجودی\""
+
+#: includes/admin/class-pwf-meta-fields.php:291,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:291
+msgid "\"On backorder\" text"
+msgstr "متن \"پیش سفارش\""
+
+#: includes/admin/class-pwf-meta-fields.php:299,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:299
+msgid "\"Show all\" text"
+msgstr "متن \"نمایش همه\""
+
+#: includes/admin/class-pwf-meta-fields.php:308,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:308
+msgid "Placeholder"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:309,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:309
+#, fuzzy
+#| msgid "Number of products "
+msgid "Search for Products"
+msgstr "تعداد محصولات "
+
+#: includes/admin/class-pwf-meta-fields.php:317,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:317
+#, fuzzy
+#| msgid "Source of options"
+msgid "Source of meta"
+msgstr "منبع گزینه ها"
+
+#: includes/admin/class-pwf-meta-fields.php:326,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:326
+msgid "Meta key"
+msgstr "کلید متا"
+
+#: includes/admin/class-pwf-meta-fields.php:334,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:334
+msgid "Meta compare"
+msgstr "مقایسه متا"
+
+#: includes/admin/class-pwf-meta-fields.php:343,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:343
+msgid "Meta type"
+msgstr "نوع متا"
+
+#: includes/admin/class-pwf-meta-fields.php:352,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:352
+msgid "Meta items"
+msgstr "موارد متا"
+
+#: includes/admin/class-pwf-meta-fields.php:368,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:368
+msgid "Unit"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:369,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:369
+msgid "EX: cm, kg"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:376,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:376
+msgid "Enable interaction"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:377,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:377
+msgid "Allow this item to interact with other filter items"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:385,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:385
+msgid "Up text"
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:386,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:386
+msgid "Add the \"up\" text for each rate."
+msgstr ""
+
+#: includes/admin/class-pwf-meta-fields.php:394,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:394
+msgid "Display rules"
+msgstr "قوانین نمایش"
+
+#: includes/admin/class-pwf-meta-fields.php:415,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:415
+msgid "Width unit"
+msgstr "واحد عرض"
+
+#: includes/admin/class-pwf-meta-fields.php:433,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:433
+msgid "Display title"
+msgstr "عنوان نمایش"
+
+#: includes/admin/class-pwf-meta-fields.php:441,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:441
+msgid "Display toggle content"
+msgstr "نمایش محتوای toggle"
+
+#: includes/admin/class-pwf-meta-fields.php:448,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:448
+msgid "Default toggle state"
+msgstr "حالت پیش فرض toggle"
+
+#: includes/admin/class-pwf-meta-fields.php:449,
+#: includes/admin/class-pwf-meta.php:431,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:449,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:431
+msgid "Default state (show)"
+msgstr "حالت پیش‌فرض (نمایش)"
+
+#: includes/admin/class-pwf-meta-fields.php:466,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:466
+msgid "Drop Down Style"
+msgstr "استایل Drop Down"
+
+#: includes/admin/class-pwf-meta-fields.php:475,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:475
+msgid "Inline style"
+msgstr "استایل درون خطی"
+
+#: includes/admin/class-pwf-meta-fields.php:483,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:483
+msgid "Display hierarchical"
+msgstr "نمایش سلسله مراتبی"
+
+#: includes/admin/class-pwf-meta-fields.php:510,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:510
+msgid "Display hierarchy collapsed"
+msgstr "نمایش سلسله مراتبی به هم ریخته است"
+
+#: includes/admin/class-pwf-meta-fields.php:518,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:518
+msgid "Style"
+msgstr "استایل"
+
+#: includes/admin/class-pwf-meta-fields.php:523,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:523
+msgid "Rounded"
+msgstr "گرد"
+
+#: includes/admin/class-pwf-meta-fields.php:527,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:527
+msgid "Rectangle"
+msgstr "مستطیل"
+
+#: includes/admin/class-pwf-meta-fields.php:536,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:536
+msgid "Action for empty options"
+msgstr "اقدام برای موارد خالی"
+
+#: includes/admin/class-pwf-meta-fields.php:537,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:537
+msgid "Actions with options when no available products"
+msgstr "در صورت عدم در دسترس بودن محصولات ، مواردی را انتخاب کنید"
+
+#: includes/admin/class-pwf-meta-fields.php:546,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:546
+msgid "Display product counts"
+msgstr "نمایش تعداد محصولات"
+
+#: includes/admin/class-pwf-meta-fields.php:547,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:547
+msgid "Show/hide product counts in options"
+msgstr "نمایش / پنهان کردن تعداد محصول در گزینه‌ها"
+
+#: includes/admin/class-pwf-meta-fields.php:555,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:555
+msgid "See more options by"
+msgstr "مشاهده موارد بیشتر توسط"
+
+#: includes/admin/class-pwf-meta-fields.php:564,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:564
+msgid "Height of visible content"
+msgstr "ارتفاع محتوای نمایشی"
+
+#: includes/admin/class-pwf-meta-fields.php:572,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:572
+msgid "size"
+msgstr "اندازه"
+
+#: includes/admin/class-pwf-meta-fields.php:573,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:573
+msgid "Height and width of item"
+msgstr "طول و عرض مورد"
+
+#: includes/admin/class-pwf-meta-fields.php:582,
+#: includes/admin/class-pwf-meta-fields.php:633,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:582,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:633
+msgid "Step"
+msgstr "گام"
+
+#: includes/admin/class-pwf-meta-fields.php:591,
+#: includes/admin/class-pwf-meta-fields.php:642,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:591,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:642
+msgid "Start"
+msgstr "شروع"
+
+#: includes/admin/class-pwf-meta-fields.php:592,
+#: includes/admin/class-pwf-meta-fields.php:643,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:592,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:643
+msgid "Range slider start handle."
+msgstr "محدوده شروع اسلایدر."
+
+#: includes/admin/class-pwf-meta-fields.php:600,
+#: includes/admin/class-pwf-meta-fields.php:651,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:600,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:651
+msgid "End"
+msgstr "پایان"
+
+#: includes/admin/class-pwf-meta-fields.php:601,
+#: includes/admin/class-pwf-meta-fields.php:652,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:601,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:652
+msgid "Range slider end handle."
+msgstr "محدوده پایان اسلایدر."
+
+#: includes/admin/class-pwf-meta-fields.php:609,
+#: includes/admin/class-pwf-meta-fields.php:660,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:609,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:660
+msgid "Display max and min inputs"
+msgstr "نمایش ورودی‌های حداکثر و حداقل"
+
+#: includes/admin/class-pwf-meta-fields.php:617,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:617
+msgid "Display price label"
+msgstr "نمایش برچسب قیمت"
+
+#: includes/admin/class-pwf-meta-fields.php:625,
+#: includes/admin/class-pwf-meta-fields.php:676,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:625,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:676
+msgid "Display Tooltip"
+msgstr "نمایش راهنما"
+
+#: includes/admin/class-pwf-meta-fields.php:668,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta-fields.php:668
+#, fuzzy
+#| msgid "Display price label"
+msgid "Display label"
+msgstr "نمایش برچسب قیمت"
+
+#: includes/admin/class-pwf-meta.php:129,
+#: includes/admin/class-pwf-meta.php:182,
+#: includes/admin/class-pwf-meta.php:222,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:129,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:182,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:222
+msgid "Please select option from source of options"
+msgstr "لطفا گزینه را از منبع گزینه ها انتخاب کنید"
+
+#: includes/admin/class-pwf-meta.php:164,
+#: includes/admin/class-pwf-meta.php:203,
+#: includes/admin/class-pwf-meta.php:248,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:164,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:203,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:248
+msgid "There is no option list"
+msgstr "هیچ لیست گزینه ای وجود ندارد"
+
+#: includes/admin/class-pwf-meta.php:273,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:273
+msgid "Automatically"
+msgstr "خودکار"
+
+#: includes/admin/class-pwf-meta.php:277,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:277
+msgid "When on click send button"
+msgstr "هنگامی که روی دکمه ارسال کلیک شد"
+
+#: includes/admin/class-pwf-meta.php:290,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:290
+msgid "Shop Filter"
+msgstr "فیلتر فروشگاه"
+
+#: includes/admin/class-pwf-meta.php:296,
+#: includes/admin/class-pwf-meta.php:479,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:296,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:479
+msgid "Filtering starts"
+msgstr "فیلتر شروع می‌شود"
+
+#: includes/admin/class-pwf-meta.php:311,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:311
+msgid "Which components to use"
+msgstr "از کدام اجزا استفاده کنید"
+
+#: includes/admin/class-pwf-meta.php:312,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:312
+msgid "Content of components will be updated when filtering"
+msgstr "محتوای اجزا هنگام فیلتر به روز می شوند"
+
+#: includes/admin/class-pwf-meta.php:317,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:317
+msgid "Pagination"
+msgstr "صفحه‌بندی"
+
+#: includes/admin/class-pwf-meta.php:322,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:322
+msgid "Sorting"
+msgstr "مرتب‌سازی"
+
+#: includes/admin/class-pwf-meta.php:327,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:327
+msgid "Results count"
+msgstr "تعداد نتایج"
+
+#: includes/admin/class-pwf-meta.php:335,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:335
+#, fuzzy
+#| msgid "Pagination"
+msgid "Pagination type"
+msgstr "صفحه‌بندی"
+
+#: includes/admin/class-pwf-meta.php:341,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:341
+msgid "Numbers"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:345,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:345
+#, fuzzy
+#| msgid "More button"
+msgid "Load more button"
+msgstr "دکمه بیشتر"
+
+#: includes/admin/class-pwf-meta.php:349,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:349
+msgid "Infinite scrolling"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:356,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:356
+msgid "Pagination ajax"
+msgstr "صفحه بندی ajax"
+
+#: includes/admin/class-pwf-meta.php:362,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:362
+msgid "Sorting ajax"
+msgstr "مرتب‌سازی ajax"
+
+#: includes/admin/class-pwf-meta.php:371,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:371
+msgid "Products container selector"
+msgstr "انتخابگر محتوای محصولات"
+
+#: includes/admin/class-pwf-meta.php:378,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:378
+msgid "Pagination selector"
+msgstr "انتخابگر صفحه‌بندی"
+
+#: includes/admin/class-pwf-meta.php:385,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:385
+msgid "Result count selector"
+msgstr "انتخابگر تعداد نتایج"
+
+#: includes/admin/class-pwf-meta.php:392,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:392
+msgid "Sorting selector"
+msgstr "انتخابگر مرتب‎‌ سازی"
+
+#: includes/admin/class-pwf-meta.php:399,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:399
+msgid "active Filters selector"
+msgstr "انتخابگر فیلتر‌های فعال"
+
+#: includes/admin/class-pwf-meta.php:405,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:405
+msgid "Scroller to"
+msgstr "به اینجا بروید"
+
+#: includes/admin/class-pwf-meta.php:406,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:406
+msgid ""
+"Use to scroll top when Ajax finished, default is Products container selector."
+msgstr "هنگام اتمام Ajax به بالا برگرد، پیش‌فرض انتخابگر محتوای محصولات است."
+
+#: includes/admin/class-pwf-meta.php:414,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:414
+msgid "Display Filter"
+msgstr "نمایش فیلتر"
+
+#: includes/admin/class-pwf-meta.php:423,
+#: includes/admin/class-pwf-meta.php:1068,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:423,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1068
+msgid "Button"
+msgstr "دکمه"
+
+#: includes/admin/class-pwf-meta.php:430,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:430
+msgid "Button toggle state"
+msgstr "حالت toggle دکمه"
+
+#: includes/admin/class-pwf-meta.php:438,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:438
+#, fuzzy
+#| msgid "Number of products "
+msgid "Number of products"
+msgstr "تعداد محصولات "
+
+#: includes/admin/class-pwf-meta.php:443,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:443
+msgid "Enable browser hash"
+msgstr "فعال‌کردن هش مرورگر"
+
+#: includes/admin/class-pwf-meta.php:449,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:449
+msgid "API remove columns layout"
+msgstr "API طرح ستون‌ها را حذف می‌کند"
+
+#: includes/admin/class-pwf-meta.php:450,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:450
+msgid "Remove columns layout in API"
+msgstr "طرح ستون‌ها را در API حذف کنید"
+
+#: includes/admin/class-pwf-meta.php:456,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:456
+msgid "Is shortcode"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:462,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:462
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:463,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:463
+msgid "Copy your shortcode you add in the post and paste it here"
+msgstr ""
+
+#: includes/admin/class-pwf-meta.php:471,
+#: includes/admin/class-pwf-meta.php:759,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:471,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:759
+msgid "Responsive"
+msgstr "واکنشگرا"
+
+#: includes/admin/class-pwf-meta.php:472,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:472
+msgid "Convert the filter to responsive"
+msgstr "تبدیل فیلتر به واکنشگرا"
+
+#: includes/admin/class-pwf-meta.php:486,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:486
+msgid "Append the filter to"
+msgstr "ضمیمه فیلتر به"
+
+#: includes/admin/class-pwf-meta.php:487,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:487
+msgid "Append the filter sticky navigation, default to the HTML body tag"
+msgstr "ناوبری چسبنده فیلتر را به‌طور پیش‌فزض به برچسب body اضافه کنید"
+
+#: includes/admin/class-pwf-meta.php:493,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:493
+msgid "Screen width"
+msgstr "عرض صفحه"
+
+#: includes/admin/class-pwf-meta.php:494,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:494
+msgid "Assign width in pixel to convert the filter to sticky navigation"
+msgstr "عرض را به پیکسل اختصاص دهید تا فیلتر به ناوبری چسبنده تبدیل شود"
+
+#: includes/admin/class-pwf-meta.php:711,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:711
+msgid "Items"
+msgstr "موارد"
+
+#: includes/admin/class-pwf-meta.php:717,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:717
+msgid "Save"
+msgstr "ذخیره کردن"
+
+#: includes/admin/class-pwf-meta.php:718,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:718
+msgid "Add item"
+msgstr "افزودن مورد"
+
+#: includes/admin/class-pwf-meta.php:754,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:754
+msgid "Filter setting"
+msgstr "تنظیمات فیلتر"
+
+#: includes/admin/class-pwf-meta.php:756,
+#: includes/admin/class-pwf-meta.php:1088,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:756,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1088
+msgid "General"
+msgstr "عمومی"
+
+#: includes/admin/class-pwf-meta.php:757,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:757
+msgid "Selectors"
+msgstr "انتخابگر‌ها"
+
+#: includes/admin/class-pwf-meta.php:758,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:758
+msgid "Extra"
+msgstr "اضافی"
+
+#: includes/admin/class-pwf-meta.php:819,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:819
+msgid "There is no data to save"
+msgstr "داده ای برای ذخیره کردن وجود ندارد"
+
+#: includes/admin/class-pwf-meta.php:851,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:851
+msgid "Filter post not saved"
+msgstr "فیلتر مطلب ذخیره نشد"
+
+#: includes/admin/class-pwf-meta.php:1060,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1060
+msgid "Checkbox list"
+msgstr "لیست جبه انتخابی"
+
+#: includes/admin/class-pwf-meta.php:1061,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1061
+msgid "Radio list"
+msgstr "لیست رادیو"
+
+#: includes/admin/class-pwf-meta.php:1062,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1062
+msgid "Dropdown list"
+msgstr "لیست کشویی"
+
+#: includes/admin/class-pwf-meta.php:1063,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1063
+msgid "Color list"
+msgstr "لیست رنگ"
+
+#: includes/admin/class-pwf-meta.php:1064,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1064
+msgid "Box list"
+msgstr "لیست جعبه"
+
+#: includes/admin/class-pwf-meta.php:1065,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1065
+msgid "Text list"
+msgstr "لیست متن"
+
+#: includes/admin/class-pwf-meta.php:1066,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1066
+msgid "Date"
+msgstr "تاریخ"
+
+#: includes/admin/class-pwf-meta.php:1067,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1067
+msgid "Price slider"
+msgstr "اسلایدر قیمت"
+
+#: includes/admin/class-pwf-meta.php:1069,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1069
+msgid "Preset"
+msgstr "از پیش تعیین شده"
+
+#: includes/admin/class-pwf-meta.php:1070,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1070
+msgid "Categories"
+msgstr "دسته‌بندی ها"
+
+#: includes/admin/class-pwf-meta.php:1072,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1072
+msgid "Layout"
+msgstr "چیدمان"
+
+#: includes/admin/class-pwf-meta.php:1073,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1073
+msgid "Column"
+msgstr "ستون"
+
+#: includes/admin/class-pwf-meta.php:1074,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1074
+msgid "Field"
+msgstr "فیلد"
+
+#: includes/admin/class-pwf-meta.php:1075,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1075
+msgid "This field is required"
+msgstr "این فیلد الزامی است"
+
+#: includes/admin/class-pwf-meta.php:1076,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1076
+msgid "This field must be unique"
+msgstr "این فیلد باید منحصر ‌به ‌فرد باشد"
+
+#: includes/admin/class-pwf-meta.php:1077,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1077
+msgid "Ajax can not get data from your site"
+msgstr "Ajax نمی‌تواند از سایت شما داده دریافت کند"
+
+#: includes/admin/class-pwf-meta.php:1078,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1078
+msgctxt "OR text for display rules"
+msgid "OR"
+msgstr "یا"
+
+#: includes/admin/class-pwf-meta.php:1079,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1079
+msgid "Hide this filter if"
+msgstr "این فیلتر را پنهان کنید اگر"
+
+#: includes/admin/class-pwf-meta.php:1081,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1081
+msgid "Image"
+msgstr "تصویر"
+
+#: includes/admin/class-pwf-meta.php:1082,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1082
+msgid "Upload image"
+msgstr "بارگذاری تصویر"
+
+#: includes/admin/class-pwf-meta.php:1083,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1083
+msgid "Type"
+msgstr "نوع"
+
+#: includes/admin/class-pwf-meta.php:1084,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1084
+msgid "Border"
+msgstr "حاشیه"
+
+#: includes/admin/class-pwf-meta.php:1085,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1085
+msgid "Marker"
+msgstr "نشانگر"
+
+#: includes/admin/class-pwf-meta.php:1086,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1086
+msgid "Light"
+msgstr "روشن"
+
+#: includes/admin/class-pwf-meta.php:1087,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1087
+msgid "Dark"
+msgstr "تاریک"
+
+#: includes/admin/class-pwf-meta.php:1089,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1089
+msgid "Visual"
+msgstr "دیداری"
+
+#: includes/admin/class-pwf-meta.php:1090,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1090
+msgid "Edit"
+msgstr "ویرایش"
+
+#: includes/admin/class-pwf-meta.php:1091,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1091
+msgid "Close"
+msgstr "بستن"
+
+#: includes/admin/class-pwf-meta.php:1092,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1092
+msgid "Remove"
+msgstr "حذف"
+
+#: includes/admin/class-pwf-meta.php:1093,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1093
+msgid "Label"
+msgstr "برچسب"
+
+#: includes/admin/class-pwf-meta.php:1094,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1094
+msgid "Value"
+msgstr "مقدار"
+
+#: includes/admin/class-pwf-meta.php:1095,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1095
+msgid "Error"
+msgstr "خطا"
+
+#: includes/admin/class-pwf-meta.php:1099,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1099
+msgid "Back"
+msgstr "بازگشت"
+
+#: includes/admin/class-pwf-meta.php:1100,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1100
+msgctxt "Add new meta"
+msgid "Add new"
+msgstr "افزودن جدید"
+
+#: includes/admin/class-pwf-meta.php:1101,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1101
+msgid "Please fill the required field"
+msgstr "لطفاً قسمت مورد نیاز را پر کنید"
+
+#: includes/admin/class-pwf-meta.php:1102,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1102
+msgid "Select item"
+msgstr "انتخاب مورد"
+
+#: includes/admin/class-pwf-meta.php:1103,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1103
+msgid "Filter updated"
+msgstr "فیلتر به‌ روز شد"
+
+#: includes/admin/class-pwf-meta.php:1104,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1104
+#, fuzzy
+#| msgid "There is no option list"
+msgid "There are no options list to display"
+msgstr "هیچ لیست گزینه ای وجود ندارد"
+
+#: includes/admin/class-pwf-meta.php:1106,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1106
+#, fuzzy
+#| msgid "Range slider end handle."
+msgid "Range slider"
+msgstr "محدوده پایان اسلایدر."
+
+#: includes/admin/class-pwf-meta.php:1107,
+#: dist/pwfwoofilter/includes/admin/class-pwf-meta.php:1107
+#, fuzzy
+#| msgid "Sorting"
+msgid "Rating"
+msgstr "مرتب‌سازی"
+
+#: includes/widgets/class-pwf-filter-widget.php:19,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:19
+msgid ""
+"This widget displays a form with items that you created in the filter post. "
+"When interacting with options, products are filtering."
+msgstr ""
+"این ابزارک یک فرم را با مواردی که در فیلتر مطلب ایجاد کرده اید نمایش می‌دهد. "
+"هنگام تعامل با گزینه ها ، محصولات فیلتر می‌شوند."
+
+#: includes/widgets/class-pwf-filter-widget.php:22,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:22
+msgid "Product Filters"
+msgstr "فیلترهای محصول"
+
+#: includes/widgets/class-pwf-filter-widget.php:100,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:100
+msgid "title:"
+msgstr "عنوان:"
+
+#: includes/widgets/class-pwf-filter-widget.php:101,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:101
+msgid "Filter products"
+msgstr "محصولات را فیلتر کنید"
+
+#: includes/widgets/class-pwf-filter-widget.php:117,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:117
+msgid "Display widget title:"
+msgstr "عنوان نمایشی ابزارک:"
+
+#: includes/widgets/class-pwf-filter-widget.php:145,
+#: dist/pwfwoofilter/includes/widgets/class-pwf-filter-widget.php:145
+msgid "Please add new filter"
+msgstr "لطفا فیلتر جدیدی اضافه کنید"
+
+#, fuzzy
+#~| msgid "Button"
+#~ msgid "Button Loader"
+#~ msgstr "دکمه"
