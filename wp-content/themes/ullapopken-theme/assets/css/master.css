@@ -14405,6 +14405,7 @@ a:focus {
 }
 body {
   font-family: 'Open Sans', sans-serif !important;
+  color: #191919;
 }
 a {
   color: #191919;
@@ -14430,6 +14431,7 @@ h6,
   font-weight: 500;
   line-height: 1.2;
   color: #191919;
+  font-family: "Open Sans SemiBold", sans-serif;
 }
 p {
   margin-top: 0;
@@ -14860,4 +14862,247 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 400;
+}
+#shopWrap .woocommerce-breadcrumb {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #828282;
+}
+#shopWrap .woocommerce-breadcrumb a {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #828282;
+}
+#shopWrap .woocommerce-products-header {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+#shopWrap .woocommerce-products-header .woocommerce-products-header__title {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  font-weight: 600;
+  color: #191919;
+  margin-bottom: 1rem;
+}
+#shopWrap #sidebar {
+  width: 18%;
+}
+#shopWrap #sidebar h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#shopWrap #sidebar .list-group {
+  border-radius: 0;
+}
+#shopWrap #sidebar .list-group .list-group-item {
+  padding: 0;
+  border: none;
+}
+#shopWrap #sidebar .list-group .list-group-item .list-group-item-action {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  padding: 0.25rem 0;
+}
+#shopWrap #sidebar .list-group .list-group-item .list-group-item-action:hover {
+  text-decoration: underline;
+}
+#shopWrap #sidebar .list-group .list-group-item .sub-cat-wrap {
+  margin-left: 1rem;
+}
+#shopWrap .shopListWrap {
+  width: 80%;
+}
+#shopWrap .shopListWrap .filterBtnsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+#shopWrap .shopListWrap .filterBtnsWrap .btn-stretch {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  max-width: 100%;
+  min-width: 1px;
+}
+#shopWrap .shopListWrap .filterBtnsWrap .btn-light {
+  background-color: #F2F2F2;
+  border-color: #F2F2F2;
+  color: #191919;
+  margin-left: 1rem;
+}
+#shopWrap .shopListWrap .active-filters {
+  margin-bottom: 1rem;
+}
+#shopWrap .shopListWrap .active-filters:empty {
+  display: none;
+}
+#shopWrap .shopListWrap .active-filters .pwf-woo-filter-notes .pwf-note-list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#shopWrap .shopListWrap .active-filters .pwf-woo-filter-notes .pwf-note-list .pwf-note-item {
+  border: 1px solid #E7E7E7;
+  border-radius: 5rem;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #191919;
+}
+#shopWrap .shopListWrap .active-filters .pwf-woo-filter-notes .pwf-note-list .pwf-note-item.pwf-clear-all-note {
+  border: none;
+}
+#shopWrap .shopListWrap .active-filters .pwf-woo-filter-notes .pwf-note-list .pwf-note-item .pwf-remove-filter {
+  padding: 5px 7px;
+}
+#shopWrap .shopListWrap .active-filters .pwf-woo-filter-notes .pwf-note-list .pwf-note-item .pwf-remove-filter .pwf-icon-remove {
+  top: -2px;
+}
+.backdrop {
+  background-color: #191919;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.backdrop.active {
+  visibility: visible;
+  opacity: 0.3;
+}
+.filtersWrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 31.25rem;
+  height: 100%;
+  transition: 0.5s;
+  touch-action: manipulation;
+  visibility: hidden;
+  right: -31.25rem;
+}
+.filtersWrapper.active {
+  visibility: visible;
+  right: 0;
+}
+.filtersWrapper .filterWrap {
+  position: relative;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 1rem 0;
+}
+.filtersWrapper .filterWrap::before {
+  content: "";
+  background-color: #fe8273;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-notes {
+  display: none;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-title {
+  position: relative;
+  border-bottom: 1px solid #F2F2F2;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  padding: .4375rem .9375rem;
+  text-align: left;
+  cursor: pointer;
+  margin: 0;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-title .pwf-toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-title .pwf-toggle::before {
+  top: 5px;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-container {
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid #F2F2F2;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item.pwf-field-item-checkboxlist .pwf-field-item-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item.pwf-field-item-checkboxlist .pwf-field-item-container .pwf-checkboxlist-item {
+  width: 50%;
+}
+.products .product .imageList .imgItem {
+  background-size: cover;
+  padding-bottom: 150%;
+  border-radius: 0.25rem;
+}
+.products .product .colorList {
+  display: flex;
+  padding-top: 0.5rem;
+}
+.products .product .colorList .colorItem {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.products .product .colorList .colorItem span {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  border-radius: 100%;
+  border: 1px solid #E7E7E7;
+}
+.products .product .colorList .colorItem span.active {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.products .product .colorList .colorItem span.active::after {
+  content: '';
+  position: relative;
+  border: 2px solid #191919;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: -0.25rem;
+  left: -0.25rem;
+  border-radius: 100%;
+}
+.products .product .woocommerce-LoopProduct-link .woocommerce-loop-product__title {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #191919;
+}
+.products .product .woocommerce-LoopProduct-link .price .amount {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #191919;
 }

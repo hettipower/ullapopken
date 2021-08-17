@@ -47,7 +47,7 @@ function theme_front_scripts() {
 
     $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyB_DH4yRoGB0aoM3IZFvWOIP2qNbFh_bIs' ;
 
-    wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key, array('jquery'),'1.0',true);
+    //wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key, array('jquery'),'1.0',true);
     wp_enqueue_script('custom-js',THEME_JS.'/custom-combined.min.js', array('jquery'),'1.0',true);
 
     $customParams = array(
@@ -124,6 +124,8 @@ require_once ('assets/vendor/autoload.php');
 require_once ('inc/admin/post_types.php');
 
 require_once ('inc/front/theme_misc.php');
+
+require_once ('woocommerce/woo_config.php');
 
 add_action( 'tgmpa_register', 'theme_required_plugins_register' );
 function theme_required_plugins_register() {
@@ -227,7 +229,7 @@ function my_acf_init() {
 }
 add_action('acf/init', 'my_acf_init');
 
-add_action('init' , 'compile_less_to_css');
+//add_action('init' , 'compile_less_to_css');
 function compile_less_to_css(){
 
     $less = new lessc;
