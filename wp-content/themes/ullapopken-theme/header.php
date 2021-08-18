@@ -2,6 +2,17 @@
 	$getShopCookie = theme_get_cookie('shop');
 	if( !isset($getShopCookie) ) {
 		theme_set_cookie( 'shop' , 'women' );
+	} else {
+		if( is_shop() ) {
+			$women_category = get_field('women_category' , 'option');
+			$men_category = get_field('men_category' , 'option');
+
+			if( $getShopCookie == 'women' ) {
+				wp_redirect(get_term_link($women_category));
+			} else if( $getShopCookie == 'men' ) {
+				wp_redirect(get_term_link($men_category));
+			}
+		}
 	}
 ?>
 <!DOCTYPE html>
