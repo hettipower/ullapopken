@@ -1,6 +1,6 @@
 <?php
 	$getShopCookie = theme_get_cookie('shop');
-	if( !$getShopCookie ) {
+	if( !isset($getShopCookie) ) {
 		theme_set_cookie( 'shop' , 'women' );
 	}
 ?>

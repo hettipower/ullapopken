@@ -77,8 +77,7 @@ function ullapopken_filter_btns_func() {
 
 add_action('woocommerce_before_shop_loop_item_title' , 'ullapopken_product_color_attr' , 35);
 function ullapopken_product_color_attr(){
-    global $product;
-    $colors = wc_get_product_terms( $product->id, 'pa_color' );
+    $colors = wc_get_product_terms( get_the_ID(), 'pa_color' );
     $imagesArr = get_color_variations_image();
 
     //Show Images

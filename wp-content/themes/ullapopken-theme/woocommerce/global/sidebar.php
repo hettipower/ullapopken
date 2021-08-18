@@ -28,7 +28,7 @@ if( $getShopCookie == 'women' ) {
     $parentTermID = get_field( 'women_category', 'option' )->term_id;
 }
 
-$currentTermID = get_queried_object()->term_id;
+$currentTermID = (isset(get_queried_object()->term_id)) ? get_queried_object()->term_id : false;
 ?>
 <div id="sidebar" role="complementary">
 	<h4>Categories</h4>
