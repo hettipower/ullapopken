@@ -1,4 +1,5 @@
-.products {
+.products , 
+.productSlider {
     .product {
         .imageList {
             .imgItem {
@@ -64,6 +65,41 @@
                     color: #191919;
                 }
             }
+        }
+    }
+}
+
+.productSlider {
+    .product {
+        margin: 0 6px;
+    }
+
+    .slick-arrow {
+        width: 62px;
+        height: 62px;
+        background-color: #fff;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        color: #000;
+
+        &::before {
+            display: none;
+        }
+
+        &.slick-prev {
+            left: 3rem;
+        }
+
+        &.slick-next {
+            right: 3rem;
+        }
+
+        .bi {
+            width: 35px;
+            height: 35px;
         }
     }
 }

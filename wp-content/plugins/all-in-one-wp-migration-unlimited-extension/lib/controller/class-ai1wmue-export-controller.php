@@ -61,45 +61,61 @@ class Ai1wmue_Export_Controller {
 		);
 	}
 
-	public static function list_files() {
+	public static function list_files( $params = array() ) {
 		check_ajax_referer( 'ai1wmue_list', 'security' );
+		ai1wm_setup_environment();
 
-		$folder_path = WP_CONTENT_DIR;
-		if ( ! empty( $_POST['folder'] ) ) {
-			// prevent exploring outside the wp folder
-			$subfolder   = str_replace( '../', '', $_POST['folder'] );
-			$folder_path = sprintf( '%s/%s', $folder_path, $subfolder );
+		// Set params
+		if ( empty( $params ) ) {
+			$params = stripslashes_deep( $_GET );
 		}
-		if ( ! is_file( $folder_path ) && ! is_dir( $folder_path ) ) {
+
+		// Set folder path
+		$folder_path = null;
+		if ( isset( $params['folder_path'] ) ) {
+			$folder_path = trim( $params['folder_path'] );
+		}
+
+		// Validate folder path
+		if ( validate_file( $folder_path ) !== 0 ) {
 			echo json_encode( array( 'success' => false ) );
 			exit;
 		}
 
-		$files = list_files( $folder_path, 1 );
+		$files = array();
 
-		$response = array( 'success' => true, 'files' => array() );
-		foreach ( $files as $file ) {
-			$response['files'][] = array(
-				'name'    => wp_basename( $file ),
-				'path'    => trim( str_replace( WP_CONTENT_DIR, '', $file ), '/' ),
-				'toggled' => false, //needed for better reactivity in vue
-				'checked' => false,
-				'type'    => is_dir( $file ) ? 'folder' : 'file',
-				'date'    => human_time_diff( filemtime( $file ) ),
-			);
+		// Get content directory files
+		if ( is_dir( WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $folder_path ) ) {
+
+			// Iterate over content directory
+			$iterator = new Ai1wm_Recursive_Directory_Iterator( WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $folder_path );
+
+			// Recursively iterate over content directory
+			$iterator = new Ai1wm_Recursive_Iterator_Iterator( $iterator, RecursiveIteratorIterator::SELF_FIRST, RecursiveIteratorIterator::CATCH_GET_CHILD );
+			$iterator->setMaxDepth( 0 );
+
+			// Loop over content directory
+			foreach ( $iterator as $item ) {
+				$files[] = array(
+					'name'    => $iterator->getFilename(),
+					'path'    => substr_replace( $iterator->getPathname(), '', 0, strlen( WP_CONTENT_DIR ) + 1 ),
+					'toggled' => false,
+					'checked' => false,
+					'folder'  => $item->isDir(),
+					'date'    => human_time_diff( $iterator->getMTime() ),
+				);
+			}
+
+			$types = $names = array();
+			foreach ( $files as $key => $value ) {
+				$types[ $key ] = $value['folder'];
+				$names[ $key ] = $value['name'];
+			}
+
+			array_multisort( $types, SORT_DESC, $names, SORT_ASC, $files );
 		}
 
-		usort( $response['files'], 'Ai1wmue_Export_Controller::sort_by_type_desc_name_asc' );
-		echo json_encode( $response );
+		echo json_encode( array( 'success' => true, 'files' => $files ) );
 		exit;
-	}
-
-	public static function sort_by_type_desc_name_asc( $first_item, $second_item ) {
-		$sorted_items = strcasecmp( $second_item['type'], $first_item['type'] );
-		if ( $sorted_items !== 0 ) {
-			return $sorted_items;
-		}
-
-		return strcasecmp( $first_item['name'], $second_item['name'] );
 	}
 }
