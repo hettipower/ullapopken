@@ -124,6 +124,91 @@
                 }
             }
         }
+
+        .woocommerce-pagination {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: flex-end;
+
+            .page-numbers {
+                border: none;
+                margin: 0;
+                display: flex;
+
+                &::before , &::after {
+                    display: none;
+                }
+
+                li {
+                    border: none;
+                    margin-right: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .page-numbers {
+                        border: 1px solid #E7E7E7;
+                        color: #191919;
+                        min-height: 40px;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 16px;
+                        border-radius: 0.25rem;
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+
+                        &:hover {
+                            background-color: #191919;
+                            border-color: #191919;
+                            color: #FFF;
+                        }
+
+                        &.next {
+                            background-color: #191919;
+                            border-color: #191919;
+                            color: #FFF;
+                            min-width: 10rem;
+
+                            &:hover {
+                                background-color: #FE8273;
+                                border-color: #FE8273;
+                            }
+
+                            .fa-chevron-right {
+                                margin-left: 0.5rem;
+                                font-size: 18px;
+                            }
+                        }
+
+                        &.prev {
+                            background-color: #191919;
+                            border-color: #191919;
+                            color: #FFF;
+                            min-width: 10rem;
+
+                            &:hover {
+                                background-color: #FE8273;
+                                border-color: #FE8273;
+                            }
+
+                            .fa-chevron-left {
+                                margin-right: 0.5rem;
+                                font-size: 18px;
+                            }
+                        }
+
+                        &.current {
+                            background-color: #E7E7E7;
+                            border-color: #E7E7E7;
+                            color: #191919;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

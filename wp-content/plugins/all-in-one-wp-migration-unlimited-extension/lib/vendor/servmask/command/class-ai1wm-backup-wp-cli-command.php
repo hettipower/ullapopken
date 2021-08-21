@@ -191,7 +191,7 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Command' ) ) {
 							exit;
 
 						case 'l':
-							WP_CLI::run_command( array( 'site', 'list' ), array( 'fields' => 'blog_id,url' ) );
+							WP_CLI::runcommand( 'site list --fields=blog_id,url' );
 							break;
 
 						default:
@@ -322,10 +322,6 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Command' ) ) {
 
 			if ( ! isset( $params['storage'] ) ) {
 				$params['storage'] = ai1wm_storage_folder();
-			}
-
-			if ( ! isset( $params['options']['network'] ) && is_multisite() ) {
-				$params['options']['network'] = 1;
 			}
 
 			if ( ! isset( $params['ai1wm_manual_restore'] ) ) {

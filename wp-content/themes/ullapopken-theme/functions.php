@@ -229,7 +229,7 @@ function my_acf_init() {
 }
 add_action('acf/init', 'my_acf_init');
 
-//add_action('init' , 'compile_less_to_css');
+add_action('init' , 'compile_less_to_css');
 function compile_less_to_css(){
 
     $less = new lessc;
@@ -266,6 +266,12 @@ function minify_js_func() {
 
     $OwlCarousel2 = get_theme_file_path('assets/js/owl.carousel.min.js');
     $minifier->add($OwlCarousel2);
+
+    $slick = get_theme_file_path('assets/js/slick.js');
+    $minifier->add($slick);
+
+    $fancybox = get_theme_file_path('assets/js/fancybox.umd.js');
+    $minifier->add($fancybox);
 
     $custom = get_theme_file_path('assets/js/custom.js');
     $minifier->add($custom);
