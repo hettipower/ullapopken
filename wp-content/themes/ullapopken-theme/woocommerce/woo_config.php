@@ -8,6 +8,8 @@ remove_action('woocommerce_single_product_summary' , 'woocommerce_template_singl
 remove_action('woocommerce_after_single_product_summary' , 'woocommerce_output_product_data_tabs' , 10);
 
 add_action('woocommerce_shop_loop_item_title' , 'woocommerce_template_loop_product_link_open' , 5);
+add_action('woocommerce_before_single_product_summary' , 'custom_track_product_view' , 30);
+
 
 add_action('after_setup_theme', 'ullapopken_woo_add_woocommerce_support');
 function ullapopken_woo_add_woocommerce_support()
@@ -104,10 +106,13 @@ function ullapopken_product_color_attr(){
         echo '<div class="colorList">';
         $i=1;
         foreach( $colors as $color ) {
-            $colorCode = get_field( 'color', 'pa_color_'.$color->term_id );
+            $colorcodes = get_term_meta($color->term_id , 'product_attribute_color');
+            //$colorCode = get_field( 'color', 'pa_color_'.$color->term_id );
             $active = ($i==1) ? 'active' : '' ;
             $imgUrl = in_array_r($color->slug , $imagesArr);
-            echo '<div class="colorItem"><span class="'.$active.'" style="background-color:'.$colorCode.'" data-colorid="'.$color->term_id.'" data-img="'.$imgUrl.'"></span></div>';
+            if( $colorcodes ) {
+                echo '<div class="colorItem"><span class="'.$active.'" style="background-color:'.$colorcodes[0].'" data-colorid="'.$color->term_id.'" data-img="'.$imgUrl.'"></span></div>';
+            }
             $i++;
         }
         echo '</div>';
@@ -160,4 +165,64 @@ add_filter( 'woocommerce_output_related_products_args', 'ullapopken_related_prod
 function ullapopken_related_products_args( $args ) {
 	$args['posts_per_page'] = 20;
 	return $args;
+}
+
+add_filter( 'woocommerce_upsell_display_args', 'wc_change_number_related_products', 20 );
+function wc_change_number_related_products( $args ) {
+	$args['posts_per_page'] = 20;
+	return $args;
+}
+
+function custom_track_product_view() {
+    if ( ! is_singular( 'product' ) ) {
+        return;
+    }
+
+    global $post;
+
+    if ( empty( $_COOKIE['woocommerce_recently_viewed'] ) )
+        $viewed_products = array();
+    else
+        $viewed_products = (array) explode( '|', $_COOKIE['woocommerce_recently_viewed'] );
+
+    if ( ! in_array( $post->ID, $viewed_products ) ) {
+        $viewed_products[] = $post->ID;
+    }
+
+    if ( sizeof( $viewed_products ) > 20 ) {
+        array_shift( $viewed_products );
+    }
+
+    // Store for session only
+    wc_setcookie( 'woocommerce_recently_viewed', implode( '|', $viewed_products ) );
+}
+
+function wc_recent_viewed_products(){
+
+    $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', $_COOKIE['woocommerce_recently_viewed'] ) : array();
+    $viewed_products = array_filter( array_map( 'absint', $viewed_products ) );
+
+    if( $viewed_products && !empty($viewed_products) ):
+?>
+<div class="container">
+	<h2>Recently viewed</h2>
+</div>
+<div class="productSlider">
+
+	<?php foreach ( $viewed_products as $viewedID ) : ?>
+
+		<?php
+		$post_object = get_post( $viewedID );
+
+		setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+
+		wc_get_template_part( 'content', 'productSlider' );
+		?>
+
+	<?php endforeach; ?>
+
+</div>
+<?php
+    endif;
+
 }

@@ -75,10 +75,11 @@ if ( post_password_required() ) {
 	</section>
 
 	<section class="upsaleProductWrap">
-		<div class="container">
-			<?php echo woocommerce_upsell_display(); ?>
-		</div>
+		<?php echo woocommerce_upsell_display(); ?>
+	</section>
+
+	<section class="recentlyViewedWrap">
+		<?php echo wc_recent_viewed_products(); ?>
 	</section>
 </div>
-
 <?php do_action( 'woocommerce_after_single_product' ); ?>
