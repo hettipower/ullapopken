@@ -252,7 +252,7 @@
         top: 0;
         right: 0;
         height: 100%;
-        padding: 1rem 0;
+        padding: 0 0 1rem;
 
         &::before {
             content: "";
@@ -262,6 +262,56 @@
             top: 0;
             width: 4px;
             height: 100%;
+        }
+
+        .filterHeader {
+            position: relative;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #E7E7E7;
+
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+                margin: 0;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+
+            .close {
+                position: absolute;
+                top: 8px;
+                right: 15px;
+                z-index: 10;
+            }
+        }
+
+        .attrOptionsWrap {
+            padding: 1.5rem;
+
+            h3 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 600;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+
+            .btn {
+                font-weight: 600;
+                width: 100%;
+                padding: 0.4375rem 0;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                border-radius: 0.25rem;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                text-align: left;
+                border: none;
+                box-shadow: none;
+
+                &:hover {
+                    background-color: #F2F2F2;
+                }
+            }
         }
 
         .pwf-filter-container {

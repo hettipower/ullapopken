@@ -36,15 +36,33 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
 						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
-						<td class="value">
+						<td class="value <?php echo $attribute_name; ?>">
+							<?php if( $attribute_name == 'pa_size' ): ?>
+								<?php
+									wc_dropdown_variation_attribute_options(
+										array(
+											'options'   => $options,
+											'attribute' => $attribute_name,
+											'product'   => $product,
+										)
+									);
+								?>
+								<a href="#" data-attrname="<?php echo $attribute_name; ?>" class="btn">
+									<span>Select <?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></span>
+								 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+								</a>
+							<?php else: ?>
+								<?php
+									wc_dropdown_variation_attribute_options(
+										array(
+											'options'   => $options,
+											'attribute' => $attribute_name,
+											'product'   => $product,
+										)
+									);
+								?>
+							<?php endif; ?>
 							<?php
-								wc_dropdown_variation_attribute_options(
-									array(
-										'options'   => $options,
-										'attribute' => $attribute_name,
-										'product'   => $product,
-									)
-								);
 								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
 							?>
 						</td>
@@ -52,6 +70,36 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+
+		<div class="selectAttributesWrap">
+			<span class="backdrop"></span>
+			<?php 
+				foreach ( $attributes as $attribute_name => $options ) :
+					if( $attribute_name == 'pa_size' ):
+			?>
+				<div class="filtersWrapper" id="<?php echo $attribute_name; ?>">
+					<div class="filterWrap">
+						<div class="filterHeader">
+							<h2>Select <?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></h2>
+							<a href="#" class="close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+									<path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+								</svg>
+							</a>
+						</div>
+						<div class="attrOptionsWrap">
+							<h3><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></h3>
+							<?php 
+								foreach( $options as $option ): 
+								$optionTerm = get_term_by('slug', $option, $attribute_name);
+							?>
+								<button class="btn" data-size="<?php echo $option; ?>" data-attrname="<?php echo $optionTerm->name; ?>"><?php echo $optionTerm->name; ?></button>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+			<?php endif; endforeach; ?>
+		</div>
 
 		<div class="single_variation_wrap">
 			<?php

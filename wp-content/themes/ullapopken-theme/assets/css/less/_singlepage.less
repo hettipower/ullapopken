@@ -4,6 +4,19 @@
         margin: auto;
     }
 
+    .woocommerce-breadcrumb {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        
+        a {
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: #828282;
+        }
+    }
+
     .singleProductDetails {
         margin-top: 2rem;
 
@@ -91,6 +104,8 @@
                         }
 
                         .value {
+                            position: relative;
+
                             .variable-items-wrapper {
                                 &.color-variable-wrapper {
                                     .variable-item {
@@ -99,6 +114,7 @@
                                         height: 1.5rem;
                                         padding: 0;
                                         border: 1px solid transparent;
+                                        border-radius: 100%;
 
                                         &.selected {
                                             padding: 0.1875rem;
@@ -106,12 +122,47 @@
                                         }
 
                                         .variable-item-span-color {
+                                            border-radius: 100%;
+
                                             &::after {
                                                 box-shadow: none;
                                             }
                                         }
                                     }
                                 }
+                            }
+
+                            &.pa_size {
+                                select {
+                                    position: absolute;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+
+                                .btn {
+                                    width: 100%;
+                                    background-color: transparent;
+                                    border: 1px solid #F2F2F2;
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                    font-weight: 400;
+                                    padding: 0.4375rem 0.9375rem;
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+
+                            select {
+                                width: 100%;
+                                background-color: transparent;
+                                border: 1px solid #F2F2F2;
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                padding: 0.4375rem 0.9375rem;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -204,20 +255,36 @@
         }
     }
 
-    .relatedProductWrap {
-        padding: 2rem 0;
+    .relatedProductWrap , 
+    .upsaleProductWrap , 
+    .recentlyViewedWrap {
+        padding: 2.5rem 0;
 
-        h2 {
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            font-weight: 600;
-            margin: 0;
+        .container {
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+                margin: 0;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+    
+            p {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+            }
         }
+    }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.5rem;
-            font-weight: 400;
+    .recentlyViewedWrap {
+        .container {
+            border-top: 1px solid rgba(25, 25, 25, 0.1);
+            padding-top: 1rem;
+
+            h2 {
+                margin-bottom: 1rem;
+            }
         }
     }
 }
