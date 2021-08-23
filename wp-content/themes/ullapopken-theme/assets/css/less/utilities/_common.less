@@ -11,5 +11,88 @@
         font-size: 1rem;
         line-height: 1.625rem;
         font-weight: bolder;
+        font-family: "Open Sans", Arial, sans-serif;
+    }
+
+    &.productresponse {
+        .productDetails {
+            .productDetail {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                .productImg {
+                    width: 128px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+
+                .detail {
+                    width: 65%;
+
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                    }
+
+                    table {
+                        font-size: 0.75rem;
+                        line-height: 1.25rem;
+                        font-weight: 400;
+                    }
+
+                    .price {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        color: #eb5050;
+                        text-align: right;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+
+        .modalFooter {
+            margin-top: 2rem;
+
+            a {
+                width: 48%;
+                outline: none;
+            }
+
+            .close {
+                font-size: .875rem;
+                line-height: 1.5rem;
+                font-weight: 600;
+                text-decoration: underline;
+                display: inline-block;
+                text-align: center;
+                margin: auto;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .btn {
+                color: #fff;
+                background-color: #191919;
+                border-color: #191919;
+                font-weight: 600;
+                padding: 0.4375rem 0;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                border-radius: 0.25rem;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                &:hover {
+                    background-color: #FE8273;
+                    border-color: #FE8273;
+                }
+            }
+        }
     }
 }

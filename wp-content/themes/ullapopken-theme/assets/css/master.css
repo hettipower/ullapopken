@@ -15432,6 +15432,73 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   font-size: 1rem;
   line-height: 1.625rem;
   font-weight: bolder;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.fancybox__content.productresponse .productDetails .productDetail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.fancybox__content.productresponse .productDetails .productDetail .productImg {
+  width: 128px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fancybox__content.productresponse .productDetails .productDetail .detail {
+  width: 65%;
+}
+.fancybox__content.productresponse .productDetails .productDetail .detail h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.fancybox__content.productresponse .productDetails .productDetail .detail table {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.fancybox__content.productresponse .productDetails .productDetail .detail .price {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #eb5050;
+  text-align: right;
+  margin-top: 2rem;
+}
+.fancybox__content.productresponse .modalFooter {
+  margin-top: 2rem;
+}
+.fancybox__content.productresponse .modalFooter a {
+  width: 48%;
+  outline: none;
+}
+.fancybox__content.productresponse .modalFooter .close {
+  font-size: .875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+.fancybox__content.productresponse .modalFooter .close:hover {
+  text-decoration: none;
+}
+.fancybox__content.productresponse .modalFooter .btn {
+  color: #fff;
+  background-color: #191919;
+  border-color: #191919;
+  font-weight: 600;
+  padding: 0.4375rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.fancybox__content.productresponse .modalFooter .btn:hover {
+  background-color: #FE8273;
+  border-color: #FE8273;
 }
 .menuContWrap {
   background-color: #fff;
@@ -16084,6 +16151,7 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
 #singleProductWrap .woocommerce-notices-wrapper {
   max-width: 1140px;
   margin: auto;
+  display: none;
 }
 #singleProductWrap .woocommerce-breadcrumb {
   font-size: 0.75rem;

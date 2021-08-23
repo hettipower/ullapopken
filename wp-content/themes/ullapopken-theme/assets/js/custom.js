@@ -160,4 +160,74 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
+    /* Custom Add to cart Functions */
+    $('.single-product form.cart').on('submit', function (e) {
+
+        e.preventDefault();
+        var serializedData = $(this).serialize();
+        var $thisbutton = $(this).find('.single_add_to_cart_button');
+        var serializedDataArr = getFormData($(this));
+        var variation_id = serializedDataArr.variation_id;
+
+        serializedData = serializedData+'&action=woocommerce_ajax_add_to_cart';
+
+        $(document.body).trigger('adding_to_cart', [$thisbutton, serializedData]);
+
+        $.ajax({
+            type: 'post',
+            url: CUSTOM_PARAMS.base_url + '/?wc-ajax=add_to_cart',
+            data: serializedData,
+            beforeSend: function (response) {
+                $('form.cart').block({
+                    message: null,
+                    overlayCSS: {
+                        cursor: 'none'
+                    }
+                });
+            },
+            complete: function (response) {
+                $('form.cart').unblock();
+            },
+            success: function (response) {
+
+                if (!response.success) {
+                    
+                    $('.productDetails .productDetail').hide();
+                    $('.productDetails .productDetail').each(function (index, element) {
+                        var variation = $(this).data('variation');
+                        console.log('variation' , variation)
+                        if( variation == variation_id ) {
+                            $(this).show();
+                        }
+                    });
+                    Fancybox.show([{ src: "#addToCartResponseSucess", type: "inline" }]);
+
+                } else {
+                    $(document.body).trigger('added_to_cart', [response.fragments, response.cart_hash, $thisbutton]);
+                }
+
+                $(document.body).trigger('wc_fragment_refresh');
+            },
+        });
+
+        return false;
+    });
+
+    $('.modalFooter .close').on('click' , function(){
+        Fancybox.close();
+        return false;
+    });
+        
+
 });
+
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    jQuery.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}

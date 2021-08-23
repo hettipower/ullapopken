@@ -226,3 +226,54 @@ function wc_recent_viewed_products(){
     endif;
 
 }
+
+add_action('woocommerce_single_product_summary', 'ullapopken_add_cart_single_response' , 70);
+function ullapopken_add_cart_single_response(){
+    global $product;
+?>
+<div id="addToCartResponseSucess" class="productresponse" style="display:none;max-width:500px;">
+    <h3 class="text-center">Great, you have placed the item in your shopping bag!</h3>
+    <div class="productDetails">
+        <?php
+            if( $product->is_type( 'variable' ) ) {
+                foreach ($product->get_available_variations() as $variation) {
+                    $variationProduct = wc_get_product($variation['variation_id']);
+                    $variationAtrrs = $variationProduct->get_variation_attributes();
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $variation['variation_id'] ), 'single-post-thumbnail' );
+                    ?>
+                        <div class="productDetail" data-variation="<?php echo $variation['variation_id']; ?>" style="display:none;">
+                            <div class="productImg">
+                                <?php if( $image ): ?>
+                                    <img src="<?php  echo $image[0]; ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="detail">
+                                <h3><?php echo get_the_title($product->get_id()); ?></h3>
+                                <table>
+                                    <?php
+                                        foreach( $variationAtrrs as $attr_name => $attr ): 
+                                            $taxonmomy = str_replace( 'attribute_', '', $attr_name );
+                                    ?>
+                                        <tr>
+                                            <td><?php echo wc_attribute_label( $taxonmomy ); ?> : </td>
+                                            <td><?php echo $attr; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </table>
+                                <div class="price text-left">
+                                    <?php echo $variationProduct->get_price_html(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                }
+            }
+        ?>
+    </div>
+    <div class="modalFooter d-flex justify-content-between">
+        <a href="#" class="close">continue shopping</a>
+        <a href="<?php echo wc_get_cart_url(); ?>" class="btn">check out now</a>
+    </div>
+</div>
+<?php
+}
