@@ -51,7 +51,8 @@ function theme_front_scripts() {
     wp_enqueue_script('custom-js',THEME_JS.'/custom-combined.min.js', array('jquery'),'1.0',true);
 
     $customParams = array(
-        'ajax_url' => admin_url( 'admin-ajax.php' )
+        'ajax_url' => admin_url( 'admin-ajax.php' ),
+        'base_url' => home_url(),
     );
     wp_localize_script( 'custom-js', 'CUSTOM_PARAMS', $customParams );
 
