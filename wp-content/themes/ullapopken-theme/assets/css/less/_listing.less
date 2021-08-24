@@ -4,8 +4,9 @@
         .imageList {
             .imgItem {
                 background-size: cover;
-                padding-bottom: 150%;
-                border-radius: 0.25rem;
+                border-radius: .25rem;
+                width: 100%;
+                min-height: 333px;
             }
         }
 
@@ -69,6 +70,9 @@
 }
 
 .productSlider {
+    max-width: 1140px;
+    margin: auto;
+
     .product {
         margin: 0 6px;
 
@@ -100,9 +104,23 @@
             right: 3rem;
         }
 
+        &.slick-disabled {
+            opacity: 0;
+            cursor: default;
+        }
+
         .bi {
             width: 35px;
             height: 35px;
+        }
+    }
+
+    .slick-list {
+        margin: 0 -0.25rem;
+        overflow: visible !important;
+
+        .slick-track {
+            margin-left: 0;
         }
     }
 }

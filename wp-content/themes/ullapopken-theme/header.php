@@ -147,5 +147,15 @@
 				<?php get_template_part( 'template-part/menu/submenus' ); ?>
 			</div>
 		</div>
-		<div class="saleWrap"></div>
+		<?php 
+			if ( get_field( 'show_sale', 'option' ) == 1 ): 
+				$sale_link = get_field( 'sale_link', 'option' );
+		?>
+			<div class="saleWrap" style="background-color : <?php the_field( 'sale_background_color', 'option' ); ?>;">
+				<?php if ( $sale_link ) { ?>
+					<a href="<?php echo $sale_link['url']; ?>" target="<?php echo $sale_link['target']; ?>"></a>
+				<?php } ?>
+				<?php the_field( 'sale_text', 'option' ); ?>
+			</div>
+		<?php endif; ?>
 	</header>

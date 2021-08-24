@@ -16,6 +16,12 @@
             font-weight: 400;
             color: #828282;
         }
+
+        span {
+            display: inline-block;
+            color: #828282;
+            padding: 0 0.5rem;
+        }
     }
 
     .singleProductDetails {
@@ -33,6 +39,11 @@
                     .wvg-single-gallery-image-container {
                         overflow: hidden;
                         border-radius: 0.25rem;
+
+                        img {
+                            width: auto;
+                            border-radius: 0.25rem;
+                        }
                     }
                 }
 
@@ -153,6 +164,16 @@
                                     justify-content: space-between;
                                     align-items: center;
                                 }
+
+                                .sizeChart {
+                                    a {
+                                        font-size: 0.75rem;
+                                        line-height: 1.25rem;
+                                        font-weight: 400;
+                                        color: #828282;
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
 
                             select {
@@ -204,6 +225,20 @@
                     font-size: 0.875rem;
                     line-height: 1.5rem;
                 }
+
+                .scrollToDetails {
+                    display: inline-block;
+                    margin-top: 3rem;
+                    font-size: 0.75rem;
+                    line-height: 1.25rem;
+                    font-weight: 400;
+
+                    i {
+                        color: #FE8273;
+                        font-size: 0.75rem;
+                        padding-right: 0.5rem;
+                    }
+                }
             }
         }
     }
@@ -224,6 +259,8 @@
                 margin: 0;
                 display: flex;
                 justify-content: space-between;
+                position: relative;
+                padding-bottom: 2rem;
 
                 .imgWrap {
                     flex: 0 0 33.33333%;
@@ -239,17 +276,64 @@
                         font-size: 1.25rem;
                         line-height: 1.75rem;
                         font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
                     }
 
                     h3 {
                         font-size: 0.875rem;
                         line-height: 1.5rem;
                         font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
                     }
 
                     ul {
                         margin-bottom: 1.5rem;
                         padding-left: 2rem;
+                    }
+
+                    .categories {
+                        padding-bottom: 1.5rem;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+
+                        .posted_in {
+
+                            span {
+                                padding-right: 2rem;
+                            }
+
+                            a {
+                                font-size: 0.75rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .title {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                    }
+                }
+
+                .sku_wrapper {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    max-width: 58.33333%;
+                    width: 100%;
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                    font-weight: 600;
+
+                    .sku {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
                     }
                 }
             }
@@ -260,6 +344,7 @@
     .upsaleProductWrap , 
     .recentlyViewedWrap {
         padding: 2.5rem 0;
+        overflow: hidden;
 
         .container {
             h2 {
