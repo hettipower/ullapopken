@@ -277,3 +277,43 @@ function ullapopken_add_cart_single_response(){
 </div>
 <?php
 }
+
+add_action('woocommerce_after_add_to_cart_form', 'ullapopken_size_cart' , 70);
+function ullapopken_size_cart(){
+    ?>
+    <div id="sizeChartContent" style="display:none;">
+        <table class="table border-0">
+            <thead>
+                <tr>
+                    <th class="border-0" scope="col">Size finder:</th>
+                    <th class="border-0" scope="col"><span class="sizeTypeClick" data-id="#womenChart">Women</span></th>
+                    <th class="border-0" scope="col"><span class="sizeTypeClick" data-id="#menChart">Men</span></th>
+                </tr>
+            </thead>
+        </table>
+
+        <div class="chartsWrap" id="womenChart">
+            <h5 class="text-center">Size Chart - Women</h5>
+            <?php if ( have_rows( 'women_size_carts', 'option' ) ) : while ( have_rows( 'women_size_carts', 'option' ) ) : the_row(); ?>
+                <div class="cart">
+                    <h6><?php the_sub_field( 'title' ); ?></h6>
+                    <span class="subtitle"><?php the_sub_field( 'sub_title' ); ?></span>
+                    <div class="table-responsive"><?php the_sub_field( 'chart' ); ?></div>
+                </div>
+            <?php endwhile; endif; ?>
+        </div>
+
+        <div class="chartsWrap" id="menChart">
+            <h5 class="text-center">Size chart Men</h5>
+                <?php if ( have_rows( 'men_size_carts', 'option' ) ) : while ( have_rows( 'men_size_carts', 'option' ) ) : the_row(); ?>
+                    <div class="cart">
+                        <h6><?php the_sub_field( 'title' ); ?></h6>
+                        <span class="subtitle"><?php the_sub_field( 'sub_title' ); ?></span>
+                        <div class="table-responsive"><?php the_sub_field( 'chart' ); ?></div>
+                    </div>
+                <?php endwhile; endif; ?>
+        </div>
+
+    </div>
+    <?php
+}

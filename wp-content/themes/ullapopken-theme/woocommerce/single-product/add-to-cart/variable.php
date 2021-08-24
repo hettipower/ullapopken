@@ -51,6 +51,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 									<span>Select <?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></span>
 								 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
 								</a>
+								<div class="sizeChart">
+									<a href="#" data-fancybox="sizeChart" data-src="#sizeChartContent">Size guide</a>
+								</div>
 							<?php else: ?>
 								<?php
 									wc_dropdown_variation_attribute_options(

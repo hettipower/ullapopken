@@ -60,6 +60,7 @@ if ( post_password_required() ) {
 				 */
 				do_action( 'woocommerce_single_product_summary' );
 				?>
+				<a href="#" class="scrollToDetails"><i class="fas fa-chevron-circle-down"></i> Product Details</a>
 			</div>
 		</div>
 	</section>

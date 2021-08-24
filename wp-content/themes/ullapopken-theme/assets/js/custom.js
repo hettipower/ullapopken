@@ -57,11 +57,11 @@ jQuery(document).ready(function ($) {
 
     $('.relatedProductWrap .productSlider').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 4,
-        centerMode: true,
+        centerMode: false,
         prevArrow : '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg></button>',
         nextArrow : '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></button>',
         responsive: [
@@ -84,11 +84,11 @@ jQuery(document).ready(function ($) {
 
     $('.upsaleProductWrap .productSlider').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 4,
-        centerMode: true,
+        centerMode: false,
         prevArrow : '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg></button>',
         nextArrow : '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></button>',
         responsive: [
@@ -111,11 +111,11 @@ jQuery(document).ready(function ($) {
 
     $('.recentlyViewedWrap .productSlider').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 4,
-        centerMode: true,
+        centerMode: false,
         prevArrow : '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg></button>',
         nextArrow : '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></button>',
         responsive: [
@@ -217,6 +217,21 @@ jQuery(document).ready(function ($) {
         Fancybox.close();
         return false;
     });
+
+    Fancybox.bind('.sizeTypeClick');
+
+    $('.sizeTypeClick').on('click' , function(){
+        var eleID = $(this).data('id');
+        $('.fancybox__slide').animate({
+            scrollTop: $(eleID).offset().top - 150
+        }, 2000);
+        return false;
+    });
+
+    $('.scrollToDetails').on('click' , function(){
+        scroll_anim('.productDescriptions');
+        return false;
+    });
         
 
 });
@@ -230,4 +245,10 @@ function getFormData($form){
     });
 
     return indexed_array;
+}
+
+function scroll_anim(ele) {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(ele).offset().top
+    }, 1000);
 }
