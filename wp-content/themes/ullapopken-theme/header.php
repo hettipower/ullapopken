@@ -95,6 +95,7 @@
 					</a>
 					<ul class="secondMenuWrap navbar-nav">
 						<?php 
+							global $woocommerce;
 							$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
 							if (is_user_logged_in()) { 
 						?>
@@ -113,7 +114,10 @@
 							<a class="nav-link" href="<?php echo home_url('wishlist'); ?>"><i class="far fa-heart"></i><span>Favorites</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo WC()->cart->get_cart_url(); ?>"><i class="fas fa-shopping-bag"></i><span>Bag</span></a>
+							<a class="nav-link cartIcon" href="<?php echo wc_get_cart_url(); ?>">
+								<span class="cartCount"><?php echo $woocommerce->cart->cart_contents_count; ?></span>
+								<i class="fas fa-shopping-bag"></i><span>Bag</span>
+							</a>
 						</li>
 					</ul>
 				</div>

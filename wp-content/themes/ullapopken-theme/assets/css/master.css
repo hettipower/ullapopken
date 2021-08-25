@@ -15513,6 +15513,25 @@ header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link {
   text-align: center;
   color: #191919;
 }
+header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link.cartIcon {
+  position: relative;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link.cartIcon .cartCount {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fe8273;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  font-size: 0.625rem;
+  line-height: 0.875rem;
+  font-weight: 400;
+}
 header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link i {
   font-size: 22px;
 }
@@ -16383,10 +16402,6 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   font-weight: 600;
   color: #191919;
 }
-.productSlider {
-  max-width: 1140px;
-  margin: auto;
-}
 .productSlider .product {
   margin: 0 6px;
 }
@@ -16703,9 +16718,9 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   padding: 2.5rem 0;
   overflow: hidden;
 }
-#singleProductWrap .relatedProductWrap .container h2,
-#singleProductWrap .upsaleProductWrap .container h2,
-#singleProductWrap .recentlyViewedWrap .container h2 {
+#singleProductWrap .relatedProductWrap .container > h2,
+#singleProductWrap .upsaleProductWrap .container > h2,
+#singleProductWrap .recentlyViewedWrap .container > h2 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;

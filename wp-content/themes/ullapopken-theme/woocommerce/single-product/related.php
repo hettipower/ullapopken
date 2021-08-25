@@ -20,7 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
-<div class="container">
 	<?php
 	$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Recommended for you', 'woocommerce' ) );
 
@@ -29,7 +28,6 @@ if ( $related_products ) : ?>
 		<h2><?php echo esc_html( $heading ); ?></h2>
 		<p>Similar products</p>
 	<?php endif; ?>
-</div>
 
 <div class="productSlider">
 	<?php foreach ( $related_products as $related_product ) : ?>

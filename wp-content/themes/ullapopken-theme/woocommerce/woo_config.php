@@ -204,9 +204,7 @@ function wc_recent_viewed_products(){
 
     if( $viewed_products && !empty($viewed_products) ):
 ?>
-<div class="container">
-	<h2>Recently viewed</h2>
-</div>
+<h2>Recently viewed</h2>
 <div class="productSlider">
 
 	<?php foreach ( $viewed_products as $viewedID ) : ?>
@@ -316,4 +314,19 @@ function ullapopken_size_cart(){
 
     </div>
     <?php
+}
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment', 30, 1 );
+function header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+    ob_start();
+    ?>
+    <a class="nav-link cartIcon" href="<?php echo wc_get_cart_url(); ?>">
+        <span class="cartCount"><?php echo $woocommerce->cart->cart_contents_count; ?></span>
+        <i class="fas fa-shopping-bag"></i><span>Bag</span>
+    </a>
+    <?php
+    $fragments['a.nav-link.cartIcon'] = ob_get_clean();
+
+    return $fragments;
 }
