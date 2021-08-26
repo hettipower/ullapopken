@@ -1,0 +1,36 @@
+2021-08-26T17:30:08+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:349
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 349
+
+2021-08-26T17:30:49+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:349
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 349
+
+2021-08-26T17:31:22+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:351
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 351
+
+2021-08-26T17:33:38+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:349
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 349
+
