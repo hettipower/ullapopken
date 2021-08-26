@@ -34,3 +34,65 @@ Stack trace:
 #4 {main}
   thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 349
 
+2021-08-26T17:42:51+00:00 CRITICAL Uncaught Error: Call to a member function get_parent_id() on null in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\cart\cart.php:38
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\xampp\htdocs\ullapopken\wp-includes\shortcodes.php(356): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\xampp\htdocs\ullapopken\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', '[woocommerce_ca...')
+#7 C:\xampp in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\cart\cart.php on line 38
+
+2021-08-26T17:50:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_AJAX::json_headers() in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:351
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 351
+
+2021-08-26T17:50:45+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:124
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(85): get_color_variations_image()
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): ullapopken_product_color_attr('')
+#2 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\content-productSlider.php(42): do_action('woocommerce_bef...')
+#5 C:\xampp\htdocs\ullapopken\wp-includes\template.php(772): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#7 C:\xampp\htdocs\ullapopken\wp-conten in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 124
+
+2021-08-26T17:50:57+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:124
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(85): get_color_variations_image()
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): ullapopken_product_color_attr('')
+#2 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\content-productSlider.php(42): do_action('woocommerce_bef...')
+#5 C:\xampp\htdocs\ullapopken\wp-includes\template.php(772): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#7 C:\xampp\htdocs\ullapopken\wp-conten in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 124
+
+2021-08-26T17:53:14+00:00 CRITICAL Uncaught Error: Call to undefined method WC_AJAX::json_headers() in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php:355
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): woocommerce_add_to_cart_variable_rc_callback('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php on line 355
+
+2021-08-26T17:59:29+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\cart\cart.php:41
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\xampp\htdocs\ullapopken\wp-includes\shortcodes.php(356): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\xampp\htdocs\ullapopken\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', '[woocommerce_ca...')
+#7 C:\xampp\htdoc in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\cart\cart.php on line 41
+

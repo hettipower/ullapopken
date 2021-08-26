@@ -11,6 +11,12 @@
             .cartTotalsWrap {
                 width: 30%;
 
+                .innerCartTotals {
+                    position: sticky;
+                    top: 0;
+                    width: 100%;
+                }
+
                 .cartTotal {
                     padding: 1.5rem;
                     background-color: #fff;
@@ -246,6 +252,7 @@
                             font-size: 0.75rem;
                             line-height: 1.25rem;
                             font-weight: 400;
+                            margin-bottom: 1rem;
                         }
 
                         .priceWrap {
@@ -275,6 +282,8 @@
                                 margin-right: 1rem;
 
                                 .quantity {
+                                    position: relative;
+
                                     .input-text {
                                         border: 1px solid #E7E7E7;
                                         border-radius: 0.25rem;
@@ -288,6 +297,33 @@
                                             box-shadow: none;
                                             border-color: #000;
                                             outline: none;
+                                        }
+                                    }
+
+                                    button {
+                                        position: absolute;
+                                        top: 0;
+                                        width: 24px;
+                                        height: 100%;
+                                        background: none;
+                                        color: #191919;
+                                        font-weight: 300;
+                                        padding: 0;
+                                        line-height: 0;
+                                        border: none;
+                                        cursor: pointer;
+
+                                        &.plus {
+                                            right: 0px;
+                                        }
+
+                                        &.minus {
+                                            left: 0px;
+                                        }
+
+                                        .bi {
+                                            width: 20px;
+                                            height: 20px;
                                         }
                                     }
                                 }

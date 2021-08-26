@@ -219,6 +219,8 @@ jQuery(document).ready(function ($) {
                 var variation = $(this).data('variation');
                 if( variation == var_id ) {
                     $(this).show();
+                } else if( $(this).hasClass('singleProduct') ) {
+                    $(this).show();
                 }
             });
             Fancybox.show([{ src: "#addToCartResponseSucess", type: "inline" }]);
@@ -251,6 +253,33 @@ jQuery(document).ready(function ($) {
     $('.scrollToDetails').on('click' , function(){
         scroll_anim('.productDescriptions');
         return false;
+    });
+
+    $('.cartItemsWrap .cartItems').on( 'click', 'button.plus, button.minus', function() {
+ 
+        // Get current quantity values
+        var qty = $( this ).closest( '.quantity' ).find( '.qty' );
+        var val   = parseFloat(qty.val());
+        var max = parseFloat(qty.attr( 'max' ));
+        var min = parseFloat(qty.attr( 'min' ));
+        var step = parseFloat(qty.attr( 'step' ));
+
+        // Change the value if plus or minus
+        if ( $( this ).is( '.plus' ) ) {
+            if ( max && ( max <= val ) ) {
+              qty.val( max );
+            } else {
+                qty.val( val + step );
+            }
+        } else {
+            if ( min && ( min >= val ) ) {
+              qty.val( min );
+            } else if ( val > 1 ) {
+              qty.val( val - step );
+            }
+        }
+        qty.trigger('change');
+         
     });
         
 

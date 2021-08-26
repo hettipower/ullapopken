@@ -35,6 +35,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+
+						//Has parent product
+						$_parent_product = wc_get_product($_product->get_parent_id());
+
+						$item_id = ( !empty( $cart_item['variation_id'] ) ) ? $cart_item['variation_id'] : '';
+						if ( !empty( $item_id ) ) {
+							$variations = get_variation_data_from_variation_id( $item_id );
+						} else {
+							$variations = array();
+						}
+
 			?>
 				<div class="cartItem <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<div class="imgWrap">
@@ -55,10 +66,20 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<div class="proTitle">
 							<?php
-								if ( ! $product_permalink ) {
-									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+								if( $_parent_product ) {
+									if( $_parent_product->is_type('variable') ) {
+										if ( ! $product_permalink ) {
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', get_the_title($_product->get_parent_id()), $cart_item, $cart_item_key ) . '&nbsp;' );
+										} else {
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), get_the_title($_product->get_parent_id()) ), $cart_item, $cart_item_key ) );
+										}
+									}
 								} else {
-									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+									if ( ! $product_permalink ) {
+										echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+									} else {
+										echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+									}
 								}
 
 								do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
@@ -67,6 +88,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<div class="productMeta">
 							<?php
+								//Variations Data
+								if( $variations ) {
+									foreach($variations as $variation) {
+										echo '<div class="variation">'.$variation.'</div>';
+									}
+								}
 								// Meta data.
 								echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
 
@@ -153,25 +180,28 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</div>
 
 	<div class="cartTotalsWrap">
-		<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
-		<div class="cartTotal"><?php echo woocommerce_cart_totals(); ?></div>
+		<div class="innerCartTotals">
 
-		<?php if ( wc_coupons_enabled() ) { ?>
-			<div class="coupon">
-				<label for="coupon_code">Do you have a promo code?</label>
-				<input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'enter promo code', 'woocommerce' ); ?>" />
-				<button type="submit" class="btn" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply', 'woocommerce' ); ?></button>
-				<?php do_action( 'woocommerce_cart_coupon' ); ?>
+			<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+			<div class="cartTotal"><?php echo woocommerce_cart_totals(); ?></div>
+
+			<?php if ( wc_coupons_enabled() ) { ?>
+				<div class="coupon">
+					<label for="coupon_code">Do you have a promo code?</label>
+					<input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'enter promo code', 'woocommerce' ); ?>" />
+					<button type="submit" class="btn" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply', 'woocommerce' ); ?></button>
+					<?php do_action( 'woocommerce_cart_coupon' ); ?>
+				</div>
+			<?php } ?>
+
+			<div class="contactWrap">
+				<h3 class="widget-title">Contact us</h3>
+				<div class="tele"><?php the_field( 'telephone', 'option' ); ?></div>
+				<div class="hour"><?php the_field( 'open_hour', 'option' ); ?></div>
+				<div class="email"><?php the_field( 'email', 'option' ); ?></div>
 			</div>
-		<?php } ?>
 
-		<div class="contactWrap">
-			<h3 class="widget-title">Contact us</h3>
-			<div class="tele"><?php the_field( 'telephone', 'option' ); ?></div>
-			<div class="hour"><?php the_field( 'open_hour', 'option' ); ?></div>
-			<div class="email"><?php the_field( 'email', 'option' ); ?></div>
 		</div>
-
 	</div>
 
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
