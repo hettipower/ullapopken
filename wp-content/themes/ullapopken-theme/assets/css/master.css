@@ -17039,6 +17039,13 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   background-color: #F2F2F2;
   text-align: center;
 }
+#wooDefaultWrap .woocommerce .woocommerce-cart-form .cartItemsWrap .cartItems .cartItem .deliveryMsg {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #5AC372;
+}
 #wooDefaultWrap .woocommerce .woocommerce-cart-form .cartItemsWrap .submitCartWrap {
   display: none;
 }
