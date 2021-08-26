@@ -121,15 +121,19 @@ function ullapopken_product_color_attr(){
 
 function get_color_variations_image() {
     global $product;
-    $variations = $product->get_available_variations();
     $imagesArr = array();
 
-    if( $variations ) {
-        foreach ( $variations as $variation ) {
-            array_push($imagesArr , array(
-                'img' => $variation['image']['url'],
-                'color' => $variation['attributes']['attribute_pa_color']
-            ));
+    if ( $product->is_type( 'variable' ) ) {
+
+        $variations = $product->get_available_variations();
+
+        if( $variations ) {
+            foreach ( $variations as $variation ) {
+                array_push($imagesArr , array(
+                    'img' => $variation['image']['url'],
+                    'color' => $variation['attributes']['attribute_pa_color']
+                ));
+            }
         }
     }
 
@@ -265,6 +269,23 @@ function ullapopken_add_cart_single_response(){
                         </div>
                     <?php
                 }
+            } else {
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ), 'single-post-thumbnail' );
+                ?>
+                    <div class="productDetail singleProduct" style="display:none;">
+                        <div class="productImg">
+                            <?php if( $image ): ?>
+                                <img src="<?php  echo $image[0]; ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="detail">
+                            <h3><?php echo get_the_title($product->get_id()); ?></h3>
+                            <div class="price text-left">
+                                <?php echo $product->get_price_html(); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php
             }
         ?>
     </div>
@@ -348,7 +369,7 @@ function woocommerce_add_to_cart_variable_rc_callback() {
         // Return fragments
         WC_AJAX::get_refreshed_fragments();
     } else {
-        WC_AJAX::json_headers();
+        //WC_AJAX::json_headers();
 
         // If there was an error adding to the cart, redirect to the product page to show any errors
         $data = array(
@@ -358,4 +379,27 @@ function woocommerce_add_to_cart_variable_rc_callback() {
         echo json_encode( $data );
     }
     die();
+}
+
+add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text',1);
+function woo_custom_cart_button_text() {
+    return __('Add to Bag', 'woocommerce');
+}
+
+function get_variation_data_from_variation_id( $item_id ) {
+    $_product = new WC_Product_Variation( $item_id );
+    $variation_data = $_product->get_variation_attributes();
+    $variation_detail = wc_get_formatted_variation( $variation_data, true );
+    
+    return explode(',' , $variation_detail);
+}
+
+add_action( 'woocommerce_after_quantity_input_field', 'dc_quantity_plus_minus_sign' );
+function dc_quantity_plus_minus_sign() {
+   echo '<button type="button" class="plus" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+ </svg></button>';
+   echo '<button type="button" class="minus" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+   <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+ </svg></button>';
 }
