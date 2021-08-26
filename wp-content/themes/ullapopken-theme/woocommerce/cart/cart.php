@@ -53,7 +53,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							<span class="cartItemCount"><?php echo $cart_item['quantity']; ?>x</span>
 						<?php endif; ?>
 						<?php
-							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('full'), $cart_item, $cart_item_key );
 
 							if ( ! $product_permalink ) {
 								echo $thumbnail; // PHPCS: XSS ok.
@@ -158,6 +158,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							
 						</div>
+
+						<div class="deliveryMsg">Sofort lieferbar - In 3-5 Werktagen bei dir</div>
 
 					</div>
 				</div>
