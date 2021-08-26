@@ -1,0 +1,362 @@
+#wooDefaultWrap {
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+
+    .woocommerce {
+        .woocommerce-cart-form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .cartTotalsWrap {
+                width: 30%;
+
+                .cartTotal {
+                    padding: 1.5rem;
+                    background-color: #fff;
+                    margin-bottom: 1.5rem;
+                    border-radius: .25rem;
+
+                    h2 {
+                        font-size: 1.25rem;
+                        line-height: 1.75rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                    }
+
+                    .shop_table {
+                        border-radius: 0;
+                        border: none;
+
+                        th {
+                            padding: 9px 0;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                        }
+
+                        td {
+                            padding: 9px 0;
+                            text-align: right;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                        }
+
+                        .order-total {
+                            th {
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                font-weight: 600;
+                            }
+
+                            td {
+                                .amount {
+                                    font-size: 1rem;
+                                    line-height: 1.5rem;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+
+                    .wc-proceed-to-checkout {
+                        padding: 0;
+
+                        .checkout-button {
+                            margin-bottom: 0;
+                            color: #FFF;
+                            background-color: #FE8273;
+                            border: 1px solid #FE8273;
+                            padding: 0.4375rem 0;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            border-radius: 0.25rem;
+                            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                            &:focus , 
+                            &:hover {
+                                background-color: #191919;
+                                border-color: #191919;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+
+                .coupon {
+                    background-color: #fff;
+                    padding: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    border-radius: 0.25rem;
+
+                    label {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        padding-bottom: 1.5rem ;
+                    }
+
+                    #coupon_code {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        padding: 0.4375rem 0.9375rem;
+                        color: #191919;
+                        border: 1px solid #E7E7E7;
+                        border-radius: 0.25rem;
+                        outline: none;
+                        box-shadow: none;
+                        margin-bottom: 1rem;
+
+                        &:focus {
+                            color: #191919;
+                            background-color: #FFF;
+                            border-color: #191919;
+                            outline: 0;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .btn {
+                        font-weight: 400;
+                        color: #191919;
+                        width: 100%;
+                        padding: 0.3125rem 0.9375rem;
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                        border-radius: 0.25rem;
+                        background-color: #F2F2F2;
+                        border-color: #F2F2F2;
+                    }
+                }
+
+                .contactWrap {
+                    padding: 1.5rem;
+                    background-color: #fff;
+                    border-radius: 0.25rem;
+
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .tele {
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                        font-weight: 600;
+                    }
+
+                    .hour {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        color: #828282;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .email {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            .cartItemsWrap {
+                width: 67%;
+                background-color: #fff;
+                border-radius: 0.25rem;
+                padding: 1.5rem;
+                margin-bottom: auto;
+
+                .mainTitle {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: "Open Sans", Arial, sans-serif;
+
+                    .cartCount {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        color: #828282;
+                    }
+                }
+
+                .cartItems {
+                    .cartItem {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 1.5rem;
+                        padding-bottom: 1.5rem;
+                        border-bottom: 1px solid #E7E7E7;
+    
+                        &:last-child {
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                            border-bottom: none;
+                        }
+
+                        .imgWrap {
+                            width: 128px;
+                            position: relative;
+
+                            img {
+                                border-radius: 0.25rem;
+                            }
+
+                            .cartItemCount {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                color: #fff;
+                                background-color: #FE8273;
+                                border-radius: 100%;
+                                position: absolute;
+                                left: -0.75rem;
+                                top: -0.75rem;
+                                width: 28px;
+                                height: 28px;
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+
+                        .contentWrap {
+                            flex: 1;
+                            padding-left: 1rem;
+                        }
+
+                        .proTitle {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            font-weight: 600;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .productMeta {
+                            font-size: 0.75rem;
+                            line-height: 1.25rem;
+                            font-weight: 400;
+                        }
+
+                        .priceWrap {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 1rem;
+
+                            .price {
+                                font-size: 0.75rem;
+                                line-height: 1.25rem;
+                                font-weight: 400;
+                            }
+
+                            .subtotal {
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .actionsWrap {
+                            display: flex;
+                            align-items: center;
+
+                            .qty {
+                                width: 150px;
+                                margin-right: 1rem;
+
+                                .quantity {
+                                    .input-text {
+                                        border: 1px solid #E7E7E7;
+                                        border-radius: 0.25rem;
+                                        padding: 0.1875rem 0.9375rem;
+                                        font-size: 0.75rem;
+                                        line-height: 1.5rem;
+                                        font-weight: 400;
+
+                                        &:focus , 
+                                        &:hover {
+                                            box-shadow: none;
+                                            border-color: #000;
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .remove {
+                                width: 10rem;
+                                height: auto;
+                                font-weight: 400;
+                                cursor: pointer;
+                                color: #191919 !important;
+                                padding: .3125rem .9375rem;
+                                font-size: .875rem;
+                                line-height: 1.25rem;
+                                border-radius: .25rem;
+                                background-color: #F2F2F2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .submitCartWrap {
+                    display: none;
+                }
+
+            }
+        }
+
+        .continueShopping {
+            margin-bottom: 2rem ;
+
+            a {
+                font-weight: 600;
+                text-decoration: underline;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+            }
+        }
+
+        .emptyCartWrap {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.25rem;
+
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+
+            .emptyCartImg {
+                text-align: center;
+            }
+
+            .emptyCartMgs {
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+
+                h3 {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
