@@ -16725,26 +16725,63 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   margin-bottom: 1.5rem;
   padding-left: 2rem;
 }
-#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap .categories {
-  padding-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-}
-#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap .categories .posted_in span {
-  padding-right: 2rem;
-}
-#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap .categories .posted_in a {
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  text-decoration: underline;
-}
 #singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap .title {
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 600;
   font-family: "Open Sans", Arial, sans-serif;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTab {
+  padding: 0;
+  border: none;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTab .nav-item .nav-link {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: transparent;
+  padding: 0 2rem 0 0;
+  text-decoration: underline;
+  border: none;
+  color: #191919;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTab .nav-item .nav-link.active {
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro {
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro:last-child {
+  padding-bottom: 2rem;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro .title {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: -1rem;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro .care {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  list-style: none;
+}
+#singleProductWrap .productDescriptions .woocommerce-tabs .panel .contentWrap #productTabContent .tab-pane .intro .care li {
+  padding-bottom: 0.5rem;
 }
 #singleProductWrap .productDescriptions .woocommerce-tabs .panel .sku_wrapper {
   position: absolute;
