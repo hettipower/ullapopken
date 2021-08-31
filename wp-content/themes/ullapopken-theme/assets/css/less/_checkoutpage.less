@@ -1,0 +1,482 @@
+#wooDefaultWrap {
+    .woocommerce {
+        .woocommerce-checkout {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .orderDetailsWrap {
+                width: 30%;
+
+                .innerOrderDetails {
+                    position: sticky;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .orderDetail {
+                    padding: 1.5rem;
+                    background-color: #fff;
+                    margin-bottom: 1.5rem;
+                    border-radius: .25rem;
+
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    table.shop_table {
+                        td {
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                        }
+
+                        th {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            font-weight: 600;
+                        }
+                    }
+
+                    #payment {
+                        background-color: transparent;
+
+                        .wc_payment_methods {
+                            padding: 1rem 0;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                        }
+
+                        .place-order  {
+                            padding: 1rem 0;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+
+                            #place_order {
+                                margin-bottom: 0;
+                                color: #FFF;
+                                background-color: #FE8273;
+                                border: 1px solid #FE8273;
+                                padding: 0.4375rem 0;
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                border-radius: 0.25rem;
+                                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                width: 100%;
+    
+                                &:focus , 
+                                &:hover {
+                                    background-color: #191919;
+                                    border-color: #191919;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .contactWrap {
+                    padding: 1.5rem;
+                    background-color: #fff;
+                    border-radius: 0.25rem;
+
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .tele {
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                        font-weight: 600;
+                    }
+
+                    .hour {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        color: #828282;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .email {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            .formFieldsWrap {
+                width: 67%;
+                margin-bottom: auto;
+
+                .formData {
+                    padding: 1.5rem;
+                    background-color: #fff;
+                    border-radius: 0.25rem;
+
+                    &.billingData {
+                        margin-bottom: 1.5rem;
+                    }
+
+                    h2 {
+                        font-size: 1.25rem;
+                        line-height: 1.75rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                        padding-bottom: 1rem;
+                        margin: 0;
+                    }
+
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        font-weight: 600;
+                        font-family: "Open Sans", Arial, sans-serif;
+                        margin-bottom: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        span {
+                            font-size: 0.75rem;
+                            line-height: 1.25rem;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .form-row {
+                        label {
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+
+                            .required {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                color: #191919;
+                            }
+                        }
+
+                        .input-text {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            padding: 0.4375rem 0.9375rem;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #191919;
+                            background-color: #FFF;
+                            background-clip: padding-box;
+                            border: 1px solid #E7E7E7;
+                            border-radius: 0.25rem;
+                            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                            &:focus {
+                                color: #191919;
+                                background-color: #FFF;
+                                border-color: #191919;
+                                outline: 0;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                .radioWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1.5rem;
+
+                    .form-check {
+                        width: 48%;
+                        text-align: center;
+                        padding: 0;
+                        background-color: #fff;
+                        border-radius: 0.25rem;
+
+                        .form-check-label {
+                            position: relative;
+                            padding: 0.5rem 1.5rem;
+                            cursor: pointer;
+                            width: 100%;
+
+                            .form-check-input {
+                                position: absolute;
+                                left: 0;
+                                z-index: -1;
+                                width: 1rem;
+                                height: 1rem;
+                                opacity: 0;
+
+                                &:checked {
+                                    ~ .custom-control-label {
+                                        &::before {
+                                            background-color: #FE8273;
+                                            border-color: #FE8273;
+                                            border-radius: 50%;
+                                        }
+    
+                                        &::after {
+                                            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.5694 10.7505L12.6128 5.70709L11.9057 5L6.8623 10.0434L4.20712 7.38824L3.5 8.09534L6.8623 11.4576L7.5694 10.7505Z' fill='%23FFF'/%3E%3C/svg%3E");
+                                            background-repeat: no-repeat;
+                                            background-position: 50% 50%;
+                                            background-size: contain;
+                                            width: 1.5rem;
+                                            height: 1.5rem;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .custom-control-label {
+                                position: relative;
+                                width: 100%;
+                                text-align: center;
+                                min-height: 24px;
+                                margin-bottom: 0.5rem;
+
+                                &::before {
+                                    border-radius: 50%;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    left: 0;
+                                    position: absolute;
+                                    top: 0rem;
+                                    right: 0;
+                                    display: block;
+                                    pointer-events: none;
+                                    content: "";
+                                    background-color: #FFF;
+                                    border: #191919 solid 1px;
+                                    margin: auto;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    top: 0rem;
+                                    right: 0;
+                                    display: block;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    left: 0;
+                                    content: "";
+                                    background: 50% / 50% 50% no-repeat;
+                                    margin: auto;
+                                }
+                            }
+
+                            h4 {
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                font-weight: 600;
+                                font-family: "Open Sans", Arial, sans-serif;
+                                margin-bottom: 0.25rem;
+                            }
+
+                            .form-text {
+                                font-size: 0.75rem;
+                                line-height: 1.25rem;
+                                font-weight: 400;
+                                font-family: "Open Sans", Arial, sans-serif;
+                                color: #828282;
+                                margin: 0;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .loginRegistrationWrap {
+            margin-bottom: 4rem;
+
+            .formsWrap {
+                .wcForm {
+                    width: 32%;
+                    background-color: #fff;
+                    padding: 1.5rem 1.5rem 4rem;
+                    border-radius: 0.25rem;
+                    position: relative;
+                    margin-bottom: auto;
+
+                    .wc-login-toggle {
+
+                        h3 {
+                            font-size: 1.25rem;
+                            line-height: 1.75rem;
+                            font-weight: 600;
+                            font-family: "Open Sans", Arial, sans-serif;
+                            margin: 0;
+                            padding-bottom: 0.5rem;
+                        }
+
+                        p {
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                            color: #828282;
+                        }
+
+                        .icon {
+                            position: absolute;
+                            padding: 1rem;
+                            margin: auto;
+                            right: 0;
+                            left: 0;
+                            bottom: -1.75rem;
+                            width: 56px;
+                            height: 56px;
+                            background-color: #fff;
+                            border-radius: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 3.5rem;
+                                height: 1.75rem;
+                                border-bottom: 0.0625rem solid #E7E7E7;
+                                border-left: 0.0625rem solid #E7E7E7;
+                                border-right: 0.0625rem solid #E7E7E7;
+                                border-bottom-left-radius: 6.25rem;
+                                border-bottom-right-radius: 6.25rem;
+                            }
+
+                            .bi {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        padding-bottom: 1.5rem;
+
+                        .wc-login-toggle {
+                            p , .icon {
+                                display: none;
+                            }
+                        } 
+                    }
+
+                    .woocommerce-form {
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+
+                        .form-row {
+                            padding: 0;
+                            width: 100%;
+                            margin-bottom: 1rem;
+
+                            label {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                            }
+
+                            .input-text {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                padding: 0.4375rem 0.9375rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                color: #191919;
+                                background-color: #FFF;
+                                background-clip: padding-box;
+                                border: 1px solid #E7E7E7;
+                                border-radius: 0.25rem;
+                                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                            }
+
+                            .woocommerce-form__label {
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 0.5rem;
+                            }
+
+                            .woocommerce-button {
+                                float: none;
+                                margin: 0;
+                                color: #FFF;
+                                background-color: #FE8273;
+                                border: 1px solid #FE8273;
+                                padding: 0.4375rem 0;
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                border-radius: 0.25rem;
+                                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                width: 100%;
+
+                                &:focus , 
+                                &:hover {
+                                    background-color: #191919;
+                                    border-color: #191919;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+
+                        .woocommerce-privacy-policy-text {
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            font-weight: 400;
+                            color: #828282;
+                        }
+                    }
+
+                    .guestBtn {
+                        display: none;
+                        margin-top: 1.5rem;
+                        
+                        a {
+                            float: none;
+                            margin: 0;
+                            color: #FFF;
+                            background-color: #FE8273;
+                            border: 1px solid #FE8273;
+                            padding: 0.4375rem 0;
+                            font-size: 0.875rem;
+                            line-height: 1.5rem;
+                            border-radius: 0.25rem;
+                            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                            width: 100%;
+                            display: inline-block;
+                            text-align: center;
+
+                            &:focus , 
+                            &:hover {
+                                background-color: #191919;
+                                border-color: #191919;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

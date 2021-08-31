@@ -34,6 +34,12 @@ if( $getShopCookie == 'women' ) {
 	</div>
 </section>
 
+<section class="recentlyViewedWrap">
+	<div class="container">
+		<?php echo wc_recent_viewed_products(); ?>
+	</div>
+</section>
+
 <section class="sectionWrap" id="bannerWrap">
 	<div class="container">
 		<?php 

@@ -173,4 +173,45 @@ header {
             display: none;
         }
     }
+
+    &.checkoutHeaderWrap {
+        .logo {
+            margin: auto;
+            text-align: center;
+            padding-top: 1.5rem;
+            padding-bottom: 0.25rem;
+
+            img {
+                width: 7.5rem;
+                height: 2rem;
+            }
+        }
+
+        .checkoutTimeLine {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            color: #828282;
+
+            li {
+                position: relative;
+
+                a {
+                    color: #191919;
+                }
+
+                .bi {
+                    margin: 0 8px;
+                }
+
+                &.active {
+                    color: #191919;
+                }
+            }
+        }
+    }
 }
