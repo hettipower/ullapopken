@@ -1,5 +1,11 @@
 <?php /* Template Name: Woocommerce Templates */ ?>
-<?php get_header(); ?>
+<?php 
+	if( is_checkout() ) {
+		get_header('checkout');
+	} else {
+		get_header();
+	}
+?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -11,4 +17,9 @@
 
 <?php endwhile; endif; ?>
 
-<?php get_footer();
+<?php 
+	if( is_checkout() ) {
+		get_footer('checkout');
+	} else {
+		get_footer();
+	}

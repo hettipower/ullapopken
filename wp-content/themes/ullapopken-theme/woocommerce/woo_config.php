@@ -352,7 +352,8 @@ function header_add_to_cart_fragment( $fragments ) {
     return $fragments;
 }
 
-add_action( 'wp_ajax_woocommerce_add_to_cart_variable_rc', 'woocommerce_add_to_cart_variable_rc_callback' );	
+add_action( 'wp_ajax_woocommerce_add_to_cart_variable_rc', 'woocommerce_add_to_cart_variable_rc_callback' );
+add_action( 'wp_ajax_nopriv_woocommerce_add_to_cart_variable_rc', 'woocommerce_add_to_cart_variable_rc_callback' );	
 function woocommerce_add_to_cart_variable_rc_callback() {
     $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $_POST['product_id'] ) );
     $quantity = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
@@ -402,4 +403,31 @@ function dc_quantity_plus_minus_sign() {
    echo '<button type="button" class="minus" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
  </svg></button>';
+}
+
+add_filter( 'woocommerce_checkout_fields' , 'ullapopken_remove_checkout_fields' );
+function ullapopken_remove_checkout_fields( $fields ) {
+
+    unset($fields['billing']['billing_company']); 
+    unset($fields['billing']['billing_address_2']); 
+    unset($fields['billing']['billing_state']); 
+    unset($fields['billing']['billing_phone']);
+
+    unset($fields['shipping']['shipping_company']); 
+    unset($fields['shipping']['shipping_address_2']);
+    unset($fields['shipping']['shipping_state']);
+    unset($fields['shipping']['shipping_phone']);
+    
+    return $fields; 
+    
+}
+
+add_filter( 'woocommerce_default_address_fields' , 'custom_override_default_address_fields' );
+function custom_override_default_address_fields( $address_fields ) {
+    $address_fields['address_1']['label'] = 'Street';
+    $address_fields['country']['label'] = 'Country';
+    $address_fields['city']['label'] = 'City';
+    $address_fields['postcode']['label'] = 'Zip Code';
+
+    return $address_fields;
 }
