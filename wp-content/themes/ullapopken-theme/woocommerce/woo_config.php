@@ -431,3 +431,27 @@ function custom_override_default_address_fields( $address_fields ) {
 
     return $address_fields;
 }
+
+function get_product_count($termSlug = '') {
+
+    $args = array( 
+        'post_type' => 'product', 
+        'post_status' => 'publish', 
+        'posts_per_page' => -1,
+        'tax_query' => array(),
+    );
+
+    if( $termSlug ) {
+        $taxQuery = array(
+            'taxonomy' => 'product_cat',
+            'field'    => 'slug',
+            'terms'    => $termSlug,
+        );
+        $args['tax_query'][] = $taxQuery;
+    }
+
+    $products = new WP_Query( $args );
+    
+    return $products->found_posts;
+
+}

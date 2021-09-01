@@ -16078,6 +16078,9 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   line-height: 1.5rem;
   font-weight: 400;
 }
+#shopWrap {
+  padding-top: 2rem;
+}
 #shopWrap .woocommerce-breadcrumb {
   width: 100%;
   font-size: 0.75rem;
@@ -16379,6 +16382,20 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   margin-bottom: 0;
   padding-bottom: 1rem;
 }
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-container .pwf-colorlist-item {
+  margin-bottom: 1rem;
+}
+.filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-container .pwf-colorlist-item::before {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
 .filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item.pwf-field-item-checkboxlist .pwf-field-item-container {
   display: flex;
   justify-content: space-between;
@@ -16386,6 +16403,14 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
 }
 .filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item.pwf-field-item-checkboxlist .pwf-field-item-container .pwf-checkboxlist-item {
   width: 50%;
+}
+.archive .filtersWrapper .filterWrap .filterHeader {
+  padding: 4px 0;
+}
+.archive .filtersWrapper .filterWrap .filterHeader h2 {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 .products .product .imageList .imgItem,
 .productSlider .product .imageList .imgItem {
