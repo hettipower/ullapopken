@@ -1,4 +1,6 @@
 #shopWrap {
+    padding-top: 2rem;
+    
     .woocommerce-breadcrumb {
         width: 100%;
         font-size: 0.75rem;
@@ -357,6 +359,22 @@
                         border-bottom: 1px solid #F2F2F2;
                         margin-bottom: 0;
                         padding-bottom: 1rem;
+
+                        .pwf-colorlist-item {
+                            margin-bottom: 1rem;
+
+                            &::before {
+                                content: attr(title);
+                                position: absolute;
+                                left: 0;
+                                bottom: -25px;
+                                width: 100%;
+                                text-align: center;
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                            }
+                        }
                     }
 
                     &.pwf-field-item-checkboxlist {
@@ -370,6 +388,22 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.archive {
+    .filtersWrapper {
+        .filterWrap {
+            .filterHeader {
+                padding: 4px 0;
+
+                h2 {
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                    font-weight: 400;
                 }
             }
         }

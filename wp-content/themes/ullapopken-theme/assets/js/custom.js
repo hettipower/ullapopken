@@ -353,3 +353,14 @@ jQuery( function( $ ) {
 
 	});
 } );
+
+(function( $ ) {
+    "use strict";
+    $( document.body ).on( "pwf_filter_js_ajax_done", function() {
+        let pwfFilterSetting    = pwffilterVariables.filter_setting;
+        let productsContainer   = pwfFilterSetting.products_container_selector;
+
+        $('.wc_pro_count').html($(productsContainer+' .product').length);
+
+    });
+})(jQuery);

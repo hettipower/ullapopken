@@ -19,6 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
+$queried_object = get_queried_object();
+$termSlug = ( isset($queried_object->taxonomy) && $queried_object->taxonomy == 'product_cat') ? $queried_object->slug : '' ;
+
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -113,7 +116,11 @@ do_action( 'woocommerce_before_main_content' );
 <div class="filtersWrapper">
 	<div class="filterWrap">
 		<div class="filterHeader">
-			<h2>Filter by</h2>
+			<h2>
+				Filter by
+				<br/>
+				(<span class="wc_pro_count"><?php echo get_product_count($termSlug); ?></span> articles)
+			</h2>
 			<a href="#" class="close">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
 					<path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>

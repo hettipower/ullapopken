@@ -20,6 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$queried_object = get_queried_object();
+$termSlug = ( isset($queried_object->taxonomy) && $queried_object->taxonomy == 'product_cat') ? $queried_object->slug : '' ;
+
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
@@ -36,6 +39,7 @@ if ( ! empty( $breadcrumb ) ) {
 			echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
 		} else {
 			echo esc_html( $crumb[0] );
+			echo ' (<span class="wc_pro_count">'.get_product_count($termSlug).'</span>)';
 		}
 
 		echo $after;
