@@ -92,6 +92,79 @@ header {
                                 margin-top: 3px;
                             }
                         }
+
+                        &.myAccount {
+                            .nav-link {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+
+                            .dropdown-menu {
+                                width: 25rem;
+                                left: -9rem;
+                                border: 1px solid #E7E7E7;
+                                border-radius: 0 0 0.25rem 0.25rem;
+                                box-shadow: 0 0.625rem 1.25rem rgba(25, 25, 25, 0.15);
+                                padding: 1.5rem;
+
+                                .close {
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 10px;
+                                    z-index: 10;
+                                    cursor: pointer;
+                                }
+
+                                .innerDropDown {
+                                    h3 {
+                                        font-size: 1rem;
+                                        line-height: 1.5rem;
+                                        font-weight: 600;
+                                        font-family: "Open Sans", Arial, sans-serif;
+                                        margin: 0;
+                                    }
+
+                                    hr {
+                                        background-color: rgba(25, 25, 25, 0.9);
+                                        margin-top: 0.25rem;
+                                        margin-bottom: 1rem;
+                                    }
+
+                                    .dropdown-item {
+                                        font-size: 0.875rem;
+                                        line-height: 1.5rem;
+                                        font-weight: 400;
+                                        background-color: transparent;
+                                        margin-bottom: 0.5rem;
+                                        padding: 0.25rem 0;
+                                        
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+
+                                    .btn {
+                                        color: #fff;
+                                        width: 100%;
+                                        background-color: #191919;
+                                        border-color: #191919;
+                                        font-weight: 600;
+                                        padding: 0.4375rem 0;
+                                        font-size: 0.875rem;
+                                        line-height: 1.5rem;
+                                        border-radius: 0.25rem;
+                                        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                        margin-top: 2.5rem;
+                
+                                        &:hover {
+                                            background-color: #FE8273;
+                                            border-color: #FE8273;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

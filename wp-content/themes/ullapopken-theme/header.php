@@ -98,9 +98,26 @@
 							global $woocommerce;
 							$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
 							if (is_user_logged_in()) { 
+								$fullName = get_user_meta( get_current_user_id(), 'first_name', true ).' '.get_user_meta( get_current_user_id(), 'last_name', true );
 						?>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_permalink( $myaccount_page_id ); ?>"><i class="far fa-user"></i><span>My Account</span></a>
+							<li class="nav-item dropdown myAccount">
+								<a class="nav-link dropdown-toggle" href="#" id="myaccountDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-user"></i><span>My Account</span></a>
+								<div class="dropdown-menu" aria-labelledby="myaccountDropDown">
+									<span class="close">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+											<path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"></path>
+										</svg>
+									</span>
+									<div class="innerDropDown">
+										<h3>Welcome <?php echo $fullName; ?>!</h3>
+										<hr>
+										<a class="dropdown-item" href="<?php echo home_url('my-account/edit-account'); ?>">Personal data</a>
+										<a class="dropdown-item" href="<?php echo home_url('my-account/orders'); ?>">Orders</a>
+										<a class="dropdown-item" href="<?php echo home_url('my-account/edit-address'); ?>">Adresses</a>
+
+										<a href="<?php echo wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>" class="btn">Sign Out</a>
+									</div>
+								</div>
 							</li>
 						<?php } else{ ?>
 							<li class="nav-item">

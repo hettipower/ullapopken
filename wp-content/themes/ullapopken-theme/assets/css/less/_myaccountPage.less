@@ -1,0 +1,237 @@
+.woocommerce-account {
+    &:not(.logged-in) {
+        #wooDefaultWrap {
+            background-color: #fff;
+        }
+    }
+    #wooDefaultWrap {
+
+        #customer_login {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &::before , &&::after {
+                display: none;
+            }
+
+            .u-column {
+                width: 40%;
+
+                h2 {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                }
+            }
+        }
+
+        .woocommerce-form {
+            padding: 0;
+            border: none;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+
+            &.woocommerce-ResetPassword {
+                max-width: 500px;
+                margin: auto;
+            }
+
+            h2 , legend {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+
+            legend {
+                margin-top: 1rem;
+            }
+
+            label {
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+            }
+
+            .input-text {
+                display: block;
+                width: 100%;
+                height: auto;
+                padding: 0.4375rem 0.9375rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #191919;
+                background-color: #FFF;
+                background-clip: padding-box;
+                border: 1px solid #E7E7E7;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                box-shadow: none;
+                outline: none;
+            }
+
+            .woocommerce-button {
+                margin: 1rem 0 0;
+                width: 100%;
+                color: #fff;
+                background-color: #FE8273;
+                border-color: #FE8273;
+                font-weight: 600;
+                padding: 0.4375rem 0;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                border-radius: 0.25rem;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                &:hover {
+                    background-color: #191919;
+                    border-color: #191919;
+                }
+            }
+
+            .btnWrap {
+                .woocommerce-button {
+                    width: auto;
+                    float: right;
+                    padding: .4375rem 3rem;
+                }
+            }
+
+            &.was-validated {
+                .input-text {
+                    &:invalid {
+                        border-color: #eb5050;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-MyAccount-content {
+            width: 100%;
+
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+
+            .woocommerce-Addresses {
+                display: grid;
+                grid-template-columns: repeat(3 , 1fr);
+                gap: 30px;
+
+                &::before , &&::after {
+                    display: none;
+                }
+
+                .woocommerce-Address {
+                    width: 100%;
+                    background-color: #fff;
+                    padding: 1.5rem;
+                    border-radius: 0.25rem;
+
+                    .woocommerce-Address-title {
+                        h3 {
+                            font-size: 1.25rem;
+                            line-height: 1.75rem;
+                            font-weight: 600;
+                            font-family: "Open Sans", Arial, sans-serif;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    address {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        min-height: 144px;
+                        margin-bottom: 0;
+
+                        &.addNewAddress {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .add {
+                                font-size: 1rem;
+                                line-height: 1.625rem;
+                                font-weight: 400;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                .bi {
+                                    width: 40px;
+                                    height: 40px;
+                                    color: #fe8273;
+                                }
+
+                                span {
+                                    padding-top: 1rem;
+                                }
+                            }
+                        }
+
+                        .edit {
+                            margin-top: 1.5rem;
+                            min-width: 10rem;
+                            background-color: #F2F2F2;
+                            font-weight: 400;
+
+                            &:hover {
+                                background-color: #E7E7E7;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .noOrderWrap {
+                min-height: 524px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 0.25rem;
+                padding: 1.5rem;
+
+                h2 {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    padding-top: 1.5rem;
+                }
+
+                h3 {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    padding-bottom: 2rem;
+                }
+
+                .btn {
+                    min-width: 18rem;
+                    color: #191919;
+                    background-color: #F2F2F2;
+                    padding: 0.4375rem 0;
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                    border-radius: 0.25rem;
+                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                    &:hover {
+                        background-color: #E7E7E7;
+                    }
+                }
+            }
+        }
+    }
+}

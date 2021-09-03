@@ -15539,6 +15539,64 @@ header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link span {
   font-size: 11px;
   margin-top: 3px;
 }
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .nav-link::after {
+  display: none;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu {
+  width: 25rem;
+  left: -9rem;
+  border: 1px solid #E7E7E7;
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(25,25,25,0.15);
+  padding: 1.5rem;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown hr {
+  background-color: rgba(25,25,25,0.9);
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown .dropdown-item {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown .dropdown-item:hover {
+  text-decoration: underline;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown .btn {
+  color: #fff;
+  width: 100%;
+  background-color: #191919;
+  border-color: #191919;
+  font-weight: 600;
+  padding: 0.4375rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-top: 2.5rem;
+}
+header .navbar .middleWrap .container .secondMenuWrap .nav-item.myAccount .dropdown-menu .innerDropDown .btn:hover {
+  background-color: #FE8273;
+  border-color: #FE8273;
+}
 header .navbar .bottomWrap {
   width: 100%;
   padding-bottom: 1rem;
@@ -17598,4 +17656,198 @@ footer .bottomWrap .quickMenu .menu .menu-item a {
   background-color: #191919;
   border-color: #191919;
   color: #FFF;
+}
+.woocommerce-account:not(.logged-in) #wooDefaultWrap {
+  background-color: #fff;
+}
+.woocommerce-account #wooDefaultWrap #customer_login {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.woocommerce-account #wooDefaultWrap #customer_login::before,
+.woocommerce-account #wooDefaultWrap #customer_login.woocommerce-account #wooDefaultWrap #customer_login::after {
+  display: none;
+}
+.woocommerce-account #wooDefaultWrap #customer_login .u-column {
+  width: 40%;
+}
+.woocommerce-account #wooDefaultWrap #customer_login .u-column h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form {
+  padding: 0;
+  border: none;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form.woocommerce-ResetPassword {
+  max-width: 500px;
+  margin: auto;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form h2,
+.woocommerce-account #wooDefaultWrap .woocommerce-form legend {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form legend {
+  margin-top: 1rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form label {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form .input-text {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0.4375rem 0.9375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #191919;
+  background-color: #FFF;
+  background-clip: padding-box;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: none;
+  outline: none;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form .woocommerce-button {
+  margin: 1rem 0 0;
+  width: 100%;
+  color: #fff;
+  background-color: #FE8273;
+  border-color: #FE8273;
+  font-weight: 600;
+  padding: 0.4375rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form .woocommerce-button:hover {
+  background-color: #191919;
+  border-color: #191919;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form .btnWrap .woocommerce-button {
+  width: auto;
+  float: right;
+  padding: .4375rem 3rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-form.was-validated .input-text:invalid {
+  border-color: #eb5050;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content {
+  width: 100%;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses::before,
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses::after {
+  display: none;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address {
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address .woocommerce-Address-title h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  min-height: 144px;
+  margin-bottom: 0;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address.addNewAddress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address.addNewAddress .add {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address.addNewAddress .add .bi {
+  width: 40px;
+  height: 40px;
+  color: #fe8273;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address.addNewAddress .add span {
+  padding-top: 1rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address .edit {
+  margin-top: 1.5rem;
+  min-width: 10rem;
+  background-color: #F2F2F2;
+  font-weight: 400;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address .edit:hover {
+  background-color: #E7E7E7;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap {
+  min-height: 524px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  padding-top: 1.5rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  padding-bottom: 2rem;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap .btn {
+  min-width: 18rem;
+  color: #191919;
+  background-color: #F2F2F2;
+  padding: 0.4375rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap .btn:hover {
+  background-color: #E7E7E7;
 }
