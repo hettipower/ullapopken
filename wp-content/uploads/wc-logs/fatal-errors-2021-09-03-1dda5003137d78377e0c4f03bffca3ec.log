@@ -1,0 +1,16 @@
+2021-09-03T19:49:50+00:00 CRITICAL Uncaught Exception: parse error: failed at `&:not('.logged-in') {` C:\xampp\htdocs\ullapopken/wp-content/themes/ullapopken-theme/assets/css/less/./_myaccountPage.less on line 4 in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php:3460
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(2273): lessc_parser->throwError()
+#1 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(121): lessc_parser->parse('.woocommerce-ac...')
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(753): lessc->tryImport(Array, Object(stdClass), Object(stdClass))
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(284): lessc->compileProp(Array, Object(stdClass), Object(stdClass))
+#4 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendo in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php on line 3460
+
+2021-09-03T19:51:03+00:00 CRITICAL Uncaught Exception: parse error: failed at `&:not('.logged-in') {` C:\xampp\htdocs\ullapopken/wp-content/themes/ullapopken-theme/assets/css/less/./_myaccountPage.less on line 4 in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php:3460
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(2273): lessc_parser->throwError()
+#1 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(121): lessc_parser->parse('.woocommerce-ac...')
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(753): lessc->tryImport(Array, Object(stdClass), Object(stdClass))
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(284): lessc->compileProp(Array, Object(stdClass), Object(stdClass))
+#4 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendo in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php on line 3460
+
