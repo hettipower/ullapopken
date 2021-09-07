@@ -25,11 +25,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <div class="u-columns col2-set" id="customer_login">
 
-	<div class="u-column">
+	<!-- <div class="u-column"> -->
 
 <?php endif; ?>
 
-		<h2><?php esc_html_e( 'My Ulla Popken Account', 'woocommerce' ); ?></h2>
+		<!-- <h2><?php esc_html_e( 'My Ulla Popken Account', 'woocommerce' ); ?></h2>
 
 		<form class="woocommerce-form woocommerce-form-login login needs-validation" method="post" novalidate>
 
@@ -59,11 +59,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
-		</form>
+		</form> -->
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-	</div>
+	<!-- </div> -->
 
 	<div class="u-column">
 

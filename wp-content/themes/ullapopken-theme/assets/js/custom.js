@@ -317,6 +317,16 @@ jQuery(document).ready(function ($) {
             $(this).parent().parent().find('.guestBtn').slideToggle();
         }
     });
+
+    $('#loginDropDown').on('click' , function(e){
+        e.preventDefault();
+        $(this).parent().find('.dropdown-menu').toggleClass('show');
+    });
+
+    $('.dropdown-menu .close').on('click' , function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass('show');
+    });
         
 
 });
