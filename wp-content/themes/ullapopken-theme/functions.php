@@ -123,6 +123,7 @@ require_once ('inc/lib/Mobile_Detect.php');
 require_once ('assets/vendor/autoload.php');
 
 require_once ('inc/admin/post_types.php');
+require_once ('inc/admin/acf.php');
 
 require_once ('inc/front/theme_misc.php');
 
@@ -273,6 +274,9 @@ function minify_js_func() {
 
     $fancybox = get_theme_file_path('assets/js/fancybox.umd.js');
     $minifier->add($fancybox);
+
+    $repeater = get_theme_file_path('assets/js/jquery.repeater.min.js');
+    $minifier->add($repeater);
 
     $custom = get_theme_file_path('assets/js/custom.js');
     $minifier->add($custom);

@@ -327,9 +327,149 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         $(this).parent().toggleClass('show');
     });
-        
+
+    $('.repeater').repeater({
+        initEmpty: true,
+        isFirstItemUndeletable: true
+    });
+
+    $('#quickOrderFrom').on('submit', function (e) {
+
+        e.preventDefault();
+        var $thisbutton = $(this).find('.btnsWrap .btn');
+        var productID = jQuery('#quickOrderFrom #bag_ids').val();
+        const productIDArr = (productID.length > 0) ? productID.split(",") : [];
+
+        /* var var_id = $(this).find( 'input[name=variation_id]' ).val();
+		var product_id = $(this).find( 'input[name=product_id]' ).val();
+		var quantity = $(this).find( 'input[name=quantity]' ).val(); */
+
+        var data = {
+            action: 'wc_add_to_bag_rc',
+            product_ids: productIDArr,
+            quantity: '1',
+        };
+
+        // Trigger event
+        $(document.body).trigger('adding_to_cart', [$thisbutton, data]);
+
+        $('#quickOrderFrom').block({
+            message: null,
+            overlayCSS: {
+                cursor: 'none'
+            }
+        });
+
+        // Ajax action
+        $.post( CUSTOM_PARAMS.ajax_url, data, function( response ) {
+
+            if ( ! response )
+                return;
+
+
+            if ( response.error && response.product_url ) {
+                window.location = response.product_url;
+                return;
+            }
+
+            fragments = response.fragments;
+            cart_hash = response.cart_hash;
+
+            $('.productItem').each(function (index, element) {
+                $(this).html('');
+            });
+
+            $('.repeaterItem .input-group').each(function (index, element) {
+                $(this)
+                .show()
+                .find('.form-control').val('');
+            });
+
+            Fancybox.show([{ src: "#addtoCartPop", type: "inline" }]);
+
+            // Trigger event so themes can refresh other areas
+            $('body').trigger( 'added_to_cart', [ fragments, cart_hash ] );
+            $(document.body).trigger('wc_fragment_refresh');
+
+            $('#quickOrderFrom').unblock();
+        });
+
+        return false;
+    });
 
 });
+
+function clearProductItems(ele , itemID){
+    var repeaterItem = jQuery(ele).parents('.repeaterItem');
+    repeaterItem.find('.input-group').show();
+    repeaterItem.find('.productItem').html('');
+
+    var productID = jQuery('#quickOrderFrom #bag_ids').val();
+    var productIDArr = (productID.length > 0) ? productID.split(",") : [];
+
+    var index = productIDArr.indexOf(itemID.toString());
+
+    if (index !== -1) {
+        productIDArr.splice(index, 1);
+    }
+    
+    jQuery('#quickOrderFrom #bag_ids').val(productIDArr.join(','));
+}
+
+function get_product_by_sku(ele) {
+
+    var thisEle = jQuery(ele);
+    var productSku = thisEle.parent().find('.form-control').val();
+    var productItem = thisEle.parent().parent().find('.productItem');
+    var notFound = '<div class="alert alert-warning d-flex align-items-center" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg><div>Product not found</div></div>';
+    var productID = jQuery('#quickOrderFrom #bag_ids').val();
+    const productIDArr = (productID.length > 0) ? productID.split(",") : [];
+
+    if( productSku ) {
+        var data = {
+            action: 'get_product_details_by_sku_ajax',
+            productSku : productSku
+        }
+
+        jQuery.ajax({
+            type: "POST",
+            url: CUSTOM_PARAMS.ajax_url,
+            data: data,
+            dataType: "JSON",
+            beforeSend: function (response) {
+                productItem.addClass('loading');
+                productItem.block({
+                    message: null,
+                    overlayCSS: {
+                        cursor: 'none'
+                    }
+                });
+            },
+            complete: function (response) {
+                productItem.removeClass('loading');
+            },
+            success: function (response) {
+                //console.log('response' , response)
+                if( response.html ) {
+                    productItem.html(response.html);
+                    thisEle.parent().parent().find('.input-group').hide().find('.form-control').val('');
+                    jQuery('.quickOrderFrom .repeater .btnsWrap .btn').removeAttr('disabled');
+                } else {
+                    productItem.html(notFound);
+                    jQuery('.quickOrderFrom .repeater .btnsWrap .btn').attr('disabled');
+                }
+
+                if( response.productID ) {
+                    productIDArr.push(response.productID);
+                    jQuery('#quickOrderFrom #bag_ids').val(productIDArr.join(','));
+                }
+
+                productItem.unblock();
+            }
+        });
+    }
+
+}
 
 function getFormData($form){
     var unindexed_array = $form.serializeArray();
@@ -374,3 +514,34 @@ jQuery( function( $ ) {
 
     });
 })(jQuery);
+
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+function remove_array_value(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
