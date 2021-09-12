@@ -17880,3 +17880,139 @@ body .woocommerce-form.was-validated .input-text:invalid {
 .woocommerce-account #wooDefaultWrap .woocommerce-MyAccount-content .noOrderWrap .btn:hover {
   background-color: #E7E7E7;
 }
+#quickOrderWrap {
+  padding: 3rem 0;
+  background-color: #f2f2f2;
+}
+#quickOrderWrap .container {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+#quickOrderWrap .container .contentWrap {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+#quickOrderWrap .container .contentWrap h1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#quickOrderWrap .container .quickOrderFrom {
+  margin-top: 2rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem {
+  margin-bottom: 1.5rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .input-group {
+  width: 100%;
+  max-width: 33.33333%;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .input-group .form-control {
+  display: block;
+  height: auto;
+  padding: 0.4375rem 0.9375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #191919;
+  background-color: #FFF;
+  background-clip: padding-box;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+  outline: none;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .input-group .input-group-text {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem {
+  margin-top: 1rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem:empty {
+  display: none;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem.loading {
+  min-height: 200px;
+  background-color: #eee;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .skuWrap {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 0.25rem;
+  min-height: 40px;
+  padding: 0 1rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .skuWrap .sku {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .skuWrap .close {
+  cursor: pointer;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail {
+  display: flex;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .productImage {
+  max-width: 128px;
+  margin-right: 1rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details {
+  flex: 1;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes {
+  display: flex;
+  justify-content: space-between;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .shipping {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: #5AC372;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .btn {
+  padding: 0;
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  box-shadow: none;
+  outline: none;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .btnsWrap {
+  margin-top: 2rem;
+  text-align: right;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .btnsWrap .btn {
+  color: #fff;
+  background-color: #191919;
+  border-color: #191919;
+  font-weight: 600;
+  padding: .4375rem 8rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-align: center;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .btnsWrap .btn:hover {
+  background-color: #FE8273;
+  border-color: #FE8273;
+}

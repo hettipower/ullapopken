@@ -74,25 +74,4 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
-<script>
-(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>

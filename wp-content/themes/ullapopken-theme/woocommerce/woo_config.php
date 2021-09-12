@@ -498,3 +498,100 @@ function bbloomer_save_name_fields( $customer_id ) {
     }
   
 }
+
+function get_product_by_sku( $sku ) {
+    global $wpdb;
+  
+    $product_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key='_sku' AND meta_value='%s' LIMIT 1", $sku ) );
+  
+    if ( $product_id ) return wc_get_product( $product_id );
+  
+    return false;
+}
+
+add_action( 'wp_ajax_get_product_details_by_sku_ajax', 'get_product_details_by_sku_ajax' );
+add_action( 'wp_ajax_nopriv_get_product_details_by_sku_ajax', 'get_product_details_by_sku_ajax' );	
+function get_product_details_by_sku_ajax() {
+
+    $results = array();
+    $html = '';
+
+    $productSku = (isset($_POST['productSku'])) ? (int)$_POST['productSku'] : false;
+
+
+    if( $productSku ) {
+        $productDetail = get_product_by_sku( $productSku );
+        //792855100
+
+        if( $productDetail ){
+            $html .= '<div class="itemDetailsWrap">
+                <div class="skuWrap">
+                    <span class="sku"># '.$productSku.'</span>
+                    <span class="close" onclick="clearProductItems(this , '.$productDetail->get_id().')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="productDetail">
+                    <div class="productImage">'.$productDetail->get_image().'</div>
+                    <div class="details">
+                        <h3><a href="'.get_permalink( $productDetail->get_id() ).'">'.$productDetail->get_name().'</a></h3>
+                        <div class="attributes">
+                            <div class="attr"></div>
+                            <div class="price">'.$productDetail->get_price_html().'</div>
+                        </div>
+                        <div class="shipping">Sofort lieferbar - In 3-5 Werktagen bei dir</div>
+                    </div>
+                </div>
+            </div>';
+
+            $results['productID'] = $productDetail->get_id();
+        }
+    }
+
+    $results['html'] = $html;
+
+    echo json_encode( $results );
+    die();
+
+}
+
+add_action( 'wp_ajax_wc_add_to_bag_rc', 'wc_add_to_bag_rc_callback' );
+add_action( 'wp_ajax_nopriv_wc_add_to_bag_rc', 'wc_add_to_bag_rc_callback' );	
+function wc_add_to_bag_rc_callback() {
+
+    $product_ids = (isset($_POST['product_ids'])) ? $_POST['product_ids'] : false;
+    $quantity = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
+    $variation_id = '';
+    $variation  = '';
+    $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
+
+    if( $product_ids ) {
+        foreach( $product_ids as $product_id ) {
+            $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $product_id ) );
+
+            if ( $passed_validation && WC()->cart->add_to_cart( $product_id, $quantity, $variation_id, $variation  ) ) {
+                do_action( 'woocommerce_ajax_added_to_cart', $product_id );
+                if ( get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) {
+                    wc_add_to_cart_message( $product_id );
+                }
+        
+                // Return fragments
+                WC_AJAX::get_refreshed_fragments();
+            } else {
+                //WC_AJAX::json_headers();
+        
+                // If there was an error adding to the cart, redirect to the product page to show any errors
+                $data = array(
+                    'error' => true,
+                    'product_url' => apply_filters( 'woocommerce_cart_redirect_after_error', get_permalink( $product_id ), $product_id )
+                );
+                echo json_encode( $data );
+            }
+        }
+    }
+
+    
+    die();
+}

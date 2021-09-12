@@ -161,27 +161,6 @@
 											<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 										</form>
-										<script>
-											(function () {
-											'use strict'
-
-											// Fetch all the forms we want to apply custom Bootstrap validation styles to
-											var forms = document.querySelectorAll('.needs-validation')
-
-											// Loop over them and prevent submission
-											Array.prototype.slice.call(forms)
-												.forEach(function (form) {
-												form.addEventListener('submit', function (event) {
-													if (!form.checkValidity()) {
-													event.preventDefault()
-													event.stopPropagation()
-													}
-
-													form.classList.add('was-validated')
-												}, false)
-												})
-											})()
-										</script>
 
 										<div class="registrationWrap">
 											<h4>New at Ulla Popken?</h4>
@@ -193,7 +172,7 @@
 							</li>
 						<?php } ?>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fas fa-clipboard-list"></i><span>Quick Order</span></a>
+							<a class="nav-link" href="<?php echo home_url('quick-order'); ?>"><i class="fas fa-clipboard-list"></i><span>Quick Order</span></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo home_url('wishlist'); ?>"><i class="far fa-heart"></i><span>Favorites</span></a>
