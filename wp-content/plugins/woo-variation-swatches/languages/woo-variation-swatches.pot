@@ -28,7 +28,7 @@ msgstr ""
 msgid "Swatches"
 msgstr ""
 
-#: ../includes/class-wvs-settings-api.php:160, ../includes/functions.php:1793
+#: ../includes/class-wvs-settings-api.php:160, ../includes/functions.php:1796
 msgid "Swatches Settings"
 msgstr ""
 
@@ -344,23 +344,23 @@ msgstr ""
 msgid "Add new %s"
 msgstr ""
 
-#: ../includes/functions.php:1169, ../includes/functions.php:1243, ../includes/functions.php:1318, ../includes/functions.php:1389, ../includes/functions.php:1459, ../includes/functions.php:1540
+#: ../includes/functions.php:1169, ../includes/functions.php:1243, ../includes/functions.php:1318, ../includes/functions.php:1389, ../includes/functions.php:1459, ../includes/functions.php:1540, ../includes/functions.php:1615
 msgid "Choose an option"
 msgstr ""
 
-#: ../includes/functions.php:1904
+#: ../includes/functions.php:1907
 msgid "Installing Plugin..."
 msgstr ""
 
-#: ../includes/functions.php:1905
+#: ../includes/functions.php:1908
 msgid "Plugin Installed. Please refresh this page."
 msgstr ""
 
-#: ../includes/functions.php:1906
+#: ../includes/functions.php:1909
 msgid "Want to add more image? Install"
 msgstr ""
 
-#: ../includes/functions.php:1906
+#: ../includes/functions.php:1909
 msgid "Additional Variation Images Gallery for WooCommerce"
 msgstr ""
 

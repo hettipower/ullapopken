@@ -42,6 +42,11 @@
 					return '';
 				}
 				
+				if ( is_array( $gallery_images ) ) {
+					$gallery_images = (array) apply_filters( 'woo_variation_gallery_raw_exported_images', $gallery_images, $product );
+					$gallery_images = array_values( array_filter( $gallery_images ) );
+				}
+				
 				$images = array();
 				
 				foreach ( $gallery_images as $image_id ) {
@@ -52,7 +57,9 @@
 					}
 				}
 				
-				return implode( ',', $images );
+				$images = apply_filters( 'woo_variation_gallery_exported_images', $images, $product_id );
+				
+				return implode( ',', array_values( array_filter( $images ) ) );
 			}
 			
 			// Import
@@ -77,14 +84,19 @@
 				if ( isset( $data[ $this->column_id ] ) && ! empty( $data[ $this->column_id ] ) ) {
 					
 					
-					$woo_variation_gallery = array();
-					$raw_gallery_images    = (array) explode( ',', $data[ $this->column_id ] );
+					$woo_variation_images = array();
+					$raw_gallery_images   = (array) explode( ',', $data[ $this->column_id ] );
+					$raw_gallery_images   = array_values( array_filter( $raw_gallery_images ) );
+					
+					$raw_gallery_images = (array) apply_filters( 'woo_variation_gallery_raw_imported_images', $raw_gallery_images, $product_id, $data, $this->column_id );
 					
 					foreach ( $raw_gallery_images as $url ) {
-						$woo_variation_gallery[] = $this->get_attachment_id_from_url( $url, $product_id );
+						$woo_variation_images[] = $this->get_attachment_id_from_url( $url, $product_id );
 					}
 					
-					update_post_meta( $product_id, 'woo_variation_gallery_images', array_values( $woo_variation_gallery ) );
+					$woo_variation_images = apply_filters( 'woo_variation_gallery_imported_images', $woo_variation_images, $raw_gallery_images, $product_id );
+					
+					update_post_meta( $product_id, 'woo_variation_gallery_images', array_values( array_filter( $woo_variation_images ) ) );
 				}
 			}
 			

@@ -1,8 +1,8 @@
 /*!
- * Additional Variation Images Gallery for WooCommerce v1.2.6 
+ * Additional Variation Images Gallery for WooCommerce v1.2.7 
  * 
  * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
- * Date: 5/8/2021, 5:34:00 PM
+ * Date: 9/4/2021, 1:28:30 AM
  * Released under the GPLv3 license.
  */
 /******/ (function(modules) { // webpackBootstrap
@@ -79,8 +79,7 @@ __webpack_require__(3);
 __webpack_require__(4);
 __webpack_require__(5);
 __webpack_require__(6);
-__webpack_require__(7);
-module.exports = __webpack_require__(8);
+module.exports = __webpack_require__(7);
 
 
 /***/ }),
@@ -979,12 +978,6 @@ var WooVariationGallery = function ($) {
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

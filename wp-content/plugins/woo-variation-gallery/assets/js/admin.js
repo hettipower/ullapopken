@@ -1,8 +1,8 @@
 /*!
- * Additional Variation Images Gallery for WooCommerce v1.2.6 
+ * Additional Variation Images Gallery for WooCommerce v1.2.7 
  * 
  * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
- * Date: 5/8/2021, 5:34:00 PM
+ * Date: 9/4/2021, 1:28:30 AM
  * Released under the GPLv3 license.
  */
 /******/ (function(modules) { // webpackBootstrap
@@ -67,48 +67,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
 /***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-jQuery(function ($) {
-    Promise.resolve().then(function () {
-        return __webpack_require__(11);
-    }).then(function (_ref) {
-        var WooVariationGalleryAdmin = _ref.WooVariationGalleryAdmin;
-
-        // WooVariationGalleryAdmin.ImageUploader();
-        // WooVariationGalleryAdmin.Sortable();
-
-        WooVariationGalleryAdmin.GWPAdmin();
-
-        $('#woocommerce-product-data').on('woocommerce_variations_loaded', function () {
-            WooVariationGalleryAdmin.ImageUploader();
-            WooVariationGalleryAdmin.Sortable();
-        });
-
-        $('#variable_product_options').on('woocommerce_variations_added', function () {
-            WooVariationGalleryAdmin.ImageUploader();
-            WooVariationGalleryAdmin.Sortable();
-        });
-
-        // Dokan Pro Support
-        $('.dokan-product-variation-wrapper').on('dokan_variations_loaded dokan_variations_added', function () {
-            WooVariationGalleryAdmin.ImageUploader();
-            WooVariationGalleryAdmin.Sortable();
-        });
-
-        $(document).trigger('woo_variation_gallery_admin_loaded');
-    });
-}); // end of jquery main wrapper
-
-/***/ }),
-
-/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -304,11 +268,47 @@ var WooVariationGalleryAdmin = function ($) {
 
 /***/ }),
 
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(9);
+
+
+/***/ }),
+
 /***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+jQuery(function ($) {
+    Promise.resolve().then(function () {
+        return __webpack_require__(10);
+    }).then(function (_ref) {
+        var WooVariationGalleryAdmin = _ref.WooVariationGalleryAdmin;
 
+        // WooVariationGalleryAdmin.ImageUploader();
+        // WooVariationGalleryAdmin.Sortable();
+
+        WooVariationGalleryAdmin.GWPAdmin();
+
+        $('#woocommerce-product-data').on('woocommerce_variations_loaded', function () {
+            WooVariationGalleryAdmin.ImageUploader();
+            WooVariationGalleryAdmin.Sortable();
+        });
+
+        $('#variable_product_options').on('woocommerce_variations_added', function () {
+            WooVariationGalleryAdmin.ImageUploader();
+            WooVariationGalleryAdmin.Sortable();
+        });
+
+        // Dokan Pro Support
+        $('.dokan-product-variation-wrapper').on('dokan_variations_loaded dokan_variations_added', function () {
+            WooVariationGalleryAdmin.ImageUploader();
+            WooVariationGalleryAdmin.Sortable();
+        });
+
+        $(document).trigger('woo_variation_gallery_admin_loaded');
+    });
+}); // end of jquery main wrapper
 
 /***/ })
 
