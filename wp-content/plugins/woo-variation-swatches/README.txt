@@ -4,8 +4,8 @@ Tags: woocommerce variation swatches, woocommerce variation, woocommerce, variat
 Requires PHP: 5.6
 Requires at least: 4.8
 WC requires at least: 4.5
-Tested up to: 5.7
-WC tested up to: 5.2
+Tested up to: 5.8
+WC tested up to: 5.6
 Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -592,6 +592,15 @@ And your are ready to go.
 12. Global Variation Color Swatches Attribute List Preview
 
 == Changelog ==
+
+= 1.1.19 - 07-09-2021 =
+
+* Fix: show_option_none value
+
+= 1.1.18 - 06-09-2021 =
+
+* Update: WooCommerce and WordPress Compatibility
+* Fix: Bundle Product selected issue
 
 = 1.1.17 - 08-05-2021 =
 

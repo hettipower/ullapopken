@@ -52,6 +52,9 @@ add_action( 'delete_woo_variation_swatches_settings', 'wvs_clear_transient' );
 add_action( 'wvs_pro_save_product_attributes', 'wvs_clear_transient' );
 add_action( 'wvs_pro_reset_product_attributes', 'wvs_clear_transient' );
 
+add_filter( 'pre_update_option_woocommerce_thumbnail_image_width', 'wvs_clear_transient' );
+
+add_filter( 'pre_update_option_woocommerce_thumbnail_cropping', 'wvs_clear_transient' );
 
 // Load Template
 // add_filter( 'woocommerce_locate_template', 'wvs_locate_template', 10, 3 );

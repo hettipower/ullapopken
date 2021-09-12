@@ -1,8 +1,8 @@
 /*!
- * Additional Variation Images Gallery for WooCommerce v1.2.6 
+ * Additional Variation Images Gallery for WooCommerce v1.2.7 
  * 
  * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
- * Date: 5/8/2021, 5:34:00 PM
+ * Date: 9/4/2021, 1:28:30 AM
  * Released under the GPLv3 license.
  */
 :root {
@@ -92,18 +92,53 @@
 
 .woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div {
   position: relative;
-  display: block;
+  /*display: block;*/
   box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* &:before {
+			   position: absolute;
+			   z-index: 99;
+			   content: '';
+			   width: 100%;
+			   height: 100%;
+			   background: rgba(0, 0, 0, .5) url("../../images/video-play.png") center center no-repeat;
+			   background-size: 50%;
+			 }*/
 }
 
-.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div:before {
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div::after {
+  /*content: "\F236";*/
+  content: "\F148";
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
   position: absolute;
-  z-index: 99;
-  content: '';
+  font-family: dashicons;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5) url(../../images/video-play.png?d6157af41baadcfb07536e7474015c9d) center center no-repeat;
-  background-size: 50%;
+  background-color: black;
+  opacity: 0.2;
+  margin: 0;
+  padding: 0;
 }
 
 .woo-variation-gallery-wrapper .woo-variation-gallery-slider {
@@ -501,8 +536,8 @@
 
 .woo-variation-gallery-has-product-thumbnail .woo-variation-gallery-thumbnail-position {
   /*&-bottom .woo-variation-gallery-slider-wrapper {
-      margin-bottom : var(--wvg-thumbnail-item-gap);
-      }*/
+		  margin-bottom : var(--wvg-thumbnail-item-gap);
+		  }*/
 }
 
 .woo-variation-gallery-has-product-thumbnail .woo-variation-gallery-thumbnail-position-left .woo-variation-gallery-container,

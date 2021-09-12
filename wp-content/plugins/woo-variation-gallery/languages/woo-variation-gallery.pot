@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../includes/class-woo-variation-gallery-export-import.php:32, ../includes/class-woo-variation-gallery-export-import.php:61
+#: ../includes/class-woo-variation-gallery-export-import.php:32, ../includes/class-woo-variation-gallery-export-import.php:68
 msgid "Woo Variation Gallery Images"
 msgstr ""
 
@@ -464,18 +464,18 @@ msgstr ""
 msgid "WooCommerce"
 msgstr ""
 
-#: ../woo-variation-gallery.php:570
+#: ../woo-variation-gallery.php:573
 msgid "<strong>Additional Variation Images Gallery for WooCommerce</strong> is an add-on of "
 msgstr ""
 
-#: ../woo-variation-gallery.php:623
+#: ../woo-variation-gallery.php:626
 msgid "Read Documentation"
 msgstr ""
 
-#: ../woo-variation-gallery.php:624
+#: ../woo-variation-gallery.php:627
 msgid "Facing issue?"
 msgstr ""
 
-#: ../woo-variation-gallery.php:624
+#: ../woo-variation-gallery.php:627
 msgid "Please open a support ticket."
 msgstr ""

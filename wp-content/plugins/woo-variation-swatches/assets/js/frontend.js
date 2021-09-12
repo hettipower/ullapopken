@@ -1,8 +1,8 @@
 /*!
- * Variation Swatches for WooCommerce v1.1.16 
+ * Variation Swatches for WooCommerce v1.1.19 
  * 
  * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
- * Date: 08/05/2021
+ * Date: 07/09/2021
  * Released under the GPLv3 license.
  */
 /******/ (function(modules) { // webpackBootstrap
@@ -144,7 +144,7 @@ jQuery(function ($) {
     });
 
     // Flatsome Infinite Scroll Support
-    $('.shop-container .products').on('append.infiniteScroll', function (event, response, path) {
+    $('.shop-container .products, .infinite-scroll-wrap').on('append.infiniteScroll', function (event, response, path) {
       $('.variations_form:not(.wvs-loaded)').each(function () {
         $(this).wc_variation_form();
       });
@@ -225,11 +225,6 @@ var WooVariationSwatches = function ($) {
     }
 
     _createClass(WooVariationSwatches, [{
-      key: 'checkAvailable',
-      value: function checkAvailable() {
-        if ([].includes) {}
-      }
-    }, {
       key: 'init',
       value: function init() {
         var _this2 = this;
@@ -279,12 +274,11 @@ var WooVariationSwatches = function ($) {
 
           var select = $(this).siblings('select.woo-variation-raw-select');
           var selected = '';
-
-          var options = $(this).siblings('select.woo-variation-raw-select').find('option');
-          var disabled = $(this).siblings('select.woo-variation-raw-select').find('option:disabled');
-          var out_of_stock = $(this).siblings('select.woo-variation-raw-select').find('option.enabled.out-of-stock');
-          var current = $(this).siblings('select.woo-variation-raw-select').find('option:selected');
-          var eq = $(this).siblings('select.woo-variation-raw-select').find('option').eq(1);
+          var options = select.find('option');
+          var disabled = select.find('option:disabled');
+          var out_of_stock = select.find('option.enabled.out-of-stock');
+          var current = select.find('option:selected');
+          var eq = select.find('option').eq(1);
 
           var li = $(this).find('li:not(.woo-variation-swatches-variable-item-more)');
           var reselect_clear = $(this).hasClass('reselect-clear');
@@ -302,17 +296,17 @@ var WooVariationSwatches = function ($) {
           // For Avada FIX
           if (options.length < 1) {
             select = $(this).parent().find('select.woo-variation-raw-select');
-            options = $(this).parent().find('select.woo-variation-raw-select').find('option');
-            disabled = $(this).parent().find('select.woo-variation-raw-select').find('option:disabled');
-            out_of_stock = $(this).siblings('select.woo-variation-raw-select').find('option.enabled.out-of-stock');
-            current = $(this).parent().find('select.woo-variation-raw-select').find('option:selected');
-            eq = $(this).parent().find('select.woo-variation-raw-select').find('option').eq(1);
+            options = select.find('option');
+            disabled = select.find('option:disabled');
+            out_of_stock = select.find('option.enabled.out-of-stock');
+            current = select.find('option:selected');
+            eq = select.find('option').eq(1);
           }
 
           options.each(function () {
             if ($(this).val() !== '') {
               selects.push($(this).val());
-              selected = current ? current.val() : eq.val();
+              selected = current.length === 0 ? eq.val() : current.val();
             }
           });
 
@@ -533,12 +527,11 @@ var WooVariationSwatches = function ($) {
 
             var select = $(this).siblings('select.woo-variation-raw-select');
             var selected = '';
-
-            var options = $(this).siblings('select.woo-variation-raw-select').find('option');
-            var disabled = $(this).siblings('select.woo-variation-raw-select').find('option:disabled');
-            var out_of_stock = $(this).siblings('select.woo-variation-raw-select').find('option.enabled.out-of-stock');
-            var current = $(this).siblings('select.woo-variation-raw-select').find('option:selected');
-            var eq = $(this).siblings('select.woo-variation-raw-select').find('option').eq(1);
+            var options = select.find('option');
+            var disabled = select.find('option:disabled');
+            var out_of_stock = select.find('option.enabled.out-of-stock');
+            var current = select.find('option:selected');
+            var eq = select.find('option').eq(1);
             var li = $(this).find('li:not(.woo-variation-swatches-variable-item-more)');
 
             //let reselect_clear   = $(this).hasClass('reselect-clear');
@@ -557,17 +550,18 @@ var WooVariationSwatches = function ($) {
             // For Avada FIX
             if (options.length < 1) {
               select = $(this).parent().find('select.woo-variation-raw-select');
-              options = $(this).parent().find('select.woo-variation-raw-select').find('option');
-              disabled = $(this).parent().find('select.woo-variation-raw-select').find('option:disabled');
-              out_of_stock = $(this).siblings('select.woo-variation-raw-select').find('option.enabled.out-of-stock');
-              current = $(this).parent().find('select.woo-variation-raw-select').find('option:selected');
-              eq = $(this).parent().find('select.woo-variation-raw-select').find('option').eq(1);
+              options = select.find('option');
+              disabled = select.find('option:disabled');
+              out_of_stock = select.find('option.enabled.out-of-stock');
+              current = select.find('option:selected');
+              eq = select.find('option').eq(1);
             }
 
             options.each(function () {
               if ($(this).val() !== '') {
                 selects.push($(this).val());
-                selected = current ? current.val() : eq.val();
+                // selected = current ? current.val() : eq.val()
+                selected = current.length === 0 ? eq.val() : current.val();
               }
             });
 

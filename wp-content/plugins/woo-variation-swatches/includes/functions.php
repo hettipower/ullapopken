@@ -1611,6 +1611,9 @@ if ( ! function_exists( 'wvs_variation_attribute_options_html' ) ):
 
 		$product = $args['product'];
 
+		// For bundle Product static item
+		$args['show_option_none'] = esc_html__( 'Choose an option', 'woo-variation-swatches' );
+
 		$is_default_to_image          = apply_filters( 'wvs_is_default_to_image', ! ! ( woo_variation_swatches()->get_option( 'default_to_image' ) ), $args );
 		$is_default_to_button         = apply_filters( 'wvs_is_default_to_button', ! ! ( woo_variation_swatches()->get_option( 'default_to_button' ) ), $args );
 		$default_image_type_attribute = apply_filters( 'wvs_default_image_type_attribute', woo_variation_swatches()->get_option( 'default_image_type_attribute' ), $args );

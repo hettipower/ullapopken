@@ -1,0 +1,33 @@
+2021-09-12T17:08:34+00:00 CRITICAL Uncaught Exception: Invalid product. in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php:167
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-data-store.php(159): WC_Product_Data_Store_CPT->read(Object(WC_Product))
+#1 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(137): WC_Data_Store->read(Object(WC_Product))
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(507): WC_Product->__construct('118')
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(522): get_product_by_sku(792855101)
+#4 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): get_product_details_by_sku_ajax('')
+#5 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\ in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php on line 167
+
+2021-09-12T17:10:54+00:00 CRITICAL Uncaught Exception: Invalid product. in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php:167
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-data-store.php(159): WC_Product_Data_Store_CPT->read(Object(WC_Product))
+#1 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(137): WC_Data_Store->read(Object(WC_Product))
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(507): WC_Product->__construct('118')
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(522): get_product_by_sku(792855101)
+#4 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): get_product_details_by_sku_ajax('')
+#5 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\ in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php on line 167
+
+2021-09-12T17:12:58+00:00 CRITICAL Uncaught Exception: Invalid product. in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php:167
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\class-wc-data-store.php(159): WC_Product_Data_Store_CPT->read(Object(WC_Product))
+#1 C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(137): WC_Data_Store->read(Object(WC_Product))
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(507): WC_Product->__construct('118')
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\woocommerce\woo_config.php(522): get_product_by_sku(792855101)
+#4 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): get_product_details_by_sku_ajax('')
+#5 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\ in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php on line 167
+
