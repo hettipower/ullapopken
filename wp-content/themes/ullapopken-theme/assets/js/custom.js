@@ -588,3 +588,10 @@ function remove_array_value(arr) {
     }
     return arr;
 }
+
+function sku_type(ele){
+    if(ele.value.length > 8){
+        ele.value = ele.value.substring(0,8)
+        ele.blur()
+    }
+}
