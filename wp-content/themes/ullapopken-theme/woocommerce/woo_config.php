@@ -517,6 +517,7 @@ function get_product_details_by_sku_ajax() {
     $html = '';
 
     $productSku = (isset($_POST['productSku'])) ? (int)$_POST['productSku'] : false;
+    $productQty = (isset($_POST['productQty'])) ? $_POST['productQty'] : [];
 
 
     if( $productSku ) {
@@ -524,6 +525,14 @@ function get_product_details_by_sku_ajax() {
         //792855100
 
         if( $productDetail ){
+
+            $parentProduct = wc_get_product( $productDetail->get_parent_id() );
+            if( $parentProduct ) {
+                $sizeAttr =  explode(',' , $parentProduct->get_attribute( 'pa_size' ));
+            } else {
+                $sizeAttr = false;
+            }
+
             $html .= '<div class="itemDetailsWrap">
                 <div class="skuWrap">
                     <span class="sku"># '.$productSku.'</span>
@@ -538,7 +547,33 @@ function get_product_details_by_sku_ajax() {
                     <div class="details">
                         <h3><a href="'.get_permalink( $productDetail->get_id() ).'">'.$productDetail->get_name().'</a></h3>
                         <div class="attributes">
-                            <div class="attr"></div>
+                            <div class="attr">
+                                <div class="qty">
+                                    <label>Qty</label>
+                                    <select class="qtySelect form-select" onchange="quick_order_qty_change(this , '.$productDetail->get_id().')">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>';
+                                if( $sizeAttr ) {
+                                    $html .= '<div class="size">
+                                        <label>Size</label>
+                                        <select class="sizeSelect form-select">';
+                                            foreach( $sizeAttr as $size ) {
+                                                $html .= '<option value="'.$size.'">'.$size.'</option>';
+                                            }
+                                        $html .= '</select>
+                                    </div>';
+                                }
+                            $html .= '</div>
                             <div class="price">'.$productDetail->get_price_html().'</div>
                         </div>
                         <div class="shipping">Sofort lieferbar - In 3-5 Werktagen bei dir</div>
@@ -547,6 +582,21 @@ function get_product_details_by_sku_ajax() {
             </div>';
 
             $results['productID'] = $productDetail->get_id();
+            
+            $productnewQty = array();
+            if( $productQty ) {
+                foreach( $productQty as $qty ){
+                    $qtyArr = explode(':' , $qty);
+                    if( $qtyArr[0] == $productDetail->get_id() ) {
+                        $qtyArr[1]++;
+                    }
+                    array_push($productnewQty , implode(':',$qtyArr));
+                }
+            } else {
+                $productnewQty = array( $productDetail->get_id().':1'  );
+            }
+
+            $results['productQty'] = $productnewQty;
         }
     }
 
@@ -565,16 +615,20 @@ function wc_add_to_bag_rc_callback() {
     $quantity = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
     $variation_id = '';
     $variation  = '';
-    $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
 
-    if( $product_ids ) {
-        foreach( $product_ids as $product_id ) {
-            $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $product_id ) );
+    $productQtyArr = (isset($_POST['productQty'])) ? $_POST['productQty'] : false;
 
-            if ( $passed_validation && WC()->cart->add_to_cart( $product_id, $quantity, $variation_id, $variation  ) ) {
-                do_action( 'woocommerce_ajax_added_to_cart', $product_id );
+    if( $productQtyArr ) {
+        foreach( $productQtyArr as $productQty ){
+            $productsArr = explode(":" , $productQty);
+
+            $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $productsArr[0] ) );
+            $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $productsArr[0], $productsArr[1] );
+
+            if ( $passed_validation && WC()->cart->add_to_cart( $productsArr[0], $productsArr[1], $variation_id, $variation  ) ) {
+                do_action( 'woocommerce_ajax_added_to_cart', $productsArr[0] );
                 if ( get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) {
-                    wc_add_to_cart_message( $product_id );
+                    wc_add_to_cart_message( $productsArr[0] );
                 }
         
                 // Return fragments
@@ -585,13 +639,12 @@ function wc_add_to_bag_rc_callback() {
                 // If there was an error adding to the cart, redirect to the product page to show any errors
                 $data = array(
                     'error' => true,
-                    'product_url' => apply_filters( 'woocommerce_cart_redirect_after_error', get_permalink( $product_id ), $product_id )
+                    'product_url' => apply_filters( 'woocommerce_cart_redirect_after_error', get_permalink( $productsArr[0] ), $productsArr[0] )
                 );
                 echo json_encode( $data );
             }
         }
     }
-
     
     die();
 }

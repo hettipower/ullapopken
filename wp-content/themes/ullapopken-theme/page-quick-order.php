@@ -17,6 +17,7 @@ get_header();
             <form id="quickOrderFrom" class="repeater" method="post">
 
                 <input type="hidden" name="bag_ids" id="bag_ids" value="" />
+                <input type="hidden" name="bag_qty" id="bag_qty" value="" />
 
                 <div class="repeaterItem">
                     <div class="input-group">

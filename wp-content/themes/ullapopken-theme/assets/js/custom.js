@@ -338,7 +338,9 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         var $thisbutton = $(this).find('.btnsWrap .btn');
         var productID = jQuery('#quickOrderFrom #bag_ids').val();
+        var productQty = jQuery('#quickOrderFrom #bag_qty').val();
         const productIDArr = (productID.length > 0) ? productID.split(",") : [];
+        const productQtyArr = (productQty.length > 0) ? productQty.split(",") : [];
 
         /* var var_id = $(this).find( 'input[name=variation_id]' ).val();
 		var product_id = $(this).find( 'input[name=product_id]' ).val();
@@ -348,6 +350,7 @@ jQuery(document).ready(function ($) {
             action: 'wc_add_to_bag_rc',
             product_ids: productIDArr,
             quantity: '1',
+            productQty: productQtyArr
         };
 
         // Trigger event
@@ -371,6 +374,8 @@ jQuery(document).ready(function ($) {
                 window.location = response.product_url;
                 return;
             }
+
+            console.log('response' , response)
 
             fragments = response.fragments;
             cart_hash = response.cart_hash;
@@ -428,12 +433,15 @@ function get_product_by_sku(ele) {
     var productItem = thisEle.parent().parent().find('.productItem');
     var notFound = '<div class="alert alert-warning d-flex align-items-center" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg><div>Product not found</div></div>';
     var productID = jQuery('#quickOrderFrom #bag_ids').val();
+    var productQty = jQuery('#quickOrderFrom #bag_qty').val();
     const productIDArr = (productID.length > 0) ? productID.split(",") : [];
+    const productQtyArr = (productQty.length > 0) ? productQty.split(",") : [];
 
     if( productSku ) {
         var data = {
             action: 'get_product_details_by_sku_ajax',
-            productSku : productSku
+            productSku : productSku,
+            productQty : productQtyArr
         }
 
         jQuery.ajax({
@@ -454,7 +462,7 @@ function get_product_by_sku(ele) {
                 productItem.removeClass('loading');
             },
             success: function (response) {
-                //console.log('response' , response)
+                console.log('response' , response.productQty)
                 if( response.html ) {
                     productItem.html(response.html);
                     thisEle.parent().parent().find('.input-group').hide().find('.form-control').val('');
@@ -469,10 +477,40 @@ function get_product_by_sku(ele) {
                     jQuery('#quickOrderFrom #bag_ids').val(productIDArr.join(','));
                 }
 
+                if( response.productQty ) {
+                    jQuery('#quickOrderFrom #bag_qty').val(response.productQty.join(','));
+                }
+
                 productItem.unblock();
             }
         });
     }
+
+}
+
+function quick_order_qty_change(ele, itemID) {
+    var thisEle = jQuery(ele);
+    var qtyVal = parseInt(thisEle.val());
+    var productQty = jQuery('#quickOrderFrom #bag_qty').val();
+    const productQtyArr = (productQty.length > 0) ? productQty.split(",") : [];
+    const productNewQtyArr = [];
+
+    if( productQtyArr.length > 0 ){
+        productQtyArr
+        .map( qty => {
+            const qtyArr = qty.split(":");
+
+            if( parseInt(qtyArr[0]) === parseInt(itemID) ) {
+                qtyArr[1] = qtyVal;
+            }
+
+            productNewQtyArr.push(qtyArr.join(':'));
+
+            return false;
+        })
+    }
+
+    jQuery('#quickOrderFrom #bag_qty').val(productNewQtyArr.join(','));
 
 }
 

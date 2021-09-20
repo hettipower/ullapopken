@@ -18566,6 +18566,32 @@ body .woocommerce-form.was-validated .input-text:invalid {
   display: flex;
   justify-content: space-between;
 }
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr {
+  display: flex;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .qty {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .size {
+  display: flex;
+  flex-direction: column;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr label {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .form-select {
+  width: 100px;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .form-select:focus {
+  border-color: #191919;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(254,130,115,0.25);
+}
 #quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .shipping {
   font-size: 0.875rem;
   line-height: 1.5rem;

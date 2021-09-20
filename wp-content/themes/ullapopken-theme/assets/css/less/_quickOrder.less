@@ -113,6 +113,38 @@
                                     .attributes {
                                         display: flex;
                                         justify-content: space-between;
+                                        
+                                        .attr {
+                                            display: flex;
+
+                                            .qty {
+                                                display: flex;
+                                                flex-direction: column;
+                                                margin-right: 1rem;
+                                            }
+
+                                            .size {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+
+                                            label {
+                                                font-size: 0.875rem;
+                                                line-height: 1.5rem;
+                                                font-weight: 400;
+                                                font-family: "Open Sans", Arial, sans-serif;
+                                            }
+
+                                            .form-select {
+                                                width: 100px;
+
+                                                &:focus {
+                                                    border-color: #191919;
+                                                    outline: 0;
+                                                    box-shadow: 0 0 0 0 rgba(254, 130, 115, 0.25);
+                                                }
+                                            }
+                                        }
                                     }
 
                                     .shipping {
