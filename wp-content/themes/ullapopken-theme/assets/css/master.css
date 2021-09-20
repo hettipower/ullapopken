@@ -17280,6 +17280,43 @@ body .woocommerce-form.was-validated .input-text:invalid {
 #singleProductWrap .singleProductDetails {
   margin-top: 2rem;
 }
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery {
+  width: 58.33333%;
+  max-width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery .flex-viewport {
+  max-width: 100%;
+  flex: 1;
+  order: 2;
+}
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery .flex-control-nav {
+  max-width: 80px !important;
+  flex: 0 0 80px;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery .flex-control-nav li {
+  opacity: 1;
+  overflow: hidden;
+  border-radius: .25rem;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 16px;
+}
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery .flex-control-nav li img {
+  object-fit: cover;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  width: 70px;
+  height: 70px;
+  opacity: 1;
+}
+#singleProductWrap .singleProductDetails .productDetailsWrap .woocommerce-product-gallery .flex-control-nav li img.flex-active {
+  border-color: #FE8273;
+}
 #singleProductWrap .singleProductDetails .productDetailsWrap .woo-variation-product-gallery {
   width: 58.33333%;
   max-width: 100% !important;
