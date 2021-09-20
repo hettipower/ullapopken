@@ -30,8 +30,8 @@ function ullapopken_woo_add_woocommerce_support()
     ));
 
     //add_theme_support( 'wc-product-gallery-zoom' );
-    //add_theme_support('wc-product-gallery-lightbox');
-    //add_theme_support('wc-product-gallery-slider');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
 }
 
 add_action('woocommerce_before_shop_loop' , 'ullapopken_filter_btns_func' , 35);
