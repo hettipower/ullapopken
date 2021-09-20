@@ -45,14 +45,15 @@ if ( function_exists ('register_sidebar')) {
 function theme_front_scripts() {
     wp_enqueue_script('jquery');
 
-    $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyB_DH4yRoGB0aoM3IZFvWOIP2qNbFh_bIs' ;
+    $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyC0_cw3dkaXJvqhZ6KHIj7_RF_Cf5Tj5p4' ;
 
-    //wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key, array('jquery'),'1.0',true);
+    wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key.'&libraries=places', array('jquery'),'1.0',true);
     wp_enqueue_script('custom-js',THEME_JS.'/custom-combined.min.js', array('jquery'),'1.0',true);
 
     $customParams = array(
         'ajax_url' => admin_url( 'admin-ajax.php' ),
         'base_url' => home_url(),
+        'theme_root' => THEME_THEMEROOT
     );
     wp_localize_script( 'custom-js', 'CUSTOM_PARAMS', $customParams );
 
@@ -126,6 +127,7 @@ require_once ('inc/admin/post_types.php');
 require_once ('inc/admin/acf.php');
 
 require_once ('inc/front/theme_misc.php');
+require_once ('inc/front/api.php');
 
 require_once ('woocommerce/woo_config.php');
 
@@ -226,7 +228,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function my_acf_init() {
-    $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyB_DH4yRoGB0aoM3IZFvWOIP2qNbFh_bIs' ;
+    $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyC0_cw3dkaXJvqhZ6KHIj7_RF_Cf5Tj5p4' ;
     acf_update_setting('google_api_key', $api_key );
 }
 add_action('acf/init', 'my_acf_init');
@@ -277,6 +279,9 @@ function minify_js_func() {
 
     $repeater = get_theme_file_path('assets/js/jquery.repeater.min.js');
     $minifier->add($repeater);
+
+    $select2 = get_theme_file_path('assets/js/select2.min.js');
+    $minifier->add($select2);
 
     $custom = get_theme_file_path('assets/js/custom.js');
     $minifier->add($custom);

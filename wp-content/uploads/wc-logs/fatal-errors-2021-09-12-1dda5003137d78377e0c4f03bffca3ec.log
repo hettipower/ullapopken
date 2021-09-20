@@ -31,3 +31,11 @@ Stack trace:
 #6 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
 #7 C:\ in C:\xampp\htdocs\ullapopken\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php on line 167
 
+2021-09-12T19:54:44+00:00 CRITICAL Uncaught Exception: parse error: failed at `&:not('.bigImg') {` C:\xampp\htdocs\ullapopken/wp-content/themes/ullapopken-theme/assets/css/less/./_singleStore.less on line 159 in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php:3460
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(2273): lessc_parser->throwError()
+#1 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(121): lessc_parser->parse('#storeContentWr...')
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(753): lessc->tryImport(Array, Object(stdClass), Object(stdClass))
+#3 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php(284): lessc->compileProp(Array, Object(stdClass), Object(stdClass))
+#4 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\l in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\leafo\lessphp\lessc.inc.php on line 3460
+
