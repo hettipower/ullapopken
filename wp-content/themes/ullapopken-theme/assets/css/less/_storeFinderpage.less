@@ -1,0 +1,175 @@
+#storeFinderWrap {
+    padding-top: 5.5rem;
+    font-family: 'Roboto',Arial,sans-serif;
+    padding-bottom: 2rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .maplistWrap {
+            width: 400px;
+
+            .searchWrap {
+                border-radius: 0.25rem;
+                background-color: #f2f2f2;
+                border-left: 1px solid #efefef;
+                border-right: 1px solid #efefef;
+                border-top: 1px solid #efefef;
+                padding: 10px;
+                height: 66px;
+
+                .input-group {
+
+                    .select2 {
+                        flex: 1 1 auto;
+                        display: block;
+                        width: 1% !important;
+
+                        .selection {
+                            height: 100%;
+                            display: inline-block;
+                            width: 100%;
+
+                            .select2-selection {
+                                border: none;
+                                border-radius: 0.25rem;
+                                height: 100%;
+                                display: inline-block;
+                                width: 100%;
+
+                                .select2-selection__rendered {
+                                    height: 100%;
+                                    line-height: 40px;
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+
+                                .select2-selection__arrow {
+                                    height: 100%;
+                                }
+
+                                .select2-selection__clear {
+                                    position: absolute;
+                                    margin: 0;
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 20px;
+                                    z-index: 10;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    .input-group-text {
+                        padding: 0 0 0 7px;
+                        border: none;
+                        background-color: transparent;
+
+                        .btn {
+                            font-family: Roboto,Arial,sans-serif;
+                            font-weight: 500;
+                            border-radius: 0.25rem;
+                            color: #fff;
+                            outline: none;
+                            border: none;
+                            box-shadow: none;
+                            margin: 0;
+                            padding: 0;
+                            font-size: 1em;
+                            height: 40px;
+                            width: 92px;
+                            cursor: pointer;
+                            background-color: #000;
+                            min-width: 1px;
+
+                            &:hover {
+                                background-color: #696969;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mapWrapper {
+            width: 100%;
+            flex: 1;
+            padding-left: 5px;
+
+            .acf-map {
+                height: 600px;
+
+                .infoWindow {
+                    .contentDetailsWrap {
+                        display: flex;
+
+                        .content {
+                            flex: 1;
+                            padding-right: 1rem;
+
+                            h4 {
+                                font-family: Roboto,Arial,sans-serif;
+                                font-weight: 500;
+                                overflow: hidden;
+                                max-height: 40px;
+                                font-size: 18px;
+                                width: 100%;
+                                line-height: 20px;
+                                margin-bottom: 10px;
+
+                                a {
+                                    color: #a9a9a9;
+
+                                    &:hover {
+                                        color: #1a1a1a;
+                                    }
+                                }
+                            }
+
+                            address {
+                                width: 100%;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                line-height: 19px;
+                                color: #525252;
+                                font-family: Roboto,Arial,sans-serif;
+                                font-size: 15px;
+                            }
+                        }
+
+                        img {
+                            width: 84px;
+                            height: 84px;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                            -o-object-position: center;
+                            object-position: center;
+                        }
+                    }
+
+                    .otherContent {
+                        div {
+                            position: relative;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            text-align: left;
+                            margin-bottom: 6px;
+                            line-height: 19px;
+                            height: 19px;
+                            font-size: 15px;
+                            line-height: 23px;
+                            font-family: Roboto,Arial,sans-serif;
+                            color: #525252;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -17,13 +17,19 @@ function new_map( $el ) {
 	
 	// var
 	var $markers = $el.find('.marker');
+
+	var disableDefaultUI = false;
+	if( $el.attr('data-disableDefaultUI') === 'true' ) {
+		disableDefaultUI = true;
+	}
 	
 	
 	// vars
 	var args = {
 		zoom		: 16,
 		center		: new google.maps.LatLng(0, 0),
-		mapTypeId	: google.maps.MapTypeId.ROADMAP
+		mapTypeId	: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI : disableDefaultUI
 	};
 	
 	
@@ -74,7 +80,8 @@ function add_marker( $marker, map ) {
 	// create marker
 	var marker = new google.maps.Marker({
 		position	: latlng,
-		map			: map
+		map			: map,
+		icon: CUSTOM_PARAMS.theme_root+'/assets/images/maker.jpg',
 	});
 
 	// add to array

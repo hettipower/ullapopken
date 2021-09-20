@@ -397,6 +397,11 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
+    $('#stores').select2({
+        placeholder: "Search locations",
+        allowClear: true
+    });
+
 });
 
 function clearProductItems(ele , itemID){
