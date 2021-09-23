@@ -17228,15 +17228,18 @@ body .woocommerce-form.was-validated .input-text:invalid {
   align-items: center;
   z-index: 100;
   color: #000;
+  position: absolute;
+  top: 34%;
+  border: none;
 }
 .productSlider .slick-arrow::before {
   display: none;
 }
 .productSlider .slick-arrow.slick-prev {
-  left: 3rem;
+  left: 0;
 }
 .productSlider .slick-arrow.slick-next {
-  right: 3rem;
+  right: 0;
 }
 .productSlider .slick-arrow.slick-disabled {
   opacity: 0;
@@ -17252,6 +17255,9 @@ body .woocommerce-form.was-validated .input-text:invalid {
 }
 .productSlider .slick-list .slick-track {
   margin-left: 0;
+}
+.productSlider .slick-list .slick-track .slick-slide {
+  margin: 0 0.25rem;
 }
 #singleProductWrap {
   margin-top: 1rem;

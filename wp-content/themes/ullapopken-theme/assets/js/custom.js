@@ -407,6 +407,14 @@ jQuery(document).ready(function ($) {
         allowClear: true
     });
 
+    $( ".single_variation_wrap" ).on( "show_variation", function ( event, variation ) {
+        $('#singleProductWrap .productDescriptions .woocommerce-tabs .panel .sku_wrapper .sku').html(variation.sku);
+        if( variation.image.url ) {
+            $('#singleProductWrap .productDescriptions .woocommerce-tabs .panel .imgWrap img').remove();
+            $('#singleProductWrap .productDescriptions .woocommerce-tabs .panel .imgWrap').append( '<img src="'+variation.image.url+'" />' );
+        }
+    } );
+
 });
 
 function clearProductItems(ele , itemID){
