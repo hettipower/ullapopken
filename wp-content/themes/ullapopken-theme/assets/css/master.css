@@ -18620,6 +18620,12 @@ body .woocommerce-form.was-validated .input-text:invalid {
 #quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .size {
   display: flex;
   flex-direction: column;
+  margin-right: 1rem;
+}
+#quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr .color {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
 }
 #quickOrderWrap .container .quickOrderFrom .repeater .repeaterItem .productItem .itemDetailsWrap .productDetail .details .attributes .attr label {
   font-size: 0.875rem;

@@ -14,6 +14,8 @@ get_header();
         </div>
         <div class="quickOrderFrom">
 
+            <div id="notifications"></div>
+
             <form id="quickOrderFrom" class="repeater" method="post">
 
                 <input type="hidden" name="bag_ids" id="bag_ids" value="" />

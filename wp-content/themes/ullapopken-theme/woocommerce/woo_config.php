@@ -509,6 +509,38 @@ function get_product_by_sku( $sku ) {
     return false;
 }
 
+function get_product_by_item_no( $itemNo ) {
+
+    $allProductIDs = get_posts( array(
+        'post_type' => 'product',
+        'numberposts' => -1,
+        'post_status' => 'publish',
+        'fields' => 'ids',
+    ) );
+
+    foreach ( $allProductIDs as $id ) {
+        if( get_field( 'item_number' , $id ) == $itemNo ) {
+            return wc_get_product( $id );
+        } else {
+            $product = wc_get_product($id);
+            $pv = new WC_Product_Variable($product->get_id());
+            $variations = $pv->get_available_variations();
+            if(!empty($variations)){
+                foreach($variations as $variation){
+                    $vid = $variation['variation_id'];
+                    if($vid){
+                        if( get_field( 'item_number' , $vid ) == $itemNo ) {
+                            return wc_get_product( $vid );
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+    return false;
+}
+
 add_action( 'wp_ajax_get_product_details_by_sku_ajax', 'get_product_details_by_sku_ajax' );
 add_action( 'wp_ajax_nopriv_get_product_details_by_sku_ajax', 'get_product_details_by_sku_ajax' );	
 function get_product_details_by_sku_ajax() {
@@ -516,28 +548,37 @@ function get_product_details_by_sku_ajax() {
     $results = array();
     $html = '';
 
-    $productSku = (isset($_POST['productSku'])) ? (int)$_POST['productSku'] : false;
+    $productItemNo = (isset($_POST['productSku'])) ? (int)$_POST['productSku'] : false;
     $productQty = (isset($_POST['productQty'])) ? $_POST['productQty'] : [];
 
-
-    if( $productSku ) {
-        $productDetail = get_product_by_sku( $productSku );
+    if( $productItemNo ) {
+        $productDetail = get_product_by_item_no( $productItemNo );
         //792855100
-
+        
         if( $productDetail ){
 
             $parentProduct = wc_get_product( $productDetail->get_parent_id() );
             if( $parentProduct ) {
                 $sizeAttr =  explode(',' , $parentProduct->get_attribute( 'pa_size' ));
+                $colorAttr =  explode(',' , $parentProduct->get_attribute( 'pa_color' ));
+                $selectedSize = str_replace(' ' , '' , str_replace('/' , '-' , $productDetail->get_attribute( 'pa_size' )));
+                $selectedColor = $productDetail->get_attribute( 'pa_color' );
             } else {
                 $sizeAttr = false;
+                $colorAttr = false;
+                $selectedSize = false;
+                $selectedColor = false;
             }
 
             $html .= '<div class="itemDetailsWrap">
                 <div class="skuWrap">
-                    <span class="sku"># '.$productSku.'</span>
-                    <span class="close" onclick="clearProductItems(this , '.$productDetail->get_id().')">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <span class="sku"># '.$productItemNo.'</span>';
+                    if( $parentProduct ) {
+                        $html .= '<span class="close" onclick="clearProductItems(this , '.$parentProduct->get_id().' , '.$parentProduct->get_id().')">';
+                    } else {
+                        $html .= '<span class="close" onclick="clearProductItems(this , '.$productDetail->get_id().' , 0)">';
+                    }
+                    $html .= '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                             <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"></path>
                         </svg>
                     </span>
@@ -545,13 +586,33 @@ function get_product_details_by_sku_ajax() {
                 <div class="productDetail">
                     <div class="productImage">'.$productDetail->get_image().'</div>
                     <div class="details">
-                        <h3><a href="'.get_permalink( $productDetail->get_id() ).'">'.$productDetail->get_name().'</a></h3>
+                        <h3><a href="'.get_permalink( $productDetail->get_id() ).'">';
+                            if( $parentProduct ) {
+                                $html .= $parentProduct->get_name();
+                            } else {
+                                $html .= $productDetail->get_name();
+                            }
+                        $html .= '</a></h3>
                         <div class="attributes">
                             <div class="attr">
                                 <div class="qty">
-                                    <label>Qty</label>
-                                    <select class="qtySelect form-select" onchange="quick_order_qty_change(this , '.$productDetail->get_id().')">
-                                        <option value="1">1</option>
+                                    <label>Qty</label>';
+                                    if( $parentProduct ) {
+                                        $html .= '<select 
+                                            class="qtySelect form-select"
+                                            onchange="quick_order_qty_change(this , '.$parentProduct->get_id().' , '.$productDetail->get_id().')"
+                                            data-price="'.$productDetail->get_price().'"
+                                            data-currency="'.get_woocommerce_currency_symbol().'"
+                                        >';
+                                    } else {
+                                        $html .= '<select 
+                                            class="qtySelect form-select"
+                                            onchange="quick_order_qty_change(this , '.$productDetail->get_id().' , 0)"
+                                            data-price="'.$productDetail->get_price().'"
+                                            data-currency="'.get_woocommerce_currency_symbol().'"
+                                        >';
+                                    }
+                                    $html .= '<option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -566,9 +627,33 @@ function get_product_details_by_sku_ajax() {
                                 if( $sizeAttr ) {
                                     $html .= '<div class="size">
                                         <label>Size</label>
-                                        <select class="sizeSelect form-select">';
+                                        <select 
+                                            class="sizeSelect form-select" 
+                                            data-size="'.$selectedSize.'" 
+                                            data-color="'.$selectedColor.'"
+                                            data-variation="'.$productDetail->get_id().'"
+                                            onchange="quick_order_size_change(this , '.$parentProduct->get_id().')"
+                                        >';
                                             foreach( $sizeAttr as $size ) {
-                                                $html .= '<option value="'.$size.'">'.$size.'</option>';
+                                                $selected = ( $selectedSize == $size ) ? 'selected' : '' ;
+                                                $html .= '<option '.$selected.' value="'.str_replace(' ' , '' , str_replace('/' , '-' , $size)).'">'.$size.'</option>';
+                                            }
+                                        $html .= '</select>
+                                    </div>';
+                                }
+                                if( $colorAttr ) {
+                                    $html .= '<div class="color">
+                                        <label>Color</label>
+                                        <select 
+                                            class="colorSelect form-select" 
+                                            data-size="'.$selectedSize.'" 
+                                            data-color="'.$selectedColor.'"
+                                            data-variation="'.$productDetail->get_id().'"
+                                            onchange="quick_order_color_change(this , '.$parentProduct->get_id().')"
+                                        >';
+                                            foreach( $colorAttr as $color ) {
+                                                $selected = ( $selectedColor == $color ) ? 'selected' : '' ;
+                                                $html .= '<option '.$selected.' value="'.str_replace(' ' , '' , $color).'">'.$color.'</option>';
                                             }
                                         $html .= '</select>
                                     </div>';
@@ -584,21 +669,34 @@ function get_product_details_by_sku_ajax() {
             $results['productID'] = $productDetail->get_id();
             
             $productnewQty = array();
+            
             if( $productQty ) {
                 foreach( $productQty as $qty ){
                     $qtyArr = explode(':' , $qty);
-                    if( $qtyArr[0] == $productDetail->get_id() ) {
-                        $qtyArr[1]++;
+                    if( $parentProduct ) {
+                        if( $qtyArr[0] == $parentProduct->get_id() && $qtyArr[2] == $productDetail->get_id() ) {
+                            $qtyArr[1]++;
+                        }
+                    } else {
+                        if( $qtyArr[0] == $productDetail->get_id() ) {
+                            $qtyArr[1]++;
+                        }
                     }
                     array_push($productnewQty , implode(':',$qtyArr));
                 }
             } else {
-                $productnewQty = array( $productDetail->get_id().':1'  );
+                if( $parentProduct ) {
+                    $productnewQty = array( $parentProduct->get_id().':1:'.$productDetail->get_id()  );
+                } else {
+                    $productnewQty = array( $productDetail->get_id().':1'  );
+                }
             }
 
             $results['productQty'] = $productnewQty;
         }
     }
+
+    
 
     $results['html'] = $html;
 
@@ -613,7 +711,6 @@ function wc_add_to_bag_rc_callback() {
 
     $product_ids = (isset($_POST['product_ids'])) ? $_POST['product_ids'] : false;
     $quantity = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
-    $variation_id = '';
     $variation  = '';
 
     $productQtyArr = (isset($_POST['productQty'])) ? $_POST['productQty'] : false;
@@ -624,6 +721,7 @@ function wc_add_to_bag_rc_callback() {
 
             $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $productsArr[0] ) );
             $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $productsArr[0], $productsArr[1] );
+            $variation_id = (isset($productsArr[2])) ? $productsArr[2] : '';
 
             if ( $passed_validation && WC()->cart->add_to_cart( $productsArr[0], $productsArr[1], $variation_id, $variation  ) ) {
                 do_action( 'woocommerce_ajax_added_to_cart', $productsArr[0] );
@@ -647,4 +745,40 @@ function wc_add_to_bag_rc_callback() {
     }
     
     die();
+}
+
+add_action( 'wp_ajax_get_product_variation_details', 'get_product_variation_details' );
+add_action( 'wp_ajax_nopriv_get_product_variation_details', 'get_product_variation_details' );	
+function get_product_variation_details() {
+
+    $results = array();
+    $size = (isset($_POST['size'])) ? $_POST['size'] : false;
+    $color = (isset($_POST['color'])) ? $_POST['color'] : false;
+    $productID = (isset($_POST['productID'])) ? $_POST['productID'] : false;
+    $variationID = (isset($_POST['variationID'])) ? $_POST['variationID'] : false;
+
+    if( $productID && $size && $color ) {
+        $_product = wc_get_product( $productID );
+        $avail_vars = $_product->get_available_variations();
+        $item = array();
+        foreach ($avail_vars as $v) {
+            if ( $v["attributes"]["attribute_pa_size"] == $size && $v["attributes"]["attribute_pa_color"] == $color) {
+                $results['productID'] = $productID;
+                $results['variationID'] = $v['variation_id'];
+            }
+        }
+    }
+
+    echo json_encode( $results );
+    die();
+
+}
+
+// Add variation custom field to single variable product form
+add_filter( 'woocommerce_available_variation', 'add_variation_custom_field_to_variable_form', 10, 3 );
+function add_variation_custom_field_to_variable_form( $variation_data, $product, $variation ) {
+    
+    $variation_data['item_number'] = get_field('item_number' , $variation->get_id());
+
+    return $variation_data;
 }
