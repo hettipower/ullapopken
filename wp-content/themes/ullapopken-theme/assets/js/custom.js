@@ -390,6 +390,8 @@ jQuery(document).ready(function ($) {
                 .find('.form-control').val('');
             });
 
+            $('#addtoCartPop h3 .count').html(productIDArr.length);
+
             Fancybox.show([{ src: "#addtoCartPop", type: "inline" }]);
 
             // Trigger event so themes can refresh other areas
@@ -523,7 +525,7 @@ function get_product_by_sku(ele) {
 
 }
 
-function quick_order_qty_change(ele, productID , variationID) {
+function quick_order_qty_change(ele, productID) {
     var thisEle = jQuery(ele);
     var qtyVal = parseInt(thisEle.val());
     var productQty = jQuery('#quickOrderFrom #bag_qty').val();
@@ -531,6 +533,7 @@ function quick_order_qty_change(ele, productID , variationID) {
     const productNewQtyArr = [];
     var price = thisEle.attr('data-price');
     var currency = thisEle.attr('data-currency');
+    var variationID = thisEle.attr('data-variation');
 
     if( productQtyArr.length > 0 ){
         productQtyArr
@@ -619,6 +622,7 @@ function quick_order_size_change(ele, productID){
                 thisEle.attr('data-variation' , response.variationID);
 
                 thisEle.parent().parent().find('.color .colorSelect').attr('data-variation' , response.variationID);
+                thisEle.parent().parent().find('.qty .qtySelect').attr('data-variation' , response.variationID);
             
                 jQuery('#quickOrderFrom #bag_qty').val(productNewQtyArr.join(','));
             } else {
@@ -696,6 +700,7 @@ function quick_order_color_change(ele, productID){
                 thisEle.attr('data-variation' , response.variationID);
 
                 thisEle.parent().parent().find('.size .sizeSelect').attr('data-variation' , response.variationID);
+                thisEle.parent().parent().find('.qty .qtySelect').attr('data-variation' , response.variationID);
             
                 jQuery('#quickOrderFrom #bag_qty').val(productNewQtyArr.join(','));
             } else {

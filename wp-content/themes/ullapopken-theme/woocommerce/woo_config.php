@@ -600,16 +600,18 @@ function get_product_details_by_sku_ajax() {
                                     if( $parentProduct ) {
                                         $html .= '<select 
                                             class="qtySelect form-select"
-                                            onchange="quick_order_qty_change(this , '.$parentProduct->get_id().' , '.$productDetail->get_id().')"
+                                            onchange="quick_order_qty_change(this , '.$parentProduct->get_id().' )"
                                             data-price="'.$productDetail->get_price().'"
                                             data-currency="'.get_woocommerce_currency_symbol().'"
+                                            data-variation="'.$productDetail->get_id().'"
                                         >';
                                     } else {
                                         $html .= '<select 
                                             class="qtySelect form-select"
-                                            onchange="quick_order_qty_change(this , '.$productDetail->get_id().' , 0)"
+                                            onchange="quick_order_qty_change(this , '.$productDetail->get_id().')"
                                             data-price="'.$productDetail->get_price().'"
                                             data-currency="'.get_woocommerce_currency_symbol().'"
+                                            data-variation=""
                                         >';
                                     }
                                     $html .= '<option value="1">1</option>
