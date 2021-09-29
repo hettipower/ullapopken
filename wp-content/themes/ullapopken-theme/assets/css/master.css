@@ -16550,6 +16550,30 @@ body .woocommerce-form .btnWrap .woocommerce-button {
 body .woocommerce-form.was-validated .input-text:invalid {
   border-color: #eb5050;
 }
+#defaultWrap {
+  background-color: #f2f2f2;
+  padding: 3rem 0;
+}
+#defaultWrap .container {
+  background-color: #fff;
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#defaultWrap .container h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#defaultWrap .container h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
 .menuContWrap {
   background-color: #fff;
   border-top: 1px solid #e7e7e7;
