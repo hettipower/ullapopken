@@ -57,6 +57,10 @@ function theme_front_scripts() {
     );
     wp_localize_script( 'custom-js', 'CUSTOM_PARAMS', $customParams );
 
+    if( is_page_template('page-store-finder.php') ) {
+
+    }
+
 }
 add_action('wp_enqueue_scripts', 'theme_front_scripts');
 

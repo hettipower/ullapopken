@@ -1,0 +1,9 @@
+2021-10-01T16:24:58+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in C:\xampp\htdocs\ullapopken\wp-content\plugins\mailchimp-for-woocommerce\admin\class-mailchimp-woocommerce-admin.php:762
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): MailChimp_WooCommerce_Admin->mailchimp_woocommerce_ajax_create_account_check_username('')
+#1 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\ullapopken\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\ullapopken\wp-admin\admin-ajax.php(187): do_action('wp_ajax_mailchi...')
+#4 {main}
+  thrown in C:\xampp\htdocs\ullapopken\wp-content\plugins\mailchimp-for-woocommerce\admin\class-mailchimp-woocommerce-admin.php on line 762
+
