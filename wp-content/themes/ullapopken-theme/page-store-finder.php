@@ -3,12 +3,10 @@
 get_header();
 ?>
 
-<?php 
-    if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-        $storesData = stores_data();
-?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<!-- <section class="sectionWrap" id="storeFinderWrap"></section> -->
+<?php get_template_part( 'template-part/page/top', 'banner' ); ?>
+
 <?php the_content(); ?>
 
 <?php endwhile; endif; ?>

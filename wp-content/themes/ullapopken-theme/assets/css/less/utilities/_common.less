@@ -270,81 +270,112 @@ body {
     #defaultWrap {
         background-color: #fff;
     }
+}
 
-    #pageBannerWrap {
-        padding: 1rem 0;
+#pageBannerWrap {
+    padding: 1rem 0;
 
-        &::after {
-            position: absolute;
-            content: "";
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: #fe8273;
+        height: 82%;
+        margin-top: auto;
+        margin-bottom: auto;
+        bottom: 0;
+    }
+
+    .container {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1400px;
+        position: relative;
+        z-index: 10;
+
+        .banner {
             width: 100%;
-            left: 0;
-            top: 0;
-            background-color: #fe8273;
-            height: 82%;
-            margin-top: auto;
-            margin-bottom: auto;
-            bottom: 0;
         }
 
-        .container {
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 1400px;
+        .bannerContent {
+            width: 100%;
+            padding: 2rem 0;
             position: relative;
-            z-index: 10;
 
-            .banner {
-                width: 100%;
-            }
-    
-            .bannerContent {
-                width: 100%;
-                padding: 2rem 0;
-                position: relative;
-    
-                .bannerContInner {
-                    padding: 2rem 3rem;
-                    height: 100%;
-                    font-size: 1rem;
-                    line-height: 1.625rem;
-                    font-weight: 400;
+            .bannerContInner {
+                padding: 2rem 3rem;
+                height: 100%;
+                font-size: 1rem;
+                line-height: 1.625rem;
+                font-weight: 400;
+                font-family: "Open Sans", Arial, sans-serif;
+
+                h3 {
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 700;
+                    letter-spacing: 0.125rem;
+                    text-transform: uppercase;
                     font-family: "Open Sans", Arial, sans-serif;
-    
-                    h3 {
-                        font-size: 0.75rem;
-                        line-height: 1rem;
-                        font-weight: 700;
-                        letter-spacing: 0.125rem;
-                        text-transform: uppercase;
-                        font-family: "Open Sans", Arial, sans-serif;
-                        color: #191919;
+                    color: #191919;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 25px;
+                        height: 1px;
+                        background-color: #191919;
                         position: relative;
-    
+                        left: 0;
+                        top: auto;
+                        bottom: 0;
+                        display: block;
+                        margin-top: 0.5rem
+                    }
+                }
+
+                h1 {
+                    font-size: 3rem;
+                    line-height: 4rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    margin-bottom: 1rem;
+                    text-indent: -2.5rem;
+                    padding-left: 2.5rem;
+                    color: #191919;
+                }
+
+                .btn {
+                    background-color: #000;
+                    color: #fff;
+                    padding: 11px 0;
+                }
+            }
+        }
+    }
+
+    &.style_2 {
+        .container {
+            .bannerContent {
+                .bannerContInner {
+                    h1 {
+                        color: #fff;
+                    }
+
+                    h3 {
+                        color: #fff;
+
                         &::after {
-                            content: "";
-                            width: 25px;
-                            height: 1px;
-                            background-color: #191919;
-                            position: relative;
-                            left: 0;
-                            top: auto;
-                            bottom: 0;
-                            display: block;
-                            margin-top: 0.5rem
+                            background-color: #fff;
                         }
                     }
-    
-                    h1 {
-                        font-size: 3rem;
-                        line-height: 4rem;
-                        font-weight: 600;
-                        font-family: "Open Sans", Arial, sans-serif;
-                        margin-bottom: 1rem;
-                        text-indent: -2.5rem;
-                        padding-left: 2.5rem;
-                        color: #191919;
+
+                    .btn {
+                        background-color: #fff;
+                        color: #000;
                     }
                 }
             }
