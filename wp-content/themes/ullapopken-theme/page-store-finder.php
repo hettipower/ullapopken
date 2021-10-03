@@ -8,8 +8,8 @@ get_header();
         $storesData = stores_data();
 ?>
 
-<section class="sectionWrap" id="storeFinderWrap">
-</section>
+<!-- <section class="sectionWrap" id="storeFinderWrap"></section> -->
+<?php the_content(); ?>
 
 <?php endwhile; endif; ?>
 
