@@ -1,11 +1,14 @@
-import { compose, withProps , withStateHandlers } from "recompose";
+import { compose, withProps , withHandlers } from "recompose";
 import { 
     GoogleMap,
     withGoogleMap , 
     withScriptjs
 } from "react-google-maps";
+import { MarkerClusterer } from 'react-google-maps/lib/components/addons/MarkerClusterer';
 
 import MarkerWithInfoWindow from './makerWithInfoWindow.component';
+
+import MarkerClustererImg from '../assets/images/MarkerClusterer.png';
 
 const GoogleMapComp = compose(
     withProps({
@@ -14,12 +17,11 @@ const GoogleMapComp = compose(
         containerElement: <div style={{ height: `600px` }} />,
         mapElement: <div style={{ height: `100%` }} />,
     }),
-    withStateHandlers(() => ({
-        isOpen: false,
-      }), {
-        onToggleOpen: ({ isOpen }) => () => ({
-          isOpen: !isOpen,
-        })
+    withHandlers({
+        onMarkerClustererClick: () => (markerClusterer) => {
+            // eslint-disable-next-line
+            const clickedMarkers = markerClusterer.getMarkers();
+        },
     }),
     withScriptjs,
     withGoogleMap
@@ -28,20 +30,35 @@ const GoogleMapComp = compose(
       defaultZoom={5}
       defaultCenter={{ lat: props.centerLocation.latitude, lng: props.centerLocation.longitude }}
     >
-        {
-            (props.allLocations.length > 0) ?
-            props.allLocations
-            .map((location , idx) => 
-                <MarkerWithInfoWindow
-                    key={idx} 
-                    position={{ lat: location.address.lat, lng: location.address.lng }}
-                    {...location}
-                    longitude={props.longitude}
-                    latitude={props.latitude}
-                />
-            )
-            : ''
-        }
+        <MarkerClusterer
+            onClick={props.onMarkerClustererClick}
+            averageCenter
+            enableRetinaIcons
+            gridSize={60}
+            styles={[
+                {
+                    url: MarkerClustererImg,
+                    height: 40,
+                    width: 40,
+                    textColor:"#FFF",
+                }
+            ]}
+        >   
+            {
+                (props.allLocations.length > 0) ?
+                props.allLocations
+                .map(location => 
+                    <MarkerWithInfoWindow
+                        key={location.ID} 
+                        position={{ lat: location.address.lat, lng: location.address.lng }}
+                        {...location}
+                        longitude={props.longitude}
+                        latitude={props.latitude}
+                    />
+                )
+                : ''
+            }
+        </MarkerClusterer>
     </GoogleMap>
 );
 

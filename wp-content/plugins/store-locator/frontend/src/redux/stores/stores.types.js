@@ -1,0 +1,7 @@
+export const storesActionTypes = {
+    SET_STORES : 'SET_STORES',
+    SET_CITY_STORES : 'SET_CITY_STORES',
+    SET_LONGITUDE : 'SET_LONGITUDE',
+    SET_LATITUDE : 'SET_LATITUDE',
+    SET_FIXTUREs : 'SET_FIXTUREs',
+}

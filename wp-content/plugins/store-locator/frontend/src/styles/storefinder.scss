@@ -1,6 +1,7 @@
 #storeFinderWrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .maplistWrap {
         width: 400px;
@@ -85,6 +86,8 @@
 
         .searchResultsWrap {
             margin-top: 50px;
+            height: calc(600px - 116px);
+            overflow: auto;
 
             .searchItem {
                 border-bottom: 1px solid #efefef;
@@ -171,6 +174,24 @@
         width: 100%;
         flex: 1;
         padding-left: 5px;
+    }
+
+    .showAll {
+        width: 100%;
+        padding: 15px 0;
+
+        a {
+            color: #a9a9a9;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 19px;
+            font-family: 'Roboto',Arial,sans-serif;
+            font-weight: 500;
+
+            &:hover {
+                color: #1a1a1a;
+            }
+        }
     }
 }
 
@@ -275,6 +296,115 @@
                     cursor: pointer;
                     background-color: #f2f2f2;
                     color: #1a1a1a;
+                }
+            }
+        }
+    }
+}
+
+.allLocationsWrap {
+    .backToMap {
+        a {
+            background-color: #f2f2f2;
+            color: #525252;
+            position: relative;
+            width: 100%;
+            font-family: 'Roboto',Arial,sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            height: 65px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            border-radius: 0.25rem        ;
+            -webkit-border-radius: 0.25rem;
+            -moz-border-radius: 0.25rem;
+            -ms-border-radius: 0.25rem;
+            -o-border-radius: 0.25rem;
+
+            &:hover {
+                background-color: #696969;
+            }
+        }
+    }
+
+    .allLocations {
+        margin-left: 20%;
+        margin-bottom: 70px;
+
+        h2 {
+            line-height: 40px;
+            font-size: 18px;
+            font-family: 'Roboto',Arial,sans-serif;
+            font-weight: 500;
+            margin-top: 15px;
+            color: #333333;
+        }
+
+        .locations {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            column-count: 3;
+
+            li {
+                font-family: 'Roboto',Arial,sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 23px;
+                letter-spacing: 0;
+                color: #525252;
+
+                a {
+                    font-family: Roboto,Arial,sans-serif;
+                    font-weight: 500;
+                    line-height: 30px;
+                    color: #a9a9a9;
+                    text-decoration: none;
+                    font-size: 15px;
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    &:hover {
+                        color: #1a1a1a;
+                    }
+                }
+            }
+        }
+    }
+
+    &.singleGroupWrap {
+        .allLocations {
+            h2 {
+    
+                a {
+                    line-height: 40px;
+                    font-size: 18px;
+                    font-family: 'Roboto',Arial,sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: #a9a9a9;
+                }
+            }
+
+            .locations {
+                column-count: 1;
+
+                li {
+                    margin-bottom: 23px;
+
+                    address {
+                        font-style: normal;
+                        font-family: 'Roboto',Arial,sans-serif;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 23px;
+                        letter-spacing: 0;
+                        color: #525252;
+                    }
                 }
             }
         }

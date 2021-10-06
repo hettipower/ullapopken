@@ -1,0 +1,16 @@
+2021-10-04T17:12:25+00:00 CRITICAL Uncaught MatthiasMullie\Minify\Exceptions\IOException: The file "C:\xampp\htdocs\ullapopken/wp-content/themes/ullapopken-theme/assets/js/custom-combined.min.js" could not be opened for writing. Check if PHP has enough permissions. in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php:476
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php(236): MatthiasMullie\Minify\Minify->openFileForWriting('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php(153): MatthiasMullie\Minify\Minify->save('/*!\n  * Bootstr...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\functions.php(295): MatthiasMullie\Minify\Minify->minify('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): minify_js_func('')
+#4 C:\xampp\htdocs\ullapopken\ in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php on line 476
+
+2021-10-04T17:52:25+00:00 CRITICAL Uncaught MatthiasMullie\Minify\Exceptions\IOException: The file "C:\xampp\htdocs\ullapopken/wp-content/themes/ullapopken-theme/assets/js/custom-combined.min.js" could not be opened for writing. Check if PHP has enough permissions. in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php:476
+Stack trace:
+#0 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php(236): MatthiasMullie\Minify\Minify->openFileForWriting('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php(153): MatthiasMullie\Minify\Minify->save('/*!\n  * Bootstr...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\functions.php(295): MatthiasMullie\Minify\Minify->minify('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ullapopken\wp-includes\class-wp-hook.php(303): minify_js_func('')
+#4 C:\xampp\htdocs\ullapopken\ in C:\xampp\htdocs\ullapopken\wp-content\themes\ullapopken-theme\assets\vendor\matthiasmullie\minify\src\Minify.php on line 476
+
