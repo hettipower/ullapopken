@@ -266,6 +266,39 @@
             margin-right: 10px;
         }
 
+        .btnWrap {
+            margin-top: 1rem;
+
+            .btn {
+                background-color: #000;
+                color: #fff;
+                height: 36px;
+                padding: 0 16px;
+                display: block;
+                line-height: 38px;
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+                -ms-flex-item-align: start;
+                align-self: flex-start;
+                width: auto;
+                position: relative;
+                font-family: 'Roboto',Arial,sans-serif;
+                font-weight: 500;
+                border-radius: 0.25rem;
+                -webkit-border-radius: 0.25rem;
+                -moz-border-radius: 0.25rem;
+                -ms-border-radius: 0.25rem;
+                -o-border-radius: 0.25rem;
+                text-decoration: none;
+                font-size: 15px;
+
+                &:hover {
+                    background-color: #696969;
+                }
+            }
+        }
+
         .linksWrap {
             display: flex;
             justify-content: space-between;

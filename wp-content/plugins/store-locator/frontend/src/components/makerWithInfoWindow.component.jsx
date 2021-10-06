@@ -81,6 +81,9 @@ class MarkerWithInfoWindow extends React.Component {
                                     </svg>
                                     {telephone}
                                 </div>
+                                <div className="btnWrap">
+                                    <a className="btn" href="#" target="_blank" rel="noopener noreferrer">Neuheiten</a>
+                                </div>
                                 <div className="linksWrap">
                                     <a className="direction" href={directionLink} target="_blank" rel="noopener noreferrer">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
