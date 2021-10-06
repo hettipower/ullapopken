@@ -7,14 +7,14 @@ get_header();
 <?php 
     if ( have_posts() ) : while ( have_posts() ) : the_post(); 
     $address = get_field( 'address' );
-    $categories_terms = get_field( 'categories' );
+    $categories_terms = ( get_field( 'categories' ) ) ? get_field( 'categories' ) : array();
     $categoriesArr = array_chunk($categories_terms , 3);
 ?>
 
 <section class="sectionWrap" id="storeContentWrap">
 	<div class="container">
         <div class="back">
-            <a href="">
+            <a href="<?php echo home_url('storefinder'); ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
                 </svg> Back to Map
@@ -56,9 +56,9 @@ get_header();
                     <div class="gallery">
                         <?php 
                             $gallery_images = get_field( 'gallery' );
-                            $galleryCount = count($gallery_images);
-                            $i=1;
                             if ( $gallery_images ) :
+                                $galleryCount = count($gallery_images);
+                                $i=1;
                                 foreach ( $gallery_images as $gallery_image ): 
                                     $bigImg = ($i == 1) ? 'bigImg' : '' ;
                         ?>
@@ -260,7 +260,7 @@ get_header();
         </div>
 
         <div class="showLocations">
-            <a href="#">Show all locations</a>
+            <a href="<?php echo home_url('storefinder'); ?>">Show all locations</a>
         </div>
 
 	</div>
@@ -278,7 +278,6 @@ get_header();
     }
     
     function showPosition(position) {
-        console.log('position' , position);
         return position;
     }
     getLocation();
