@@ -180,13 +180,14 @@
         width: 100%;
         padding: 15px 0;
 
-        a {
+        span {
             color: #a9a9a9;
             text-decoration: none;
             font-size: 15px;
             line-height: 19px;
             font-family: 'Roboto',Arial,sans-serif;
             font-weight: 500;
+            cursor: pointer;
 
             &:hover {
                 color: #1a1a1a;
@@ -303,8 +304,10 @@
 }
 
 .allLocationsWrap {
+    width: 100%;
+
     .backToMap {
-        a {
+        span {
             background-color: #f2f2f2;
             color: #525252;
             position: relative;
@@ -324,6 +327,7 @@
             -moz-border-radius: 0.25rem;
             -ms-border-radius: 0.25rem;
             -o-border-radius: 0.25rem;
+            cursor: pointer;
 
             &:hover {
                 background-color: #696969;
@@ -358,7 +362,7 @@
                 letter-spacing: 0;
                 color: #525252;
 
-                a {
+                span , a {
                     font-family: Roboto,Arial,sans-serif;
                     font-weight: 500;
                     line-height: 30px;
@@ -367,6 +371,7 @@
                     font-size: 15px;
                     display: inline-block;
                     margin-right: 5px;
+                    cursor: pointer;
 
                     &:hover {
                         color: #1a1a1a;
@@ -380,13 +385,18 @@
         .allLocations {
             h2 {
     
-                a {
+                span {
                     line-height: 40px;
                     font-size: 18px;
                     font-family: 'Roboto',Arial,sans-serif;
                     font-weight: 500;
                     text-decoration: none;
                     color: #a9a9a9;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #1a1a1a;
+                    }
                 }
             }
 

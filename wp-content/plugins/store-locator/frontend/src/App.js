@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios";
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { 
   setStores , 
@@ -10,10 +11,14 @@ import {
   setFixtures 
 } from './redux/stores/stores.actions';
 
+import { selectActivePage } from './redux/stores/stores.selectors';
+
 import './App.css';
 import './styles/storefinder.scss';
 
-import routes from './routes';
+import AllLocationPage from './pages/allLocation.page';
+import MapPage from './pages/map.page';
+import SingleLocationGroup from './pages/singleLocationGroup.page';
 
 class App extends React.Component {
 
@@ -85,15 +90,22 @@ class App extends React.Component {
       setCityStores(response.data);
     });
 
+    window.scrollTo(0, 0);
+
   }
 
   render(){
 
-    return (
-      <div>
-        {routes}
-      </div>
-    );
+    const { activePage } = this.props;
+
+    if (activePage === 'map') {
+      return ( <MapPage /> );
+    } else if (activePage === 'allLocation') {
+      return ( <AllLocationPage /> );
+    } else if (activePage === 'singleLocation') {
+      return ( <SingleLocationGroup /> );
+    }
+
   }
 
 
@@ -107,4 +119,8 @@ const mapDispatchToProps = dispatch => ({
   setFixtures : (fixtures) => dispatch(setFixtures(fixtures)),
 });
 
-export default connect(null, mapDispatchToProps)(App);
+const mapStateToProps = createStructuredSelector({
+  activePage : selectActivePage,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

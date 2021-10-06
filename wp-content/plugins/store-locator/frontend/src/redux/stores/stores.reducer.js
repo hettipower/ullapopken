@@ -6,6 +6,8 @@ const INITIAL_STATE = {
     longitude: false,
     latitude : false,
     fixtures : [],
+    activePage : 'map',
+    activeLocation : false
 }
 
 const storesReducer = ( state = INITIAL_STATE , action ) => {
@@ -30,10 +32,20 @@ const storesReducer = ( state = INITIAL_STATE , action ) => {
                 ...state,
                 latitude : action.payload
             }
-        case storesActionTypes.SET_FIXTUREs:
+        case storesActionTypes.SET_FIXTURES:
             return{
                 ...state,
                 fixtures : action.payload
+            }
+        case storesActionTypes.SET_ACTIVE_PAGE:
+            return{
+                ...state,
+                activePage : action.payload
+            }
+        case storesActionTypes.SET_ACTIVE_LOCATION:
+            return{
+                ...state,
+                activeLocation : action.payload
             }
         default:
             return state;

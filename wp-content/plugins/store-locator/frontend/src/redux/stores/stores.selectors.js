@@ -27,3 +27,13 @@ export const selectFixtures = createSelector(
     [selectStoresAPI],
     (stores) => stores.fixtures
 );
+
+export const selectActivePage = createSelector(
+    [selectStoresAPI],
+    (stores) => stores.activePage
+);
+
+export const selectActiveLocation = createSelector(
+    [selectStoresAPI],
+    (stores) => stores.activeLocation
+);

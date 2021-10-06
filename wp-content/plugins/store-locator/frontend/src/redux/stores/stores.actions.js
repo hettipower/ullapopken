@@ -22,6 +22,16 @@ export const setLatitude = latitude => ({
 });
 
 export const setFixtures = fixtures => ({
-    type : storesActionTypes.SET_FIXTUREs,
+    type : storesActionTypes.SET_FIXTURES,
     payload : fixtures
+});
+
+export const setActivePage = activePage => ({
+    type : storesActionTypes.SET_ACTIVE_PAGE,
+    payload : activePage
+});
+
+export const setActiveLocation = activeLocation => ({
+    type : storesActionTypes.SET_ACTIVE_LOCATION,
+    payload : activeLocation
 });

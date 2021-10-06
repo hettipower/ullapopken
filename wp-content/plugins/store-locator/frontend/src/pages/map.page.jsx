@@ -2,7 +2,6 @@ import React from 'react';
 import { getCenterOfBounds } from 'geolib';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import GeoSearch from '../components/search.components';
 import SearchResults from '../components/searchResults.component';
@@ -14,6 +13,8 @@ import {
     selectLatitude , 
     selectLongitude 
 } from '../redux/stores/stores.selectors';
+
+import { setActivePage } from '../redux/stores/stores.actions';
 
 class MapPage extends React.Component {
 
@@ -153,7 +154,7 @@ class MapPage extends React.Component {
 
         const { allLocations , showClear } = this.state;
 
-        const { fixtures , stores , longitude , latitude } = this.props;
+        const { fixtures , stores , longitude , latitude , setActivePage } = this.props;
 
         return(
             <div id="storeFinderWrapper" className="container">
@@ -183,13 +184,19 @@ class MapPage extends React.Component {
                 </div>
 
                 <div className="showAll">
-                    <Link to="/all-locations">Show all locations</Link>
+                  <span
+                    onClick={() => setActivePage('allLocation')}
+                  >Show all locations</span>
                 </div>
             
             </div>
         )
     }
 }
+
+const mapDispatchToProps = dispatch => ({
+  setActivePage : (activePage) => dispatch(setActivePage(activePage)),
+});
 
 const mapStateToProps = createStructuredSelector({
     stores : selectStores,
@@ -198,4 +205,4 @@ const mapStateToProps = createStructuredSelector({
     longitude : selectLongitude , 
 });
 
-export default connect(mapStateToProps)(MapPage);
+export default connect(mapStateToProps , mapDispatchToProps)(MapPage);
