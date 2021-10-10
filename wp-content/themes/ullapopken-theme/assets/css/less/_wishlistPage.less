@@ -1,0 +1,204 @@
+.woocommerce-wishlist {
+    #defaultWrap{
+        .container {
+            padding: 0;
+            background-color: transparent;
+
+            .loginWrap {
+                background-color: #d5eaf5;
+                padding: 1rem 1.5rem;
+                margin-bottom: 1.5rem;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+                font-family: "Open Sans", Arial, sans-serif;
+
+                h3 {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 600;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    margin: 0;
+                }
+
+                .btnWrap {
+                    .btn {
+                        padding: 8px 10rem;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .wishlistWrapper {
+                background-color: #fff;
+                padding: 1.5rem 1.5rem 4rem;
+                margin-bottom: 1.5rem;
+
+                #yith-wcwl-form {
+                    .wishlist-title-container {
+                        .wishlist-title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .btn {
+                                display: none;
+                            }
+
+                            h2 {
+                                font-size: 1.25rem;
+                                line-height: 1.75rem;
+                                font-weight: 600;
+                                font-family: "Open Sans", Arial, sans-serif;
+                            }
+
+                            .itemCount {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                color: #828282;
+                            }
+                        }
+                    }
+
+                    .emptyWishlistWrap {
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        text-align: center;
+                        font-family: "Open Sans", Arial, sans-serif;
+
+                        h3 {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            font-weight: 600;
+                            font-family: "Open Sans", Arial, sans-serif;
+                            margin-bottom: 0;
+                        }
+
+                        .btnWrap {
+                            .btn {
+                                margin: 0;
+                                color: #191919;
+                                background-color: #F2F2F2;
+                                border-color: #F2F2F2;
+                                padding: 8px 4rem;
+
+                                &:hover {
+                                    background-color: #E7E7E7;
+                                    border-color: #E7E7E7;
+                                    color: #191919;
+                                }
+                            }
+                        }
+                    }
+
+                    .wishlistItemsWrap {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: grid;
+                        grid-template-columns: repeat(3 , 1fr);
+                        gap: 30px;
+
+                        .wishlistItem {
+                            width: 100%;
+
+                            .imgWrap {
+                                margin-bottom: 1rem;
+                            }
+
+                            h3 {
+                                font-family: "Open Sans",Arial,sans-serif;
+                                font-size: 1rem;
+                                font-weight: 600;
+                                line-height: 1;
+                                text-align: left;
+                                margin-bottom: 7px;
+
+                                a {
+                                    color: #191919;
+                                }
+                            }
+
+                            .metas {
+                                margin-bottom: 0.5rem;
+
+                                .variation {
+                                    margin: 0;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    font-size: 0.75rem;
+                                    line-height: 1.25rem;
+                                    font-weight: 400;
+                                    font-family: "Open Sans", Arial, sans-serif;
+
+                                    dt {
+                                        font-weight: 400;
+                                        width: 11%;
+                                    }
+
+                                    dd {
+                                        margin: 0 0 2px;
+                                        width: 89%;
+                                    }
+                                }
+                            }
+
+                            .price {
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 600;
+                                font-family: "Open Sans", Arial, sans-serif;
+                                margin-bottom: 2rem;
+                            }
+
+                            .addtoCart {
+                                .add_to_cart_button {
+                                    display: inline-block;
+                                    color: #fff;
+                                    background-color: #191919;
+                                    padding: 0.4375rem 0;
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                    border-radius: 0.25rem;
+                                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                    width: 100%;
+                                    text-align: center;
+                                    font-weight: 600;
+
+                                    &:hover {
+                                        background-color: #FE8273;
+                                    }
+                                }
+                            }
+
+                            .remove {
+                                margin-top: 0.5rem;
+
+                                .remove_from_wishlist {
+                                    width: 100%;
+                                    color: #191919 !important;
+                                    background-color: #F2F2F2;
+                                    border-color: #F2F2F2;
+                                    text-align: center;
+                                    font-weight: 600;
+                                    padding: 0.4375rem 0;
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                    border-radius: 0.25rem;
+                                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                    height: auto;
+
+                                    &:hover {
+                                        background-color: #E7E7E7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

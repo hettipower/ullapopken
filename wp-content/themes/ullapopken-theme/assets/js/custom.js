@@ -419,6 +419,11 @@ jQuery(document).ready(function ($) {
         }
     } );
 
+    $('#wishlistLogin').on('click' , function(){
+        $('#loginDropDown').dropdown('show');
+        return false;
+    })
+
 });
 
 function clearProductItems(ele , productID , variationID){

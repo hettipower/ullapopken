@@ -784,3 +784,69 @@ function add_variation_custom_field_to_variable_form( $variation_data, $product,
 
     return $variation_data;
 }
+
+add_action('yith_wcwl_before_wishlist_form' , 'wishlist_login_component');
+function wishlist_login_component(){
+    if( !is_user_logged_in() ){
+        ?>
+        <div class="loginWrap">
+            <h3>Your favorites</h3>
+            <p>Save your favorites for later! Create a log in or sign into your account now.</p>
+            <div class="btnWrap d-flex justify-content-end">
+                <a href="#" class="btn" id="wishlistLogin">Sign in</a>
+            </div>
+        </div>
+        <?php
+    }
+    echo '<div class="wishlistWrapper">';
+}
+
+add_action('yith_wcwl_after_wishlist_form' , 'wishlist_footer_component');
+function wishlist_footer_component(){
+
+    echo '</div>';
+}
+
+if ( defined( 'YITH_WCWL' ) && ! function_exists( 'yith_wcwl_get_items_count' ) ) {
+    function yith_wcwl_get_items_count() {
+      ob_start();
+      ?>
+        <a class="nav-link wishlist" href="<?php echo esc_url( YITH_WCWL()->get_wishlist_url() ); ?>">
+            <span class="yith-wcwl-items-count"><?php echo esc_html( yith_wcwl_count_all_products() ); ?></span>
+            <i class="far fa-heart"></i><span>Favorites</span>
+        </a>
+      <?php
+      return ob_get_clean();
+    }
+    add_shortcode( 'yith_wcwl_items_count', 'yith_wcwl_get_items_count' );
+}
+
+if ( defined( 'YITH_WCWL' ) && ! function_exists( 'yith_wcwl_ajax_update_count' ) ) {
+    function yith_wcwl_ajax_update_count() {
+      wp_send_json( array(
+        'count' => yith_wcwl_count_all_products()
+      ) );
+    }
+    add_action( 'wp_ajax_yith_wcwl_update_wishlist_count', 'yith_wcwl_ajax_update_count' );
+    add_action( 'wp_ajax_nopriv_yith_wcwl_update_wishlist_count', 'yith_wcwl_ajax_update_count' );
+}
+
+if ( defined( 'YITH_WCWL' ) && ! function_exists( 'yith_wcwl_enqueue_custom_script' ) ) {
+    function yith_wcwl_enqueue_custom_script() {
+      wp_add_inline_script(
+        'jquery-yith-wcwl',
+        "
+          jQuery( function( $ ) {
+            $( document ).on( 'added_to_wishlist removed_from_wishlist', function() {
+              $.get( yith_wcwl_l10n.ajax_url, {
+                action: 'yith_wcwl_update_wishlist_count'
+              }, function( data ) {
+                $('.yith-wcwl-items-count').html( data.count );
+              } );
+            } );
+          } );
+        "
+      );
+    }
+    add_action( 'wp_enqueue_scripts', 'yith_wcwl_enqueue_custom_script', 20 );
+}

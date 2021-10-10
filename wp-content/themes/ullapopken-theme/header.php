@@ -175,7 +175,7 @@
 							<a class="nav-link" href="<?php echo home_url('quick-order'); ?>"><i class="fas fa-clipboard-list"></i><span>Quick Order</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo home_url('wishlist'); ?>"><i class="far fa-heart"></i><span>Favorites</span></a>
+							<?php echo do_shortcode('[yith_wcwl_items_count]'); ?>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link cartIcon" href="<?php echo wc_get_cart_url(); ?>">
