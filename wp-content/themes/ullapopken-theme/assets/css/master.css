@@ -16999,6 +16999,160 @@ body .woocommerce-form.was-validated .input-text:invalid {
   line-height: 1.5rem;
   font-weight: 400;
 }
+#productCatWrap {
+  padding: 3rem 0 0;
+}
+#productCatWrap h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#productCatWrap .productCategories {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 10px;
+}
+#productCatWrap .productCategories .productCat {
+  position: relative;
+  background-color: #f2f2f2;
+}
+#productCatWrap .productCategories .productCat:hover {
+  background-color: #191919;
+}
+#productCatWrap .productCategories .productCat:hover h3 {
+  color: #fff;
+}
+#productCatWrap .productCategories .productCat a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#productCatWrap .productCategories .productCat h3 {
+  margin: 0;
+  text-align: center;
+  padding: 0.4375rem 0;
+  color: #191919;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#currentTrendingWrap {
+  padding: 3rem 0 0;
+}
+#currentTrendingWrap h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#currentTrendingWrap .trendingWrap {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+#currentTrendingWrap .trendingWrap .trending {
+  position: relative;
+  color: #fff;
+}
+#currentTrendingWrap .trendingWrap .trending a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#currentTrendingWrap .trendingWrap .trending .content {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 10px;
+}
+#currentTrendingWrap .trendingWrap .trending .content h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #fff;
+}
+#activeWareWrap {
+  padding: 3rem 0 0;
+}
+#activeWareWrap h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#activeWareWrap .activeWareSlider .activeWare {
+  padding-right: 10px;
+  position: relative;
+}
+#activeWareWrap .activeWareSlider .activeWare .imgWrap {
+  position: relative;
+}
+#activeWareWrap .activeWareSlider .activeWare .imgWrap .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+  width: 200px;
+  margin: auto;
+  color: #191919;
+  background-color: #F2F2F2;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.4375rem 0;
+  line-height: 1.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#activeWareWrap .activeWareSlider .activeWare .imgWrap .btn:hover {
+  background-color: #191919;
+  color: #FFF;
+}
+#activeWareWrap .activeWareSlider .activeWare .content {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  padding: 1rem 0 0;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+#activeWareWrap .activeWareSlider .activeWare .content h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0;
+}
+#activeWareWrap .activeWareSlider .slick-arrow {
+  position: absolute;
+  bottom: 49%;
+  border: none;
+  background-color: #fff;
+  padding: 1rem;
+  z-index: 5;
+}
+#activeWareWrap .activeWareSlider .slick-arrow.slick-next {
+  right: -1.1rem;
+}
+#activeWareWrap .activeWareSlider .slick-arrow.slick-prev {
+  left: -1.1rem;
+}
+#activeWareWrap .activeWareSlider .slick-arrow.slick-disabled {
+  display: none !important;
+}
 #shopWrap {
   padding-top: 2rem;
 }
