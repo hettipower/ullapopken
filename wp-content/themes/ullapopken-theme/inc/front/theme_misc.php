@@ -6,9 +6,11 @@ function theme_set_cookie( $name , $value , $time = '86400' ){
 function theme_get_cookie( $name ){
   if( isset($_COOKIE[$name]) ){
     return $_COOKIE[$name];
+  } else if( get_option('theme_shop') ) {
+    return get_option('theme_shop');
   }
 
-  return false;
+  return 'women';
 }
 
 add_action( 'admin_post_theme_set_shop_cookie_func', 'theme_set_shop_cookie_func' );
@@ -19,6 +21,7 @@ function theme_set_shop_cookie_func() {
   $shop = $_REQUEST['shop'];
 
   theme_set_cookie( 'shop' , $shop );
+  update_option('theme_shop' , $shop);
 
   wp_redirect($url);
   exit();
