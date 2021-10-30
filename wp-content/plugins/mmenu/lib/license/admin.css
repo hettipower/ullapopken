@@ -1,0 +1,26 @@
+.license td {
+	position: relative;
+}
+.license .dashicons-yes,
+.license .dashicons-no {
+	font-size: 16px;
+	margin-top: -7px;
+	position: absolute;
+	top: 50%;
+	left: 400px;
+}
+.license .dashicons-yes{
+	color: green;
+}
+.license .dashicons-no {
+	color: red;
+}
+
+@media screen and (max-width: 782px) {
+	.license .dashicons {
+		font-size: 20px;
+		margin-top: -9px;
+		margin-left: -40px;
+		left: 100%;
+	}
+}

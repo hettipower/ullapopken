@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH Framework\n"
 "Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2021-07-13 10:11:30+00:00\n"
-"PO-Revision-Date: 2021-06-08 11:44:05+0000\n"
+"POT-Creation-Date: 2021-10-11 07:35:19+00:00\n"
+"PO-Revision-Date: 2021-09-28 13:56:41+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 
-#: includes/class-yit-assets.php:146 yit-functions.php:1962
+#: includes/class-yit-assets.php:146 yit-functions.php:1979
 msgid "Confirm trash"
 msgstr "Confirmar el traslado a la papelera"
 
@@ -23,13 +23,13 @@ msgstr ""
 "¿Estás seguro de que quieres mover a la papelera los elementos seleccionados?"
 
 #: includes/class-yit-assets.php:149 includes/class-yit-assets.php:153
-#: templates/sysinfo/tabs/main.php:40 templates/sysinfo/tabs/main.php:48
-#: yit-functions.php:1964 yit-functions.php:1982
+#: templates/sysinfo/tabs/main.php:42 templates/sysinfo/tabs/main.php:50
+#: yit-functions.php:1981 yit-functions.php:1999
 msgid "No"
 msgstr "No"
 
-#: includes/class-yit-assets.php:150 yit-functions.php:1980
-#: yit-functions.php:2108
+#: includes/class-yit-assets.php:150 yit-functions.php:1997
+#: yit-functions.php:2125
 msgid "Confirm delete"
 msgstr "Confirmar el borrado"
 
@@ -37,8 +37,8 @@ msgstr "Confirmar el borrado"
 msgid "Are you sure you want to delete the selected items?"
 msgstr "¿Estás seguro de que quieres borrar los elementos seleccionados?"
 
-#: includes/class-yit-assets.php:151 yit-functions.php:1896
-#: yit-functions.php:2056
+#: includes/class-yit-assets.php:151 yit-functions.php:1913
+#: yit-functions.php:2073
 msgid ""
 "This action cannot be undone and you will not be able to recover this data."
 msgstr "Esta acción no se puede revertir y no podrá recuperar estos datos."
@@ -472,7 +472,7 @@ msgstr "Personalizado:"
 msgid "Preview:"
 msgstr "Vista previa:"
 
-#: templates/fields/icons.php:63
+#: templates/fields/icons.php:78
 msgid "Set Default"
 msgstr "Establecer predeterminado"
 
@@ -596,49 +596,97 @@ msgstr "¡Copiado!"
 msgid "Copy Code"
 msgstr "Copiar código"
 
-#: templates/sysinfo/tabs/main.php:15
+#: templates/sysinfo/tabs/main.php:17
 msgid "Site Info"
 msgstr "Información del sitio"
 
-#: templates/sysinfo/tabs/main.php:20
+#: templates/sysinfo/tabs/main.php:22
 msgid "Site URL"
 msgstr "URL del sitio"
 
-#: templates/sysinfo/tabs/main.php:29
+#: templates/sysinfo/tabs/main.php:31
 msgid "Output IP Address"
 msgstr "Dirección IP de salida"
 
-#: templates/sysinfo/tabs/main.php:37
+#: templates/sysinfo/tabs/main.php:39
 msgid "Defined WP_CACHE"
 msgstr "WP_CACHE definido"
 
-#: templates/sysinfo/tabs/main.php:40 templates/sysinfo/tabs/main.php:48
+#: templates/sysinfo/tabs/main.php:42 templates/sysinfo/tabs/main.php:50
 msgid "Yes"
 msgstr "Sí"
 
-#: templates/sysinfo/tabs/main.php:45
+#: templates/sysinfo/tabs/main.php:47
 msgid "External object cache"
 msgstr "Caché objeto externo"
 
-#: templates/sysinfo/tabs/main.php:54
+#: templates/sysinfo/tabs/main.php:55
+msgid "YITH Plugin Framework Version"
+msgstr "Versión del YITH Plugin Framework "
+
+#. translators: %s is the name of the plugin that is loading the framework.
+#: templates/sysinfo/tabs/main.php:64
+msgid "loaded by %s"
+msgstr "cargado por %s"
+
+#: templates/sysinfo/tabs/main.php:73
 msgid "Plugins Requirements"
 msgstr "Requerimientos de los plugins"
 
+#: templates/sysinfo/tabs/main.php:108
+msgid "Database Info"
+msgstr "Información de la base de datos"
+
+#: templates/sysinfo/tabs/main.php:113
+msgid "MySQL version"
+msgstr "Versión de MySQL"
+
+#. Translators: %s: Codex link.
+#: templates/sysinfo/tabs/main.php:123
+msgid "WordPress recommends a minimum MySQL version of 5.6. See: %s"
+msgstr "WordPress recomienda como versión mínima para MySQL la 5.6. Ver: %s"
+
+#: templates/sysinfo/tabs/main.php:123
+msgid "WordPress requirements"
+msgstr "Requerimientos de WordPress"
+
+#: templates/sysinfo/tabs/main.php:130
+msgid "Total Database Size"
+msgstr "Tamaño total de la base de datos:"
+
+#: templates/sysinfo/tabs/main.php:138
+msgid "Database Data Size"
+msgstr "Tamaño de los datos en la base de datos:"
+
+#: templates/sysinfo/tabs/main.php:146
+msgid "Database Index Size"
+msgstr "Tamaño del índice en la base de datos:"
+
+#: templates/sysinfo/tabs/main.php:154
+msgid "Database Free Size"
+msgstr "Espacio libre en la base de datos:"
+
+#. Translators: %1$f: Table size, %2$f: Index size, %3$f: Free size, %4$s
+#. Engine.
+#: templates/sysinfo/tabs/main.php:168
+msgid "Data: %1$.2fMB | Index: %2$.2fMB | Free: %3$.2fMB | Engine: %4$s"
+msgstr "Datos: %1$.2fMB | Índice: %2$.2fMB | Libre: %3$.2fMB | Motor: %4$s"
+
 #. translators: %s is the title of the post object.
-#: yit-functions.php:1894
+#: yit-functions.php:1911
 msgid "Are you sure you want to move \"%s\" to trash?"
 msgstr "¿Estás seguro de que quieres mover \"%s\" a la papelera?"
 
 #. translators: %s is the title of the post object.
-#: yit-functions.php:1896 yit-functions.php:2056
+#: yit-functions.php:1913 yit-functions.php:2073
 msgid "Are you sure you want to delete \"%s\"?"
 msgstr "¿Estás seguro de que quieres borrar \"%s\"?"
 
-#: yit-functions.php:1994 yit-functions.php:2002 yit-functions.php:2119
+#: yit-functions.php:2011 yit-functions.php:2019 yit-functions.php:2136
 msgid "Further actions"
 msgstr "Otras acciones"
 
-#: yit-plugin.php:204
+#: yit-plugin.php:205
 msgid "License"
 msgstr "Licencia"
 
@@ -667,13 +715,13 @@ msgctxt "Button text"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: includes/class-yit-assets.php:148 yit-functions.php:1965
+#: includes/class-yit-assets.php:148 yit-functions.php:1982
 msgctxt "Trash confirmation action"
 msgid "Yes, move to trash"
 msgstr "Sí, mover a la papelera"
 
-#: includes/class-yit-assets.php:152 yit-functions.php:1983
-#: yit-functions.php:2110
+#: includes/class-yit-assets.php:152 yit-functions.php:2000
+#: yit-functions.php:2127
 msgctxt "Delete confirmation action"
 msgid "Yes, delete"
 msgstr "Si, borrar"
@@ -792,13 +840,12 @@ msgstr "Enlazar valores juntos"
 #: templates/fields/image-dimensions.php:18
 msgctxt "Image width field label"
 msgid "Width"
-msgstr ""
+msgstr "Anchura"
 
 #: templates/fields/image-dimensions.php:23
-#, fuzzy
 msgctxt "Image height field label"
 msgid "Height"
-msgstr "Derecha"
+msgstr "Altura"
 
 #: templates/fields/onoff.php:28
 msgctxt "YES/NO button: use MAX 4 characters!"
@@ -884,86 +931,82 @@ msgctxt "Help tab submit ticket button"
 msgid "Submit a ticket"
 msgstr "Enviar ticket"
 
-#: yit-functions.php:1908
+#: yit-functions.php:1925
 msgctxt "Post action"
 msgid "Preview"
 msgstr "Previsualizar"
 
-#: yit-functions.php:1917
+#: yit-functions.php:1934
 msgctxt "Post action"
 msgid "View"
 msgstr "Ver"
 
-#: yit-functions.php:1928
+#: yit-functions.php:1945
 msgctxt "Post action"
 msgid "Edit"
 msgstr "Editar"
 
-#: yit-functions.php:1936
+#: yit-functions.php:1953
 msgctxt "Post action"
 msgid "Duplicate"
 msgstr "Duplicar"
 
-#: yit-functions.php:1948
+#: yit-functions.php:1965
 msgctxt "Post action"
 msgid "Restore"
 msgstr "Restaurar"
 
-#: yit-functions.php:1956
+#: yit-functions.php:1973
 msgctxt "Post action"
 msgid "Trash"
 msgstr "A la papelera"
 
-#: yit-functions.php:1973
+#: yit-functions.php:1990
 msgctxt "Post action"
 msgid "Delete Permanently"
 msgstr "Borrar permanentemente"
 
-#: yit-functions.php:2070
+#: yit-functions.php:2087
 msgctxt "Term action"
 msgid "View"
 msgstr "Ver"
 
-#: yit-functions.php:2080
+#: yit-functions.php:2097
 msgctxt "Term action"
 msgid "Edit"
 msgstr "Editar"
 
-#: yit-functions.php:2088
+#: yit-functions.php:2105
 msgctxt "Term action"
 msgid "Duplicate"
 msgstr "Duplicar"
 
-#: yit-functions.php:2101
+#: yit-functions.php:2118
 msgctxt "Term action"
 msgid "Delete"
 msgstr "Borrar"
 
-#: yit-plugin.php:85
+#: yit-plugin.php:84
 msgctxt "Plugin Row Meta"
 msgid "Live Demo"
 msgstr "Demostración en vivo"
 
-#: yit-plugin.php:89
+#: yit-plugin.php:88
 msgctxt "Plugin Row Meta"
 msgid "Documentation"
 msgstr "Documentación"
 
-#: yit-plugin.php:93
+#: yit-plugin.php:92
 msgctxt "Plugin Row Meta"
 msgid "Support"
 msgstr "Soporte"
 
-#: yit-plugin.php:97
+#: yit-plugin.php:96
 msgctxt "Plugin Row Meta"
 msgid "Premium version"
 msgstr "Versión premium"
 
-#: yit-plugin.php:200
+#: yit-plugin.php:201
 msgctxt "Action links"
 msgid "Settings"
 msgstr "Ajustes"
-
-#~ msgctxt "Delete confirmation action"
-#~ msgid "Yes, delete permanently"
-#~ msgstr "Sí, borrar permanentemente"

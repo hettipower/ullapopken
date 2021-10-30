@@ -1,0 +1,49 @@
+
+.wrap .phone,
+.wrap .submit-export
+{
+	display: none;
+}
+.wrap.mmenu-export
+{
+	position: relative;
+	z-index: 10;
+}
+.wrap.mmenu-export .submit-export
+{
+	display: block;
+}
+.wrap.mmenu-export h2,
+.wrap.mmenu-export .section,
+.wrap.mmenu-export p.intro,
+.wrap.mmenu-export p.submit-fixed
+{
+	display: none;
+}
+.wrap.mmenu-export #mmenu-settings:before
+{
+	bottom: -50px;
+}
+
+.submit-export pre
+{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	user-select: all;
+	white-space: normal;
+	word-wrap: break-word;
+}
+.submit-export strong
+{
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	font-size: 23px;
+	line-height: 50px;
+	color: #fff;
+}
+.submit-export a
+{
+	display: inline-block;
+	margin-top: 10px;
+}

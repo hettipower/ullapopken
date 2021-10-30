@@ -1,0 +1,66 @@
+.combobox
+{
+	vertical-align: bottom;
+	position: relative;
+}
+.combobox input[type="text"],
+.combobox select
+{
+	width: 100%;
+}
+.combobox input[type="text"]
+{
+	display: block;
+}
+.combobox select
+{
+	display: none;
+}
+.combobox.is-combobox
+{
+	border: 1px solid #ddd;
+	margin: 1;
+}
+.combobox.is-combobox input[type="text"],
+.combobox.is-combobox select
+{
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	margin: 0;
+}
+.combobox.is-combobox input[type="text"]
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	width: calc( 100% - 30px );
+	z-index: 1;
+}
+.combobox.is-combobox select
+{
+	display: block;
+}
+
+/* Smallest screens */
+@media screen and (max-width:782px) {
+	.combobox
+	{
+		display: block;
+		margin-bottom: 5px;
+	}
+	.button.locate
+	{
+		display: none !important;
+	}
+}
+/* Larger screens */
+@media screen and (min-width:783px) {
+	.combobox
+	{
+		display: inline-block;
+		width: 250px;
+		margin-right: 5px;
+	}
+}

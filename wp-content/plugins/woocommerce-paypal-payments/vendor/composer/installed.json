@@ -333,17 +333,17 @@
         },
         {
             "name": "dhii/module-interface",
-            "version": "v0.3.0-alpha1",
-            "version_normalized": "0.3.0.0-alpha1",
+            "version": "v0.3.0-alpha2",
+            "version_normalized": "0.3.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/module-interface.git",
-                "reference": "e93feaf37e183ac22114e3fd86650bd987fa83d1"
+                "reference": "0e39f167d7ed8990c82f5d2e6084159d1a502a5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/module-interface/zipball/e93feaf37e183ac22114e3fd86650bd987fa83d1",
-                "reference": "e93feaf37e183ac22114e3fd86650bd987fa83d1",
+                "url": "https://api.github.com/repos/Dhii/module-interface/zipball/0e39f167d7ed8990c82f5d2e6084159d1a502a5b",
+                "reference": "0e39f167d7ed8990c82f5d2e6084159d1a502a5b",
                 "shasum": ""
             },
             "require": {
@@ -356,7 +356,7 @@
                 "slevomat/coding-standard": "^6.0",
                 "vimeo/psalm": "^3.11.7 | ^4.0"
             },
-            "time": "2021-01-14T19:21:28+00:00",
+            "time": "2021-08-23T08:23:01+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -382,7 +382,7 @@
             "description": "Interfaces for modules",
             "support": {
                 "issues": "https://github.com/Dhii/module-interface/issues",
-                "source": "https://github.com/Dhii/module-interface/tree/v0.3.0-alpha1"
+                "source": "https://github.com/Dhii/module-interface/tree/v0.3.0-alpha2"
             },
             "install-path": "../dhii/module-interface"
         },

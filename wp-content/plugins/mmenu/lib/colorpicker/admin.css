@@ -1,0 +1,89 @@
+.wp-picker-container
+{
+	width: 190px;
+	position: relative;
+}
+.wp-picker-holder
+{
+	margin: -5px 0 0 10px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+.wp-color-result
+{
+	border-radius: 30px !important;
+	border: 1px solid #ccc !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 180px !important;
+	height: 180px !important;
+	position: relative !important;
+	overflow: hidden !important;
+}
+.wp-color-result:focus,
+.wp-color-result:hover
+{
+	box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.2 );
+}
+.wp-color-result:after
+{
+	border: none !important;
+	content: "" !important;
+	box-shadow: none;
+	background: none center center no-repeat transparent;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.light .wp-color-result:after
+{
+	background-image: url( ../lib/colorpicker/mm_menu_theme_light.png );
+}
+.white .wp-color-result:after
+{
+	background-image: url( ../lib/colorpicker/mm_menu_theme_white.png );
+}
+.dark .wp-color-result:after
+{
+	background-image: url( ../lib/colorpicker/mm_menu_theme_dark.png );
+}
+.black .wp-color-result:after
+{
+	background-image: url( ../lib/colorpicker/mm_menu_theme_black.png );
+}
+
+.wp-color-result-text
+{
+	display: none !important;
+}
+
+.wp-picker-open + .wp-picker-input-wrap
+{
+	text-align: center;
+	display: block;
+	width: 182px;
+	margin-top: 10px;
+}
+
+/* Smallest screens */
+@media screen and (max-width:782px) {
+	.wp-picker-container
+	{
+		padding-top: 20px;
+	}
+	.wp-picker-open + .wp-picker-input-wrap input
+	{
+		display: inline-block !important;
+	}
+}
+/* Smallest small screens */
+@media screen and (max-width:480px) {
+	.wp-picker-holder
+	{
+		display: none;
+	}
+}

@@ -1,5 +1,6 @@
 <?php 
 $promotion = get_field( 'promotion', 'option' ); 
+$detect = new Mobile_Detect;
 ?>
 <footer>
     <?php if( $promotion ): ?>
@@ -57,6 +58,12 @@ $promotion = get_field( 'promotion', 'option' );
         </div>
     </div>
 </footer>
+
+</div>
+
+<?php if( $detect->isMobile() || $detect->isTablet() ): ?>
+    <div id="mobileMegaMenuWrap"></div>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 

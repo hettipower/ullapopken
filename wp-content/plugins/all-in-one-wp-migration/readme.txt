@@ -4,7 +4,7 @@ Tags: move, transfer, copy, migrate, backup, clone, restore, db migration, wordp
 Requires at least: 3.3
 Tested up to: 5.8
 Requires PHP: 5.2.17
-Stable tag: 7.47
+Stable tag: 7.49
 License: GPLv2 or later
 
 Move, transfer, copy, migrate, and backup a site with 1-click. Quick, easy, and reliable.
@@ -30,6 +30,7 @@ If you have WordPress version between 3.3 and 5.8.1 and PHP version between 5.2.
 
 * Supports custom uploads, plugins, theme folders, and more.
 * Available in over 50 language translations - including Japanese.
+* Accessible for individuals with disabilities (WCAG 2.1 AA Level compliant)
 * No limitations on host or operating system.
 * Supports a vast range of hosting providers -- [click here for a full list of supported providers.](https://help.servmask.com/knowledgebase/supported-hosting-providers/)
 * A long list of [premium extensions](https://servmask.com/products) that gives you the power to do more.
@@ -44,7 +45,8 @@ Here are other reasons to use All-in-One WP Migration ...
 
 **Trusted by the Government and Big Corporations:**
 
-Many enterprise customers, government organizations, and universities use, love, and trust All-in-One WP Migration. Here are some: Boeing, Lockheed Martin, NASA, VW, Harvard University, Stanford University, Lego, P&G, Automattic, State of California, State of Hawaii, EMC2, etc.
+Many enterprise customers, government organizations, and universities use,
+love, and trust All-in-One WP Migration. Here are some: Boeing, NASA, VW, IBM, Harvard University, Stanford University, Lego, P&G, Automattic, State of California, State of Hawaii.
 This broad adoption and usage of All-in-One WP Migration demonstrate how **safe, reliable and adaptable** the plugin is for just about any website migration need.
 
 **Full Compatibility and Support:**
@@ -87,6 +89,18 @@ All-in-One WP Migration is in full compliance with General Data Protection Regul
 See our [GDPR Compliant Privacy Policy here](https://www.iubenda.com/privacy-policy/946881).
 
 == Changelog ==
+= 7.49 =
+**Added**
+
+* Better error handling when making HTTP requests
+* Store a list of site files as CSV
+* Filter to change the request method
+
+= 7.48 =
+**Added**
+
+* Support for BuddyPress plugin
+
 = 7.47 =
 **Added**
 
@@ -143,14 +157,3 @@ See our [GDPR Compliant Privacy Policy here](https://www.iubenda.com/privacy-pol
 **Fixed**
 
 * Remove deprecated jQuery methods
-
-= 7.38 =
-**Added**
-
-* Improved MySQL error handling
-
-= 7.37 =
-**Added**
-
-* Improved detection of pretty permalink support
-* Improved DB error handling
