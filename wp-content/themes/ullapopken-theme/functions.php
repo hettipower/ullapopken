@@ -237,13 +237,9 @@ function my_acf_init() {
 }
 add_action('acf/init', 'my_acf_init');
 
-add_action('init' , 'compile_less_to_css');
 function compile_less_to_css(){
-
     $less = new lessc;
-
     $less->compileFile(THEME_THEMEROOT_PATH.'/assets/css/less/master.less' , THEME_THEMEROOT_PATH.'/assets/css/master.css' );
-
 }
 
 use MatthiasMullie\Minify;
@@ -260,7 +256,6 @@ function minify_css_func() {
 
 }
 
-add_action( 'init', 'minify_js_func');
 function minify_js_func() {
 
     $bootstrap = get_theme_file_path('assets/js/bootstrap.bundle.min.js');
@@ -294,4 +289,10 @@ function minify_js_func() {
     $minifiedPath = get_theme_file_path('assets/js/custom-combined.min.js');
     $minifier->minify($minifiedPath);
 
+}
+
+//Compile Asset Files
+if ( get_field( 'complie_assets', 'option' ) == 1 ) {
+    add_action('init' , 'compile_less_to_css');
+    add_action( 'init', 'minify_js_func');
 }
