@@ -26,6 +26,12 @@
             font-weight: 600;
             color: #191919;
             margin-bottom: 1rem;
+
+            @media @mobileTab {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                font-weight: 600;
+            }
         }
     }
 }
@@ -33,8 +39,16 @@
 .shopWrapper {
     padding: 0 2rem;
 
+    @media @mobileTab {
+        padding: 0 1rem;
+    }
+
     #sidebar {
         width: 18%;
+
+        @media @mobileTab {
+            display: none;
+        }
 
         h4 {
             font-size: 1rem;
@@ -72,10 +86,20 @@
     .shopListWrap {
         width: 80%;
 
+        @media @mobileTab {
+            width: 100%;
+        }
+
         .filterBtnsWrap {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 1.5rem;
+
+            @media @mobileTab {
+                display: grid;
+                grid-template-columns: repeat(3 , 1fr);
+                gap: 10px;
+            }
 
             .btn-stretch {
                 padding-left: 0.9375rem;
@@ -89,6 +113,10 @@
                 border-color: #F2F2F2;
                 color: #191919;
                 margin-left: 1rem;
+
+                @media @mobileTab {
+                    margin: 0;
+                }
             }
         }
 

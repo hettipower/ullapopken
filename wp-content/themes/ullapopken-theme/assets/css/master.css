@@ -16063,12 +16063,36 @@ header .navbar .topnavvbar {
 header .navbar .topnavvbar .menuWrap li {
   padding-left: 1rem;
 }
+@media screen and (max-width: 767px) {
+  header .navbar .topnavvbar .menuWrap .navbar-nav {
+    flex-direction: row;
+  }
+}
 header .navbar .middleWrap {
   width: 100%;
   padding: 15px 0;
 }
 header .navbar .middleWrap .container {
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  header .navbar .middleWrap .container .menuIcon #menuToggler {
+    width: auto;
+    min-width: 1px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #191919;
+    font-size: 10px;
+    box-shadow: none;
+    outline: none;
+  }
+  header .navbar .middleWrap .container .menuIcon #menuToggler .bi-list {
+    width: 32px;
+    height: 32px;
+  }
 }
 header .navbar .middleWrap .container .topCatWrap .navbar-nav .nav-item {
   margin-right: 2rem;
@@ -16089,8 +16113,25 @@ header .navbar .middleWrap .container .navbar-brand {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-width: 767px) {
+  header .navbar .middleWrap .container .navbar-brand {
+    margin-right: auto;
+    max-width: 150px;
+    margin-left: 1rem;
+  }
+}
 header .navbar .middleWrap .container .navbar-brand img {
   width: 14.5rem;
+}
+@media screen and (max-width: 767px) {
+  header .navbar .middleWrap .container .secondMenuWrap {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .navbar .middleWrap .container .secondMenuWrap .nav-item {
+    margin: 0 12px;
+  }
 }
 header .navbar .middleWrap .container .secondMenuWrap .nav-item .nav-link {
   display: inline-flex;
@@ -16320,6 +16361,36 @@ header.checkoutHeaderWrap .checkoutTimeLine li .bi {
 header.checkoutHeaderWrap .checkoutTimeLine li.active {
   color: #191919;
 }
+#mobileMegaMenuWrap {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .wpmm-menu .mm-listview .mm-listitem::after {
+    display: none;
+  }
+  .wpmm-menu .mm-listview .mm-listitem .mm-listitem__text {
+    color: #191919;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+  }
+  .wpmm-menu .mm-listview .mm-listitem .mm-listitem__btn {
+    padding: 0 25px;
+    height: 54px;
+    background-color: transparent;
+    border: none;
+  }
+  .wpmm-menu .mm-listview .mm-listitem .mm-panel {
+    background-color: transparent;
+  }
+  .wpmm-menu .mm-listview .mm-listitem .mm-panel .mm-listitem .mm-listitem__text {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    padding: 5px 20px;
+  }
+}
 footer .promotionWrap {
   background-color: #f2f2f2;
   padding: 21px 0;
@@ -16336,9 +16407,32 @@ footer .serviceWrap {
   padding: 11px 0;
   font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+  footer .serviceWrap .container {
+    flex-wrap: wrap;
+  }
+  footer .serviceWrap .container .service {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+}
 footer .middleWrap {
   background-color: #f2f2f2;
   padding: 3rem 0 0;
+}
+@media screen and (max-width: 767px) {
+  footer .middleWrap .container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .middleWrap .footerBoxWrap {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 footer .middleWrap .footerBoxWrap .widget-title {
   font-size: 1rem;
@@ -16381,11 +16475,28 @@ footer .bottomWrap {
   background-color: #191919;
   padding: 3rem 0 10px;
 }
+@media screen and (max-width: 767px) {
+  footer .bottomWrap {
+    padding: 1rem 0;
+  }
+}
 footer .bottomWrap .quickMenu .menu {
   flex-direction: row;
 }
+@media screen and (max-width: 767px) {
+  footer .bottomWrap .quickMenu .menu {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 footer .bottomWrap .quickMenu .menu .menu-item {
   margin-right: 1rem;
+}
+@media screen and (max-width: 767px) {
+  footer .bottomWrap .quickMenu .menu .menu-item {
+    margin: 0 1rem;
+  }
 }
 footer .bottomWrap .quickMenu .menu .menu-item a {
   color: #fff;
@@ -16864,6 +16975,11 @@ body .woocommerce-form.was-validated .input-text:invalid {
   line-height: 1.625rem;
   font-weight: 400;
 }
+@media screen and (max-width: 767px) {
+  #sliderWrap .container .contentWrap {
+    display: none;
+  }
+}
 #sliderWrap .container .contentWrap h1 {
   font-size: 3rem;
   line-height: 4rem;
@@ -16886,6 +17002,16 @@ body .woocommerce-form.was-validated .input-text:invalid {
 #bannerWrap {
   padding: 3rem 0;
 }
+@media screen and (max-width: 767px) {
+  #bannerWrap {
+    padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #trendsWrap {
+    overflow: hidden;
+  }
+}
 #trendsWrap h2 {
   font-size: 2rem;
   line-height: 2.5rem;
@@ -16893,15 +17019,32 @@ body .woocommerce-form.was-validated .input-text:invalid {
   margin-bottom: 1rem;
   font-family: "Open Sans", Arial, sans-serif;
 }
+@media screen and (max-width: 767px) {
+  #trendsWrap h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
 #trendsWrap .trends {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 8px;
 }
+@media screen and (max-width: 767px) {
+  #trendsWrap .trends {
+    overflow: auto;
+  }
+}
 #trendsWrap .trends .trend {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  #trendsWrap .trends .trend {
+    width: 160px;
+  }
 }
 #trendsWrap .trends .trend.trend-1 {
   color: #fff;
@@ -16936,6 +17079,16 @@ body .woocommerce-form.was-validated .input-text:invalid {
   overflow: hidden;
   border-radius: 5px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  #featuredBannerWrap .innerContent {
+    height: 300px;
+  }
+  #featuredBannerWrap .innerContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 #featuredBannerWrap .innerContent a {
   position: absolute;
@@ -16976,6 +17129,13 @@ body .woocommerce-form.was-validated .input-text:invalid {
   line-height: 4rem;
   font-weight: 600;
 }
+@media screen and (max-width: 767px) {
+  #subscribeWrap .innerWrap h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+}
 #subscribeWrap .innerWrap .btn {
   margin-top: 1rem;
   width: 200px;
@@ -16998,6 +17158,12 @@ body .woocommerce-form.was-validated .input-text:invalid {
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  #aboutContWrap .content {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
 }
 #productCatWrap {
   padding: 3rem 0 0;
@@ -17180,11 +17346,28 @@ body .woocommerce-form.was-validated .input-text:invalid {
   color: #191919;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 767px) {
+  #shopWrap .woocommerce-products-header .woocommerce-products-header__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+}
 .shopWrapper {
   padding: 0 2rem;
 }
+@media screen and (max-width: 767px) {
+  .shopWrapper {
+    padding: 0 1rem;
+  }
+}
 .shopWrapper #sidebar {
   width: 18%;
+}
+@media screen and (max-width: 767px) {
+  .shopWrapper #sidebar {
+    display: none;
+  }
 }
 .shopWrapper #sidebar h4 {
   font-size: 1rem;
@@ -17215,10 +17398,22 @@ body .woocommerce-form.was-validated .input-text:invalid {
 .shopWrapper .shopListWrap {
   width: 80%;
 }
+@media screen and (max-width: 767px) {
+  .shopWrapper .shopListWrap {
+    width: 100%;
+  }
+}
 .shopWrapper .shopListWrap .filterBtnsWrap {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .shopWrapper .shopListWrap .filterBtnsWrap {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+  }
 }
 .shopWrapper .shopListWrap .filterBtnsWrap .btn-stretch {
   padding-left: 0.9375rem;
@@ -17231,6 +17426,11 @@ body .woocommerce-form.was-validated .input-text:invalid {
   border-color: #F2F2F2;
   color: #191919;
   margin-left: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .shopWrapper .shopListWrap .filterBtnsWrap .btn-light {
+    margin: 0;
+  }
 }
 .shopWrapper .shopListWrap .active-filters {
   margin-bottom: 1rem;
@@ -17493,6 +17693,12 @@ body .woocommerce-form.was-validated .input-text:invalid {
   border-radius: .25rem;
   width: 100%;
   min-height: 333px;
+}
+@media screen and (max-width: 767px) {
+  .products .product .imageList .imgItem,
+  .productSlider .product .imageList .imgItem {
+    min-height: 256px;
+  }
 }
 .products .product .colorList,
 .productSlider .product .colorList {

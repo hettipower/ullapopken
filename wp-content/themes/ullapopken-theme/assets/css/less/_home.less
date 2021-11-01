@@ -27,6 +27,10 @@
             line-height: 1.625rem;
             font-weight: 400;
 
+            @media @mobileTab {
+                display: none;
+            }
+
             h1 {
                 font-size: 3rem;
                 line-height: 4rem;
@@ -55,15 +59,30 @@
 
 #bannerWrap {
     padding: 3rem 0;
+
+    @media @mobileTab {
+        padding: 1rem 0;
+    }
 }
 
 #trendsWrap {
+
+    @media @mobileTab {
+        overflow: hidden;
+    }
+
     h2 {
         font-size: 2rem;
         line-height: 2.5rem;
         font-weight: 400;
         margin-bottom: 1rem;
         font-family: "Open Sans", Arial, sans-serif;
+
+        @media @mobileTab {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 400;
+        }
     }
 
     .trends {
@@ -71,10 +90,18 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 8px;
 
+        @media @mobileTab {
+            overflow: auto;
+        }
+
         .trend {
             position: relative;
             overflow: hidden;
             border-radius: 5px;
+
+            @media @mobileTab {
+                width: 160px;
+            }
 
             &.trend-1 {
                 color: #fff;
@@ -116,6 +143,16 @@
         overflow: hidden;
         border-radius: 5px;
         position: relative;
+
+        @media @mobileTab {
+            height: 300px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
 
         a {
             position: absolute;
@@ -161,6 +198,12 @@
             font-size: 3rem;
             line-height: 4rem;
             font-weight: 600;
+
+            @media @mobileTab {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                font-weight: 600;
+            }
         }
 
         .btn {
@@ -189,6 +232,11 @@
         font-size: 0.875rem;
         line-height: 1.5rem;
         font-weight: 400;
+
+        @media @mobileTab {
+            -moz-column-count: 1;
+            column-count: 1;
+        }
     }
 }
 

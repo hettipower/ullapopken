@@ -19,12 +19,13 @@
             </div>
         </div>
         <div class="middleWrap">
-            <div class="container d-flex justify-content-between flex-wrap">
+            <div class="container d-flex justify-content-between">
                 <div class="menuIcon">
                     <button id="menuToggler" class="btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
+                        <span>Menu</span>
                     </button>
                 </div>
                 <a class="navbar-brand" href="<?php echo home_url(); ?>">

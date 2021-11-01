@@ -62,7 +62,7 @@ $detect = new Mobile_Detect;
 </div>
 
 <?php if( $detect->isMobile() || $detect->isTablet() ): ?>
-    <div id="mobileMegaMenuWrap"></div>
+    <?php get_template_part( 'template-part/menu/mobile' , 'menu' ); ?>
 <?php endif; ?>
 
 <?php wp_footer(); ?>
