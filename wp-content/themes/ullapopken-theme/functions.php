@@ -244,7 +244,6 @@ function compile_less_to_css(){
 
 use MatthiasMullie\Minify;
 
-add_action( 'init', 'minify_css_func');
 function minify_css_func() {
 
     $master = get_theme_file_path('assets/css/master.css');
@@ -295,4 +294,5 @@ function minify_js_func() {
 if ( get_field( 'complie_assets', 'option' ) == 1 ) {
     add_action('init' , 'compile_less_to_css');
     add_action( 'init', 'minify_js_func');
+    add_action( 'init', 'minify_css_func');
 }

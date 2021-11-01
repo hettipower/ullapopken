@@ -99,6 +99,8 @@
                 display: grid;
                 grid-template-columns: repeat(3 , 1fr);
                 gap: 10px;
+                height: 2.5rem;
+                overflow: hidden;
             }
 
             .btn-stretch {
@@ -275,6 +277,10 @@
     visibility: hidden;
     right: -31.25rem;
 
+    @media @mobileTab {
+        width: 100%;
+    }
+
     &.active {
         visibility: visible;
         right: 0;
@@ -388,6 +394,10 @@
                         margin-bottom: 0;
                         padding-bottom: 1rem;
 
+                        @media @mobileTab {
+                            padding-right: 1.5rem;
+                        }
+                    
                         .pwf-colorlist-item {
                             margin-bottom: 1rem;
 

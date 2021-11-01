@@ -16064,6 +16064,11 @@ header .navbar .topnavvbar .menuWrap li {
   padding-left: 1rem;
 }
 @media screen and (max-width: 767px) {
+  header .navbar .topnavvbar .menuWrap li {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
   header .navbar .topnavvbar .menuWrap .navbar-nav {
     flex-direction: row;
   }
@@ -17413,6 +17418,8 @@ body .woocommerce-form.was-validated .input-text:invalid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
+    height: 2.5rem;
+    overflow: hidden;
   }
 }
 .shopWrapper .shopListWrap .filterBtnsWrap .btn-stretch {
@@ -17561,6 +17568,11 @@ body .woocommerce-form.was-validated .input-text:invalid {
   visibility: hidden;
   right: -31.25rem;
 }
+@media screen and (max-width: 767px) {
+  .filtersWrapper {
+    width: 100%;
+  }
+}
 .filtersWrapper.active {
   visibility: visible;
   right: 0;
@@ -17656,6 +17668,11 @@ body .woocommerce-form.was-validated .input-text:invalid {
   border-bottom: 1px solid #F2F2F2;
   margin-bottom: 0;
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-container {
+    padding-right: 1.5rem;
+  }
 }
 .filtersWrapper .filterWrap .pwf-filter-container .pwf-woo-filter-inner .pwf-field-item .pwf-field-item-container .pwf-colorlist-item {
   margin-bottom: 1rem;
