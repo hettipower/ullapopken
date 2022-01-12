@@ -1,5 +1,42 @@
 *** Changelog ***
 
+= 1.6.4 - 2021-12-27 =
+* Fix - Non admin user cannot save changes to the plugin settings #278
+* Fix - Empty space in invoice prefix causes smart buttons to not load #390
+* Fix - woocommerce_payment_complete action not triggered for payments completed via webhook #399
+* Fix - Paying with Venmo - Change funding source on checkout page and receipt to Venmo  #394
+* Fix - Internal server error on checkout when selected saved card but then switched to paypal #403
+* Enhancement - Allow formatted text for the Description field #407
+* Enhancement - Remove filter to prevent On-Hold emails #411
+
+= 1.6.3 - 2021-12-14 =
+* Fix - Payments fail when using custom order numbers #354
+* Fix - Do not display saved payments on PayPal buttons if vault option is disabled #358
+* Fix - Double "Place Order" button #362
+* Fix - Coupon causes TAX_TOTAL_MISMATCH #372
+* Fix - Funding sources Mercado Pago and BLIK can't be disabled #383
+* Fix - Customer details not available in order and name gets replaced by xxx@dcc2.paypal.com #378
+* Fix - 3D Secure failing for certain credit card types with PayPal Card Processing #379
+* Fix - Error messages are not cleared even when checkout is re-attempted (DCC) #366
+* Add - New additions for system report status #377
+
+= 1.6.2 - 2021-11-22 =
+* Fix - Order of WooCommerce checkout actions causing incompatibility with AvaTax address validation #335
+* Fix - Can't checkout to certain countries with optional postcode #330
+* Fix - Prevent subscription from being purchased when saving payment fails #308
+* Fix - Guest users must checkout twice for subscriptions, no smart buttons loaded #342
+* Fix - Failed PayPal API request causing strange error #347
+* Fix - PayPal payments page empty after switching packages #350
+* Fix - Could Not Validate Nonce Error #239
+* Fix - Refund via PayPal dashboard does not set the WooCommerce order to "Refunded" #241
+* Fix - Uncaught TypeError: round() #344
+* Fix - Broken multi-level (nested) associative array values after getting submitted from checkout page #307
+* Fix - Transaction id missing in some cases #328
+* Fix - Payment not possible in pay for order form because of terms checkbox missing #294
+* Fix - "Save your Credit Card" shouldn't be optional when paying for a subscription #368
+* Fix - When paying for a subscription and vaulting fails, cart is cleared #367
+* Fix - Fatal error when activating PayPal Checkout plugin #363
+
 = 1.6.1 - 2021-10-12 =
 * Fix - Handle authorization capture failures #312
 * Fix - Handle denied payment authorization #302

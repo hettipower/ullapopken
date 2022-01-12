@@ -106,6 +106,17 @@ function ccfm_insert_headers_and_footers() {
 }
 
 /**
+ * Clear cache when ACF fields are updated
+ */
+function ccfm_acf_update_fields( $post_id, $post ) {
+    if ( $post->post_type == 'acf-field-group' || $post->post_type == 'acf-field' ) {
+        ccfm_clear_cache_for_me( 'acf_update_fields' );
+        remove_action( 'save_post', 'ccfm_acf_update_fields', 10, 2 );
+    }
+}
+
+
+/**
  * Add all urls to be purged and purge it in GoDaddy Cache.
  */
 function ccfm_godaddy_purge() {

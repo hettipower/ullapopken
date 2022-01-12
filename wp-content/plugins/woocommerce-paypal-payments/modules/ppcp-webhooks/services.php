@@ -14,7 +14,6 @@ use Psr\Log\LoggerInterface;
 use WooCommerce\PayPalCommerce\ApiClient\Endpoint\WebhookEndpoint;
 use WooCommerce\PayPalCommerce\ApiClient\Entity\Webhook;
 use WooCommerce\PayPalCommerce\ApiClient\Factory\WebhookFactory;
-use WooCommerce\PayPalCommerce\WcGateway\Assets\WebhooksStatusPageAssets;
 use WooCommerce\PayPalCommerce\Webhooks\Endpoint\ResubscribeEndpoint;
 use WooCommerce\PayPalCommerce\Webhooks\Endpoint\SimulateEndpoint;
 use WooCommerce\PayPalCommerce\Webhooks\Endpoint\SimulationStateEndpoint;
@@ -24,23 +23,26 @@ use WooCommerce\PayPalCommerce\Webhooks\Handler\PaymentCaptureCompleted;
 use WooCommerce\PayPalCommerce\Webhooks\Handler\PaymentCaptureRefunded;
 use WooCommerce\PayPalCommerce\Webhooks\Handler\PaymentCaptureReversed;
 use Psr\Container\ContainerInterface;
+use WooCommerce\PayPalCommerce\Webhooks\Status\Assets\WebhooksStatusPageAssets;
 use WooCommerce\PayPalCommerce\Webhooks\Status\WebhookSimulation;
 
 return array(
 
-	'webhook.registrar'                       => function( $container ) : WebhookRegistrar {
+	'webhook.registrar'                       => function( ContainerInterface $container ) : WebhookRegistrar {
 		$factory      = $container->get( 'api.factory.webhook' );
 		$endpoint     = $container->get( 'api.endpoint.webhook' );
 		$rest_endpoint = $container->get( 'webhook.endpoint.controller' );
+		$last_webhook_storage = $container->get( 'webhook.last-webhook-storage' );
 		$logger = $container->get( 'woocommerce.logger.woocommerce' );
 		return new WebhookRegistrar(
 			$factory,
 			$endpoint,
 			$rest_endpoint,
+			$last_webhook_storage,
 			$logger
 		);
 	},
-	'webhook.endpoint.controller'             => function( $container ) : IncomingWebhookEndpoint {
+	'webhook.endpoint.controller'             => function( ContainerInterface $container ) : IncomingWebhookEndpoint {
 		$webhook_endpoint = $container->get( 'api.endpoint.webhook' );
 		$webhook  = $container->get( 'webhook.current' );
 		$handler          = $container->get( 'webhook.endpoint.handler' );
@@ -48,6 +50,7 @@ return array(
 		$verify_request   = ! defined( 'PAYPAL_WEBHOOK_REQUEST_VERIFICATION' ) || PAYPAL_WEBHOOK_REQUEST_VERIFICATION;
 		$webhook_event_factory      = $container->get( 'api.factory.webhook-event' );
 		$simulation      = $container->get( 'webhook.status.simulation' );
+		$last_webhook_storage = $container->get( 'webhook.last-webhook-storage' );
 
 		return new IncomingWebhookEndpoint(
 			$webhook_endpoint,
@@ -56,10 +59,11 @@ return array(
 			$verify_request,
 			$webhook_event_factory,
 			$simulation,
+			$last_webhook_storage,
 			... $handler
 		);
 	},
-	'webhook.endpoint.handler'                => function( $container ) : array {
+	'webhook.endpoint.handler'                => function( ContainerInterface $container ) : array {
 		$logger         = $container->get( 'woocommerce.logger.woocommerce' );
 		$prefix         = $container->get( 'api.prefix' );
 		$order_endpoint = $container->get( 'api.endpoint.order' );
@@ -68,11 +72,11 @@ return array(
 			new CheckoutOrderCompleted( $logger, $prefix ),
 			new PaymentCaptureRefunded( $logger, $prefix ),
 			new PaymentCaptureReversed( $logger, $prefix ),
-			new PaymentCaptureCompleted( $logger, $prefix ),
+			new PaymentCaptureCompleted( $logger, $prefix, $order_endpoint ),
 		);
 	},
 
-	'webhook.current'                         => function( $container ) : ?Webhook {
+	'webhook.current'                         => function( ContainerInterface $container ) : ?Webhook {
 		$data = (array) get_option( WebhookRegistrar::KEY, array() );
 		if ( empty( $data ) ) {
 			return null;
@@ -91,18 +95,18 @@ return array(
 		}
 	},
 
-	'webhook.is-registered'                   => function( $container ) : bool {
+	'webhook.is-registered'                   => function( ContainerInterface $container ) : bool {
 		return $container->get( 'webhook.current' ) !== null;
 	},
 
-	'webhook.status.registered-webhooks'      => function( $container ) : array {
+	'webhook.status.registered-webhooks'      => function( ContainerInterface $container ) : array {
 		$endpoint = $container->get( 'api.endpoint.webhook' );
 		assert( $endpoint instanceof WebhookEndpoint );
 
 		return $endpoint->list();
 	},
 
-	'webhook.status.registered-webhooks-data' => function( $container ) : array {
+	'webhook.status.registered-webhooks-data' => function( ContainerInterface $container ) : array {
 		$empty_placeholder = __( 'No webhooks found.', 'woocommerce-paypal-payments' );
 
 		$webhooks = array();
@@ -139,7 +143,7 @@ return array(
 		);
 	},
 
-	'webhook.status.simulation'               => function( $container ) : WebhookSimulation {
+	'webhook.status.simulation'               => function( ContainerInterface $container ) : WebhookSimulation {
 		$webhook_endpoint = $container->get( 'api.endpoint.webhook' );
 		$webhook  = $container->get( 'webhook.current' );
 		return new WebhookSimulation(
@@ -150,13 +154,13 @@ return array(
 		);
 	},
 
-	'webhook.status.assets'                   => function( $container ) : WebhooksStatusPageAssets {
+	'webhook.status.assets'                   => function( ContainerInterface $container ) : WebhooksStatusPageAssets {
 		return new WebhooksStatusPageAssets(
 			$container->get( 'webhook.module-url' )
 		);
 	},
 
-	'webhook.endpoint.resubscribe'            => static function ( $container ) : ResubscribeEndpoint {
+	'webhook.endpoint.resubscribe'            => static function ( ContainerInterface $container ) : ResubscribeEndpoint {
 		$registrar = $container->get( 'webhook.registrar' );
 		$request_data            = $container->get( 'button.request-data' );
 
@@ -166,7 +170,7 @@ return array(
 		);
 	},
 
-	'webhook.endpoint.simulate'               => static function ( $container ) : SimulateEndpoint {
+	'webhook.endpoint.simulate'               => static function ( ContainerInterface $container ) : SimulateEndpoint {
 		$simulation = $container->get( 'webhook.status.simulation' );
 		$request_data = $container->get( 'button.request-data' );
 
@@ -175,7 +179,7 @@ return array(
 			$request_data
 		);
 	},
-	'webhook.endpoint.simulation-state'       => static function ( $container ) : SimulationStateEndpoint {
+	'webhook.endpoint.simulation-state'       => static function ( ContainerInterface $container ) : SimulationStateEndpoint {
 		$simulation = $container->get( 'webhook.status.simulation' );
 
 		return new SimulationStateEndpoint(
@@ -183,7 +187,14 @@ return array(
 		);
 	},
 
-	'webhook.module-url'                      => static function ( $container ): string {
+	'webhook.last-webhook-storage'            => static function ( ContainerInterface $container ): WebhookInfoStorage {
+		return new WebhookInfoStorage( $container->get( 'webhook.last-webhook-storage.key' ) );
+	},
+	'webhook.last-webhook-storage.key'        => static function ( ContainerInterface $container ): string {
+		return 'ppcp-last-webhook';
+	},
+
+	'webhook.module-url'                      => static function ( ContainerInterface $container ): string {
 		return plugins_url(
 			'/modules/ppcp-webhooks/',
 			dirname( __FILE__, 3 ) . '/woocommerce-paypal-payments.php'

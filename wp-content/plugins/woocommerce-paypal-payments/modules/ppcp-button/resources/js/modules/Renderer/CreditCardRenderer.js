@@ -182,8 +182,11 @@ class CreditCardRenderer {
 
         if (this.formValid && this.cardValid) {
             const save_card = this.defaultConfig.save_card ? true : false;
-            const vault = document.getElementById('ppcp-credit-card-vault') ?
+            let vault = document.getElementById('ppcp-credit-card-vault') ?
                 document.getElementById('ppcp-credit-card-vault').checked : save_card;
+            if (this.defaultConfig.enforce_vault) {
+                vault = true;
+            }
             const contingency = this.defaultConfig.hosted_fields.contingency;
             const hostedFieldsData = {
                 vault: vault
@@ -191,6 +194,23 @@ class CreditCardRenderer {
             if (contingency !== 'NO_3D_SECURE') {
                 hostedFieldsData.contingencies = [contingency];
             }
+
+            if (this.defaultConfig.payer) {
+                hostedFieldsData.cardholderName = this.defaultConfig.payer.name.given_name + ' ' + this.defaultConfig.payer.name.surname;
+            }
+            if (!hostedFieldsData.cardholderName) {
+                const firstName = document.getElementById('billing_first_name') ? document.getElementById('billing_first_name').value : '';
+                const lastName = document.getElementById('billing_last_name') ? document.getElementById('billing_last_name').value : '';
+
+                if (!firstName || !lastName) {
+                    this.spinner.unblock();
+                    this.errorHandler.message(this.defaultConfig.hosted_fields.labels.cardholder_name_required);
+                    return;
+                }
+
+                hostedFieldsData.cardholderName = firstName + ' ' + lastName;
+            }
+
             this.currentHostedFieldsInstance.submit(hostedFieldsData).then((payload) => {
                 payload.orderID = payload.orderId;
                 this.spinner.unblock();

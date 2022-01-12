@@ -5,11 +5,11 @@ Plugin URI: https://webheadcoder.com/clear-cache-for-me/
 Description: Purges all cache on WPEngine, W3 Total Cache, WP Super Cache, WP Fastest Cache when updating widgets, menus, settings.  Forces a browser to reload a theme's CSS and JS files.
 Author: Webhead LLC
 Author URI: https://webheadcoder.com 
-Version: 1.6
+Version: 1.7
 */
 
 
-define( 'CCFM_VERSION', '1.6' );
+define( 'CCFM_VERSION', '1.7' );
 define( 'CCFM_PLUGIN', __FILE__ );
 
 require_once( 'clear-cache-for-action.php' );
@@ -88,6 +88,10 @@ function ccfm_admin_init() {
 
         //detect WooThemes settings changes
         add_action( 'update_option_woo_options', 'ccfm_clear_cache_for_woo_options' );
+
+        if ( class_exists( 'ACF' ) ) {
+            add_action( 'save_post', 'ccfm_acf_update_fields', 10, 2 );
+        }
 
         //try detect NextGen Gallery changes
         add_action( 'ngg_update_gallery', 'ccfm_clear_cache_for_ngg' );

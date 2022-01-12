@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.9
-Tested up to: 5.8
-Stable tag: 2.5.1
-Version: 2.5.1
+Tested up to: 5.9
+Stable tag: 2.6
+Version: 2.6
 Requires PHP: 5.6.20
 Text Domain: disable-gutenberg
 Domain Path: /languages
@@ -54,10 +54,10 @@ Just activate and done! The default plugin settings are configured to hide all t
 * Option to hide the Gutenberg plugin menu item (settings link)
 * Adds "Classic Editor" link to each post on the Posts screen
 * Adds item to the WP sidebar menu: "Add New (Classic)"
-* NEW! Option to enable Custom Fields Meta Box for ACF
-* NEW! Choose which editor to use for each post
-* NEW! Whitelist any post title, slug, or ID
-* NEW! Option to disables frontend Gutenberg stylesheet
+* Option to enable Custom Fields Meta Box for ACF
+* Choose which editor to use for each post
+* Whitelist any post title, slug, or ID
+* Option to enable/disable frontend Gutenberg stylesheet
 
 > Works same as Classic Editor plugin, but can do a LOT more!
 > Lightweight and super fast, built with WP APIs :)
@@ -178,7 +178,7 @@ The settings include a "More Tools" link. Clicking it toggles open some advanced
 * ACF Support - Enables the Custom Fields Meta Box (ACF plugin disables by default)
 * Reset Options - Restores the default plugin options
 
-If there are any questions about these items or anything else, feel free to [contact me directly](https://perishablepress.com/contact/) or post in the [WP Support Forums](https://wordpress.org/support/plugin/disable-gutenberg/).
+If there are any questions about these items or anything else, feel free to [contact me directly](https://plugin-planet.com/support/#contact) or post in the [WP Support Forums](https://wordpress.org/support/plugin/disable-gutenberg/).
 
 
 **Uninstalling**
@@ -269,7 +269,7 @@ The default Gutenberg/Block styles are disabled by default when DG plugin is act
 
 **Got a question?**
 
-Send any questions or feedback via my [contact form](https://perishablepress.com/contact/)
+Send any questions or feedback via my [contact form](https://plugin-planet.com/support/#contact)
 
 
 
@@ -281,6 +281,7 @@ I develop and maintain this free plugin with love for the WordPress community. T
 * [Digging into WordPress](https://digwp.com/)
 * [.htaccess made easy](https://htaccessbook.com/)
 * [WordPress Themes In Depth](https://wp-tao.com/wordpress-themes-book/)
+* [Wizard's SQL Recipes for WordPress](https://books.perishablepress.com/downloads/wizards-collection-sql-recipes-wordpress/)
 
 And/or purchase one of my premium WordPress plugins:
 
@@ -298,8 +299,17 @@ Links, tweets and likes also appreciated. Thanks! :)
 
 Thank you to everyone for using Disable Gutenberg and for all the [awesome 5-star reviews](https://wordpress.org/support/plugin/disable-gutenberg/reviews/)!
 
-If you have any feedback or suggestions to make this plugin the absolute best it can be, and/or would like to help with development, please reach me via my [contact form](https://perishablepress.com/contact/) at Perishable Press.
+If you have any feedback or suggestions to make this plugin the absolute best it can be, and/or would like to help with development, please reach me via the [contact form](https://plugin-planet.com/support/#contact) at Plugin Planet.
 
+
+**2.6 (2022/01/10)**
+
+* Improves loading of translations
+* Improves clarity on settings page
+* Removes Edit Links when Gutenberg is disabled
+* Updates some links to external resources
+* Generates new default translation template
+* Tests on WordPress 5.9
 
 **2.5.1 (2021/07/25)**
 

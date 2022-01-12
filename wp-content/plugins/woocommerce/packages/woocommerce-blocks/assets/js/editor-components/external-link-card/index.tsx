@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { Icon, chevronRight } from '@woocommerce/icons';
+import { Icon, external } from '@wordpress/icons';
 import { VisuallyHidden } from '@wordpress/components';
 
 /**
@@ -10,18 +10,21 @@ import { VisuallyHidden } from '@wordpress/components';
  */
 import './editor.scss';
 
+export interface ExternalLinkCardProps {
+	href: string;
+	title: string;
+	description?: string;
+}
+
 /**
- * Show a link that displays a title, description, and optional icon. Links are opened in a new tab.
+ * Show a link that displays a title, description, and an icon showing that the link is external.
+ * Links are opened in a new tab.
  */
 const ExternalLinkCard = ( {
 	href,
 	title,
 	description,
-}: {
-	href: string;
-	title: string;
-	description?: string;
-} ): JSX.Element => {
+}: ExternalLinkCardProps ): JSX.Element => {
 	return (
 		<a
 			href={ href }
@@ -46,7 +49,7 @@ const ExternalLinkCard = ( {
 				}
 			</VisuallyHidden>
 			<Icon
-				srcElement={ chevronRight }
+				icon={ external }
 				className="wc-block-editor-components-external-link-card__icon"
 			/>
 		</a>

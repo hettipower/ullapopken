@@ -30,6 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=597242117012725" nonce="xH3McWON"></script>
+<script src="https://apis.google.com/js/platform.js"></script>
 <script>
 	!function (d,s,id) {
 		var js,
@@ -68,5 +69,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			data-size="small"
 			data-share="false">
 		</div>
+	</span>
+	<span class="ai1wm-top-positive-two">
+		<div class="g-ytsubscribe" data-channelid="UCWMNPEnX7KyDLknpcmPaSwg" data-layout="default" data-count="default"></div>
 	</span>
 </div>

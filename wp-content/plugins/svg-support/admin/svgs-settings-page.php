@@ -138,7 +138,7 @@
 											<label for="bodhi_svgs_settings[css_target]"><strong><?php _e( 'CSS Class to target', 'svg-support' ); ?></strong></label>
 										</th>
 										<td>
-											<input id="bodhi_svgs_settings[css_target]" class="all-options code" name="bodhi_svgs_settings[css_target]" type="text" value="<?php if( isset( $bodhi_svgs_options['css_target'] ) ) echo $bodhi_svgs_options['css_target']; ?>"><br /><small class="description"><?php _e( 'The default target class is <code>style-svg</code>. You can change it to your own class such as <code>my-class</code> by typing it here.<br />Leave blank to use the default class.', 'svg-support' ); ?></small>
+											<input id="bodhi_svgs_settings[css_target]" class="all-options code" name="bodhi_svgs_settings[css_target]" type="text" value="<?php if( isset( $bodhi_svgs_options['css_target'] ) ) echo esc_attr($bodhi_svgs_options['css_target']); ?>"><br /><small class="description"><?php _e( 'The default target class is <code>style-svg</code>. You can change it to your own class such as <code>my-class</code> by typing it here.<br />Leave blank to use the default class.', 'svg-support' ); ?></small>
 										</td>
 									</tr>
 

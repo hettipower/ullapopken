@@ -3,8 +3,8 @@ Contributors: webheadllc
 Donate link: https://webheadcoder.com/donate-clear-cache-for-me
 Tags: wpengine, cache, clear, purge, js, css, widget
 Requires at least: 3.8
-Tested up to: 5.7
-Stable tag: 1.6
+Tested up to: 5.8
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,9 +36,10 @@ Works with the following caching systems:
 
 Clears all cache for following actions (requires a caching system above to be active):
 
-* When Widgets are saved
-* When Customizer is saved
-* When Menus are saved
+* When Widgets are saved.
+* When Customizer is saved.
+* When Menus are saved.
+* When a fields in Advanced Custom Fields are saved.
 * When a Contact Form 7 form is saved.
 * When a Formidable Form form is saved.
 * When WooThemes settings are saved.
@@ -58,6 +59,9 @@ Clears all cache for following actions (requires a caching system above to be ac
 1. The button on the dashboard.  
 
 == Changelog ==
+
+= 1.7 =
+Added cache clearing when fields in Advanced Custom Fields are updated.  
 
 = 1.6 =
 Added cache clearing when WordPress core is updated.

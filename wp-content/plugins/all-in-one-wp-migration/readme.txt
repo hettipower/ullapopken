@@ -2,9 +2,9 @@
 Contributors: yani.iliev, bangelov, pimjitsawang
 Tags: move, transfer, copy, migrate, backup, clone, restore, db migration, wordpress migration, website migration, database export, database import, apoyo, sauvegarde, di riserva, バックアップ
 Requires at least: 3.3
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 5.2.17
-Stable tag: 7.49
+Stable tag: 7.52
 License: GPLv2 or later
 
 Move, transfer, copy, migrate, and backup a site with 1-click. Quick, easy, and reliable.
@@ -89,6 +89,21 @@ All-in-One WP Migration is in full compliance with General Data Protection Regul
 See our [GDPR Compliant Privacy Policy here](https://www.iubenda.com/privacy-policy/946881).
 
 == Changelog ==
+= 7.52 =
+**Fixed**
+
+* Out of disk space when exporting database.sql
+
+= 7.51 =
+**Added**
+
+* Link to YouTube Channel
+
+= 7.50 =
+**Added**
+
+* Improved reliability for scheduling events
+
 = 7.49 =
 **Added**
 

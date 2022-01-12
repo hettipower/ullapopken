@@ -78,8 +78,8 @@ function bodhi_svgs_inline() {
 
 				// use custom class if set
 				$css_target_array = array(
-					'Bodhi' => 'img.'. $bodhi_svgs_options['css_target'],
-					'ForceInlineSVG' => $bodhi_svgs_options['css_target']
+					'Bodhi' => 'img.'. esc_attr($bodhi_svgs_options['css_target']),
+					'ForceInlineSVG' => esc_attr($bodhi_svgs_options['css_target'])
 				);
 
 			} else {
@@ -99,7 +99,7 @@ function bodhi_svgs_inline() {
 
 			// if custom target is set, use that, otherwise use default
 			if ( ! empty( $bodhi_svgs_options['css_target'] ) ) {
-				$css_target = 'img.'. $bodhi_svgs_options['css_target'];
+				$css_target = 'img.'. esc_attr($bodhi_svgs_options['css_target']);
 			} else {
 				$css_target = 'img.style-svg';
 			}

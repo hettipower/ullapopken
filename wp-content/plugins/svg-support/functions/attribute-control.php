@@ -34,7 +34,7 @@ if ( bodhi_svgs_advanced_mode() ) {
 		if ( strpos( $html, '.svg' ) !== FALSE ) {
 
 			// strip html for svg files
-			$html = preg_replace( '/(width|height|title|alt|class)=".*"\s/', 'class="' . $class . '"', $html );;
+			$html = preg_replace( '/(width|height|title|alt|class)=".*"\s/', 'class="' . esc_attr($class) . '"', $html );
 
 		} else {
 

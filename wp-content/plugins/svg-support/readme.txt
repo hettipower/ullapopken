@@ -1,11 +1,11 @@
 === SVG Support ===
 Contributors: Benbodhi
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z9R7JERS82EQQ
-Tags: svg, vector, safesvg, css, style, mime, mime type, embed, img, inline, animation, animate, js
+Tags: svg, vector, safesvg, safe svg, css, style, mime, mime type, embed, img, inline, animation, animate, js
 Requires at least: 4.8
-Tested up to: 5.8.1-alpha-51489
+Tested up to: 5.9-RC1-52446
 Requires PHP: 5.2
-Stable tag: 2.3.19
+Stable tag: 2.3.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,12 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Changelog ==
+
+= 2.3.21 =
+* Fixed featured image SVG overlapping container.
+
+= 2.3.20 =
+* Fixed admin setting not being escaped when output.
 
 = 2.3.19 =
 * Fixed PHP Warning from localize_script in functions/enqueue.php.
@@ -317,6 +323,12 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Upgrade Notice ==
+
+= 2.3.21 =
+Fixes featured image display on edit post screen.
+
+= 2.3.20 =
+Added more security.
 
 = 2.3.19 =
 Quick update to address PHP warnings from localize_script and to add a SRC check.
