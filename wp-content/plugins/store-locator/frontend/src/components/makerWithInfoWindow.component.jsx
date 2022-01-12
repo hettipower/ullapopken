@@ -5,7 +5,7 @@ import {
 } from "react-google-maps";
 import { getPreciseDistance } from 'geolib';
 
-import MarkerIcon from '../assets/images/maker.jpg';
+import MarkerIcon from '../assets/images/maker.png';
 
 class MarkerWithInfoWindow extends React.Component {
 
@@ -45,7 +45,7 @@ class MarkerWithInfoWindow extends React.Component {
 
         return (
             <Marker
-                key={this.props.key}
+                key={this.props.ID}
                 position={this.props.position}
                 icon={MarkerIcon} 
                 onClick={() => this.handleToggleOpen()}
@@ -82,7 +82,7 @@ class MarkerWithInfoWindow extends React.Component {
                                     {telephone}
                                 </div>
                                 <div className="btnWrap">
-                                    <a className="btn" href="#" target="_blank" rel="noopener noreferrer">Neuheiten</a>
+                                    <a className="btn" href="http://" target="_blank" rel="noopener noreferrer">Neuheiten</a>
                                 </div>
                                 <div className="linksWrap">
                                     <a className="direction" href={directionLink} target="_blank" rel="noopener noreferrer">

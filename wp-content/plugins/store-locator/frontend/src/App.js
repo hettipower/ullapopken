@@ -47,12 +47,12 @@ class App extends React.Component {
       });
     }
 
-    let STORES_API_URL = 'http://localhost/ullapopken/wp-json/ullapopken/v1/stores';
-    let CITY_API_URL = 'http://localhost/ullapopken/wp-json/ullapopken/v1/stores-cities';
+    let STORES_API_URL = 'http://localhost/ullapopken/wp-json/store-locator/v1/stores';
+    let CITY_API_URL = 'http://localhost/ullapopken/wp-json/store-locator/v1/stores-cities';
 
     if( process.env.NODE_ENV === 'production' ) {
-      STORES_API_URL = `${window.CUSTOM_PARAMS.base_url}/wp-json/ullapopken/v1/stores`;
-      CITY_API_URL = `${window.CUSTOM_PARAMS.base_url}/wp-json/ullapopken/v1/stores-cities`;
+      STORES_API_URL = `${window.CUSTOM_PARAMS.base_url}/wp-json/store-locator/v1/stores`;
+      CITY_API_URL = `${window.CUSTOM_PARAMS.base_url}/wp-json/store-locator/v1/stores-cities`;
     }
 
     axios.get(STORES_API_URL)

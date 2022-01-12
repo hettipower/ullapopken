@@ -1,0 +1,255 @@
+#storeContentWrap {
+    padding-top: 5.5rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+#storeContentWrap .container {
+    max-width: 1200px;
+    padding: 0;
+}
+#storeContentWrap .back a {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    white-space: nowrap;
+    height: 30px;
+    display: block;
+    color: #525252;
+    font-size: 1em;
+}
+#storeContentWrap .mapWrap {
+    position: relative;
+    min-height: 250px;
+}
+#storeContentWrap .mapWrap .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+#storeContentWrap .mapWrap .acf-map {
+    height: 250px;
+}
+#storeContentWrap .titleWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 9px 0 rgba(0,0,0,0.06);
+    padding: 20px;
+}
+#storeContentWrap .titleWrap .title h1 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 33px;
+    max-height: 68px;
+    line-height: 37px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#storeContentWrap .titleWrap .title address {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    font-style: normal;
+}
+#storeContentWrap .titleWrap .direction {
+    display: flex;
+}
+#storeContentWrap .titleWrap .direction a {
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+    border-radius: 0.25rem !important;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    font-size: 1em;
+    height: 34px;
+    width: auto;
+    padding: 16px;
+    cursor: pointer;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: none;
+    background-color: #000;
+}
+#storeContentWrap .titleWrap .direction a.direction {
+    margin-right: 10px;
+}
+#storeContentWrap .titleWrap .direction a:hover {
+    background-color: #696969;
+}
+#storeContentWrap .titleWrap .direction a .bi {
+    margin-right: 5px;
+}
+#storeContentWrap .detailsWrap {
+    padding: 24px;
+    background-color: #eee;
+}
+#storeContentWrap .detailsWrap .details {
+    width: 100%;
+    min-width: 320px;
+    -ms-flex-order: 1;
+    order: 1;
+    padding-right: 20px;
+    -ms-flex-preferred-size: 66%;
+    flex-basis: 66%;
+    -ms-flex: 2 0 320px;
+    flex: 2 0 320px;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap {
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery {
+    min-width: 320px;
+    -ms-flex: 0 0 320px;
+    flex: 0 0 320px;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 40px;
+    max-width: 200px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item {
+    position: relative;
+    width: 103px;
+    height: 103px;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item.bigImg {
+    height: 220px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item:not(bigImg) {
+    margin-left: 5.5px;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item:nth-child(2) {
+    margin: 0;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .gallery .item .count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.56);
+    color: #e6e6e6;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    font-size: 13px;
+    line-height: 15px;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location {
+    -ms-flex: 1 0 235px;
+    flex: 1 0 235px;
+    min-width: 235px;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div {
+    padding: 3px 20px 3px 30px;
+    position: relative;
+    margin-bottom: 5px;
+    color: #525252;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div .bi {
+    position: absolute;
+    left: 0;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div .table td {
+    border: none;
+    padding: 0;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div .table td.text-right {
+    text-align: right;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div a {
+    color: #a9a9a9;
+}
+#storeContentWrap .detailsWrap .details .galleryDetailsWrap .location > div a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+#storeContentWrap .detailsWrap .details .descriptionWrap {
+    padding: 26px;
+    background-color: #fff;
+    color: #525252;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+#storeContentWrap .detailsWrap h4.title {
+    margin: 0;
+    padding-bottom: 25px;
+    width: 100%;
+    font-size: 18px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #333333;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: Roboto, Arial, sans-serif;
+}
+#storeContentWrap .detailsWrap h4.title img {
+    margin-right: 14px;
+    width: 16px;
+    height: auto;
+    max-height: 20px;
+}
+#storeContentWrap .showLocations {
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+#storeContentWrap .showLocations a {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    color: #a9a9a9;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 19px;
+    display: inline;
+}
+#storeContentWrap .showLocations a:hover {
+    color: #1a1a1a;
+}
+#storeContentWrap .mapWrap .store-locator-map {
+    height: 350px;
+}
