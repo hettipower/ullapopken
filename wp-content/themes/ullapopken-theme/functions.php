@@ -47,7 +47,7 @@ function theme_front_scripts() {
 
     $api_key = ( get_field( 'google_api' , 'option' ) ) ? get_field( 'google_api' , 'option' ) : 'AIzaSyC0_cw3dkaXJvqhZ6KHIj7_RF_Cf5Tj5p4' ;
 
-    wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key.'&libraries=places', array('jquery'),'1.0',true);
+    //wp_enqueue_script('googleapis-js','https://maps.googleapis.com/maps/api/js?key='.$api_key.'&libraries=places', array('jquery'),'1.0',true);
     wp_enqueue_script('custom-js',THEME_JS.'/custom-combined.min.js', array('jquery'),'1.0',true);
 
     $customParams = array(
@@ -263,8 +263,8 @@ function minify_js_func() {
     // we can even add another file, they'll then be
     // joined in 1 output file
 
-    $acf_map = get_theme_file_path('assets/js/acf_map.js');
-    $minifier->add($acf_map);
+    /* $acf_map = get_theme_file_path('assets/js/acf_map.js');
+    $minifier->add($acf_map); */
 
     $OwlCarousel2 = get_theme_file_path('assets/js/owl.carousel.min.js');
     $minifier->add($OwlCarousel2);
@@ -272,8 +272,8 @@ function minify_js_func() {
     $slick = get_theme_file_path('assets/js/slick.js');
     $minifier->add($slick);
 
-    $fancybox = get_theme_file_path('assets/js/fancybox.umd.js');
-    $minifier->add($fancybox);
+    /* $fancybox = get_theme_file_path('assets/js/fancybox.umd.js');
+    $minifier->add($fancybox); */
 
     $repeater = get_theme_file_path('assets/js/jquery.repeater.min.js');
     $minifier->add($repeater);
